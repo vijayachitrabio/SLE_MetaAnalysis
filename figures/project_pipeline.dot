@@ -1,0 +1,58 @@
+digraph SLE_Publication_Pipeline {
+    // --- Global Aesthetics (Optimized for Publication) ---
+    graph [rankdir=TB, nodesep=0.5, ranksep=0.7, fontname="Arial", 
+           labeljust="c", labelloc="t", compound=true, penwidth=0.8];
+    node [fontname="Arial", fontsize=11, style="filled,rounded", shape=box, margin="0.2,0.1", penwidth=1.2];
+    edge [color="#444444", arrowhead=vee, arrowsize=1.0, penwidth=1.0];
+
+    // --- Stage 1: Input Data ---
+    subgraph cluster_1 {
+        label = "Stage 1: Discovery & Replication (European)";
+        labeljust="c"; labelloc="t"; fontname="Arial Bold"; fontsize=14;
+        color="#88CCEE"; style="rounded,filled"; fillcolor="#F2F9FF"; margin=25;
+
+        bentham [label="Discovery: Bentham et al. (2015)\nCases: 4,036 | Controls: 6,959", fillcolor="#FFFFFF", color="#88CCEE"];
+        julia   [label="Discovery: Julià et al. (2018)\nCases: 799 | Controls: 1,558",    fillcolor="#FFFFFF", color="#88CCEE"];
+        finngen [label="Validation: FinnGen Release 12\nCases: ~850 | Controls: ~418,000", fillcolor="#FFFFFF", color="#117733"];
+    }
+
+    // --- Stage 2: Meta-Analysis ---
+    subgraph cluster_2 {
+        label = "Stage 2: Statistical Meta-Analysis";
+        labeljust="c"; labelloc="t"; fontname="Arial Bold"; fontsize=14;
+        color="#AA4499"; style="rounded,filled"; fillcolor="#FAF4FA"; margin=25;
+
+        qc      [label="Harmonization & Quality Control\n(GRCh38, MAF > 1%, GCP)", fillcolor="#FFFFFF", color="#AA4499"];
+        meta    [label="IVW Fixed-Effects Meta-Analysis\n13,352 individuals (4,835 cases, 8,517 controls)", fillcolor="#FFFFFF", color="#AA4499", fontname="Arial Bold"];
+        pruning [label="Independent Locus Identification\n(Physical Distance Pruning)",  fillcolor="#FFFFFF", color="#AA4499"];
+    }
+
+    // --- Stage 3: Biology & Clinical Translation ---
+    subgraph cluster_3 {
+        label = "Stage 3: Biology & Clinical Translation";
+        labeljust="c"; labelloc="t"; fontname="Arial Bold"; fontsize=14;
+        color="#CC6677"; style="rounded,filled"; fillcolor="#FFF4F4"; margin=25;
+
+        enrich  [label="Pathway Enrichment\n(WikiPathways / g:Profiler)", fillcolor="#FFFFFF", color="#CC6677"];
+        eqtl    [label="Functional Characterization\n(GTEx v10 & DICE eQTLs)",    fillcolor="#FFFFFF", color="#CC6677"];
+        drug    [label="Therapeutic Lead Mapping\n(Target Prioritization)",       fillcolor="#FFFFFF", color="#882255", fontname="Arial Bold"];
+    }
+
+    // --- Flow Logic ---
+    bentham -> qc;
+    julia   -> qc;
+    
+    qc      -> meta;
+    meta    -> pruning;
+
+    pruning -> finngen [label=" Replication"];
+    pruning -> enrich;
+    pruning -> eqtl;
+
+    enrich  -> drug;
+    eqtl    -> drug;
+
+    // Loci count annotation
+    loci_note [shape=none, label="13 Independent\nSignals Identified", fontcolor="#d32f2f", fontsize=10, fillcolor=none, style=none];
+    pruning -> loci_note [style=dotted, arrowhead=none];
+}
