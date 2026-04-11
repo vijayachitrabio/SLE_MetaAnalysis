@@ -1,0 +1,4 @@
+Cohort	GWAS_Catalog_ID	N_Cases	N_Controls	N_SNPs_raw	N_SNPs_filtered	Lambda_raw	GC_Corrected	Lambda_post_GC	MAF_filter
+Bentham 2015	GCST003156	4036	6959	~2.6M	~430K	1.409	Yes	1	>0.01
+Julià 2018	GCST006093	799	1558	~6.4M	~430K	1.039	No	1.039	>0.01
+Meta-Analysis	N/A	4835	8517	N/A	429,799		N/A	1.019	N/A

@@ -1,0 +1,18 @@
+# Local IDE and System Settings
+.*
+~$*
+
+# Large Research Assets and Data
+data/
+raw/
+*analysis/
+results/*.pdf
+results/pathway/
+results/sle_meta_analysis_results.tsv
+
+# Binary Documents
+*.docx
+*.pptx
+
+# Local Manuscript Documentation
+manuscript_sle_meta_analysis.md

@@ -1,0 +1,13 @@
+SNP	Gene	dir_consistent	BETA_meta	SE_fg	OR_meta	OR_FinnGen	P_FinnGen	NCP	Power_pct	replicated	conclusion
+rs13019891	STAT4	FALSE	-0.4598	0.0491	0.631	1.048	0.342832	9.36	100	FALSE	Adequately powered — discordant direction
+rs1612904	rs1612904	TRUE	-0.3984	0.0474	0.671	0.658	1.27791e-18	8.4	100	TRUE	Replicated
+rs1800629	TNF/HLA	TRUE	0.5599	0.0601	1.75	1.777	1.08943e-21	9.32	100	TRUE	Replicated
+rs3807306	IRF5	TRUE	0.2705	0.0482	1.311	1.185	0.000438834	5.61	99.7	TRUE	Replicated
+rs1233478	rs1233478	TRUE	0.35	0.0644	1.419	1.395	2.39282e-07	5.43	99.5	TRUE	Replicated
+rs7823055	XKR6/BLK	FALSE	-0.247	0.0491	0.781	1.084	0.100145	5.03	98.5	FALSE	Adequately powered — discordant direction
+rs71557334	HLA-upstream	TRUE	0.3397	0.0758	1.405	1.502	8.06789e-08	4.48	94.7	TRUE	Replicated
+rs4843868	rs4843868	TRUE	-0.2375	0.0537	0.789	0.871	0.0102582	4.42	94	FALSE	Adequately powered — signal may be cohort-specific
+rs200484	HLA-upstream	TRUE	0.37	0.0849	1.448	1.665	1.88764e-09	4.36	93.2	TRUE	Replicated
+rs3925075	rs3925075	TRUE	-0.1645	0.0483	0.848	0.872	0.00447332	3.41	70.6	FALSE	Adequately powered — signal may be cohort-specific
+rs2736340	rs2736340	TRUE	0.1729	0.0529	1.189	1.242	4.10847e-05	3.27	65.7	TRUE	Replicated
+rs1422673	rs1422673	TRUE	0.189	0.0629	1.208	1.087	0.18484	3	55.5	FALSE	Adequately powered — signal may be cohort-specific

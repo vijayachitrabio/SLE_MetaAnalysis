@@ -1,0 +1,5 @@
+Study	Lambda	GC_correction	Note
+Bentham 2015 (pre-GC)	1.409	Applied	Corrected before meta-analysis entry
+Bentham 2015 (post-GC)	1	Applied	Used in meta-analysis
+Julia 2018	1.039	Not applied (lambda < 1.05)	Within acceptable range
+Meta-Analysis	1.0608	Not applied (see note)	Mild residual inflation; likely reflects polygenic HLA signal

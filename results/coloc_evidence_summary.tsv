@@ -1,0 +1,14 @@
+rsId	GTEx_Gene	GTEx_Tissue	GTEx_P	DICE_Evidence	Colocalisation_Evidence
+rs200484	ENSG00000272009	Spleen	1.55221406681331e-05	No record in DICE blood dataset	Suggestive/Qualitative
+rs7582694	N/A (No immune tissue eQTL)			No record in DICE blood dataset	Suggestive/Qualitative
+rs7823055	N/A (No immune tissue eQTL)			No record in DICE blood dataset	Suggestive/Qualitative
+rs1612904	HLA-DQA2	Whole_Blood	1.09630385748339e-36	Significant eQTL for HLA-DRB6/DQB1 in Monocytes, B cells, T cells	Strong (Multi-source)
+rs1800629	C4A	Whole_Blood	3.17303979038269e-23	TNF/HLA region eQTL multi-cell support	Strong (Multi-source)
+rs2736340	FAM167A	Whole_Blood	8.71714496394121e-79	Significant eQTL for BLK/FAM167A in B cells, NK cells. SLE-associated in DICE.	Strong (Multi-source)
+rs3807306	IRF5	Whole_Blood	1.71361503878279e-84	Strong IRF5 eQTL support in various immune subsets (literature)	Strong (Multi-source)
+rs71557334	BTN3A2	Whole_Blood	2.30365428586788e-171	Significant eQTL for BTN3A2 in NK cells, T cells, B cells	Strong (Multi-source)
+rs1233478	HCP5B	Whole_Blood	5.1388268370009e-15	No record in DICE blood dataset	Moderate (GTEx)
+rs3925075	ITGAX	Whole_Blood	2.50749981922808e-21	No record in DICE blood dataset	Moderate (GTEx)
+rs4843868	IRF8	Cells_EBV-transformed_lymphocytes	4.34031618043818e-06	Significant IRF8 eQTL in T-cell subsets	Moderate (GTEx)
+rs13019891	N/A (No immune tissue eQTL)			STAT4 eQTL support in literature	Moderate (DICE)
+rs1422673	TNIP1	Whole_Blood	0.000111587702415741	TNIP1 eQTL support in literature	Moderate (DICE)

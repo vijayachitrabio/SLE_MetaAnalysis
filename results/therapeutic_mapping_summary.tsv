@@ -1,0 +1,23 @@
+Locus_SNP	Lead_Gene	Functional_Evidence	Therapeutic_Pathway	Relevant_Drug_Class	Specific_Therapeutic_Link
+rs13019891	STAT4	Strong (DICE/Literature)	Type I Interferon Signaling	JAK-STAT Inhibitors / Anti-IFNAR	Anifrolumab (Downstream effect)
+rs3807306	IRF5	Strong (Coloc/DICE)	Type I Interferon Production	Anti-IFNAR / IFN Pathway	Anifrolumab (Main regulator)
+rs1800629	C4A / TNF	Strong (Coloc)	Complement Cascade / Inflammation	Complement Inhibitors / Anti-TNF	C5 inhibitors (e.g. Eculizumab), Belimumab
+rs2736340	BLK / FAM167A	Strong (Coloc/DICE)	B-cell Signaling & Survival	Anti-BAFF / B-cell focused	Belimumab (Functional pathway)
+rs71557334	BTN3A2	Strong (Coloc)	T-cell Activation / Butyrophilins	Immune Modulators	N/A (Novel target)
+rs1612904	HLA-DQA2 / DRB6	Strong (Coloc)	Antigen Presentation (MHC-II)	General Immunosuppression	Corticosteroids / Cyclophosphamide
+rs1422673	TNIP1	Moderate (DICE)	NF-kB Signaling Inhibition	Anti-Cytokine / NF-kB focus	Glucocorticoids (Pathway link)
+rs3925075	ITGAX	Moderate (GTEx)	Complement Receptor Signaling	Complement Pathway	Complement Inhibitors (Receptor target)
+rs4843868	IRF8	Moderate (GTEx)	Interferon / Myeloid Differentiation	Type I Interferon Pathway	Anifrolumab (Pathway link)
+rs1233478	HCP5B	Moderate (GTEx)	MHC Regulation	MHC-related	N/A
+rs7582694	STAT4	Inferred (Location)	Type I Interferon Signaling	JAK-STAT Inhibitors	Anifrolumab (Downstream effect)
+rs7823055	BLK	Inferred (Location)	B-cell Signaling	Anti-BAFF	Belimumab (Pathway link)
+rs200484	HLA-upstream	Suggestive	Antigen Presentation	MHC-related	N/A
+
+# --- Methodology Summary: Therapeutic Mapping ---
+# 1. Prioritization: Lead risk genes were prioritized based on functional genomic evidence
+# (Strong/Moderate eQTL colocalisation in GTEx v10 and DICE immune cell datasets).
+# 2. Database Integration: Lead genes were cross-referenced with the Open Targets
+# Platform (v22.12) to identify approved therapies and drug classes.
+# 3. Pathway Mapping: Regulatory genes (e.g., IRF5, STAT4) were mapped to therapeutic
+# mechanisms including Type I Interferon signaling (targeted by Anifrolumab) and 
+# B-cell survival pathways (targeted by Belimumab).
