@@ -1,45 +1,58 @@
 digraph SLE_Publication_Pipeline {
     // --- Global Aesthetics (Optimized for Publication) ---
-    graph [rankdir=TB, nodesep=0.5, ranksep=0.7, fontname="Arial", 
-           labeljust="c", labelloc="t", compound=true, penwidth=0.8];
-    node [fontname="Arial", fontsize=11, style="filled,rounded", shape=box, margin="0.2,0.1", penwidth=1.2];
-    edge [color="#444444", arrowhead=vee, arrowsize=1.0, penwidth=1.0];
+    graph [rankdir=TB, nodesep=0.6, ranksep=0.9, fontname="Helvetica", 
+           labeljust="c", labelloc="t", compound=true, penwidth=0.5, size="11,9"];
+    node [fontname="Helvetica", fontsize=10, style="filled,rounded", shape=box, margin="0.15,0.08", penwidth=0.8];
+    edge [color="#666666", arrowhead=vee, arrowsize=0.8, penwidth=1.2];
 
-    // --- Stage 1: Discovery Phase (Northern Europe) ---
+    // --- Stage 1: Discovery Phase ---
     subgraph cluster_1 {
-        label = "Stage 1: Discovery Phase (Northern/North-Eastern)";
-        labeljust="c"; labelloc="t"; fontname="Arial Bold"; fontsize=14;
-        color="#88CCEE"; style="rounded,filled"; fillcolor="#F2F9FF"; margin=25;
+        label = "Stage 1: Discovery Meta-Analysis";
+        labeljust="c"; labelloc="t"; fontname="Helvetica Bold"; fontsize=12;
+        color="#4477AA"; style="rounded,filled"; fillcolor="#EEF4FA"; margin=18;
 
-        discovery [label="Discovery Meta-Analysis (IVW Fixed-Effects)\nBentham (N=4,036 cases) + FinnGen R12 (N=1,306 cases)\nTotal Cases: ~5,342", fillcolor="#FFFFFF", color="#88CCEE", fontname="Arial Bold"];
+        bentham [label="Bentham et al. 2015\nN=4,036 cases\nN=6,979 controls", 
+                 fillcolor="#FFFFFF", color="#4477AA", style="rounded"];
+        finngen [label="FinnGen R12\nN=1,306 cases\nN=19,033 controls", 
+                 fillcolor="#FFFFFF", color="#4477AA", style="rounded"];
+        meta [label="IVW Fixed-Effects\nMeta-Analysis\nP < 5×10⁻⁸", 
+              fillcolor="#D4E5F7", color="#4477AA", fontname="Helvetica Bold"];
+        
+        bentham -> meta;
+        finngen -> meta;
     }
 
-    // --- Stage 2: Independent Validation (Southern Europe) ---
+    // --- Stage 2: Independent Validation ---
     subgraph cluster_2 {
         label = "Stage 2: Independent Geographic Validation";
-        labeljust="c"; labelloc="t"; fontname="Arial Bold"; fontsize=14;
-        color="#AA4499"; style="rounded,filled"; fillcolor="#FAF4FA"; margin=25;
+        labeljust="c"; labelloc="t"; fontname="Helvetica Bold"; fontsize=12;
+        color="#EE6677"; style="rounded,filled"; fillcolor="#FEF0EF"; margin=18;
 
-        replication [label="Southern European Replication (Spanish Only)\nCases: 907 | Controls: 1,558\nIndependent Validation Target", fillcolor="#FFFFFF", color="#AA4499", fontname="Arial Bold"];
+        spanish [label="Julià et al. 2018\n(Spanish Cohort)\nN=907 cases\nN=1,558 controls", 
+                 fillcolor="#FFFFFF", color="#EE6677", fontname="Helvetica Bold"];
+        validation [label="Replication\nP < 0.05 (one-sided)\nOR consistency check", 
+                   fillcolor="#FCD5CE", color="#EE6677", fontname="Helvetica Bold"];
+        
+        spanish -> validation;
     }
 
     // --- Stage 3: Functional & Clinical Translation ---
     subgraph cluster_3 {
-        label = "Stage 3: Biology & Clinical Translation";
-        labeljust="c"; labelloc="t"; fontname="Arial Bold"; fontsize=14;
-        color="#CC6677"; style="rounded,filled"; fillcolor="#FFF4F4"; margin=25;
+        label = "Stage 3: Functional & Clinical Translation";
+        labeljust="c"; labelloc="t"; fontname="Helvetica Bold"; fontsize=12;
+        color="#66CCEE"; style="rounded,filled"; fillcolor="#F0F9FA"; margin=18;
 
-        enrich  [label="Pathway Enrichment (fgsea / gProfiler)\nNES-based Biological Theme Mapping", fillcolor="#FFFFFF", color="#CC6677"];
-        eqtl    [label="Functional Evidence (GTEx v8/v10)\nImmune-tissue cis-eQTL mapping",    fillcolor="#FFFFFF", color="#CC6677"];
-        ppi     [label="Protein Interaction Network (STRING-DB)\nGene Core Connectivity Analysis", fillcolor="#FFFFFF", color="#CC6677"];
-        drug    [label="Therapeutic Prioritization\nDrug-Target Mapping",       fillcolor="#FFFFFF", color="#882255", fontname="Arial Bold"];
+        enrich  [label="Pathway Enrichment\ngProfiler + fgsea\nGO:BP, KEGG, Reactome", fillcolor="#FFFFFF", color="#66CCEE"];
+        eqtl    [label="eQTL Analysis\nGTEx v8\nBlood, Spleen, Lymphocytes", fillcolor="#FFFFFF", color="#66CCEE"];
+        ppi     [label="PPI Network\nSTRING-DB\nConfidence > 0.4", fillcolor="#FFFFFF", color="#66CCEE"];
+        drug    [label="Therapeutic Mapping\nDrugBank + OpenTargets\nFDA-approved drugs", fillcolor="#BBE1F0", color="#33BBEE", fontname="Helvetica Bold"];
     }
 
     // --- Flow Logic ---
-    discovery -> replication [label=" 57 Independent\n Signals Identified"];
-    replication -> enrich [label=" 26 Replicated Loci"];
-    replication -> eqtl;
-    replication -> ppi;
+    meta -> validation [label="57 independent\nloci (clumping)", fontname="Helvetica", fontsize=9];
+    validation -> enrich [label="26 replicated\nloci", fontname="Helvetica", fontsize=9];
+    validation -> eqtl;
+    validation -> ppi;
 
     enrich  -> drug;
     eqtl    -> drug;
