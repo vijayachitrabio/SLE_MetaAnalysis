@@ -16,3 +16,7 @@ results/sle_meta_analysis_results.tsv
 
 # Local Manuscript Documentation
 manuscript_sle_meta_analysis.md
+*.tsv.gz
+results/discovery_meta_results.tsv
+results/sle_meta_analysis_results.tsv
+GWAS_SLE_summaryStats/

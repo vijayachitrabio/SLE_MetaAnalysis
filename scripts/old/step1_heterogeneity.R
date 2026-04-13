@@ -13,29 +13,56 @@ cat("=== STEP 1: Heterogeneity, Forest Plots, Per-Cohort Consistency, Leave-One-
 process_gwas <- function(file_path, name) {
   cat("Loading", name, "...\n")
   dt <- fread(file_path)
-  if ("hm_rsid" %in% names(dt)) setnames(dt, "hm_rsid", "SNP")
-  else if ("rsid" %in% names(dt)) setnames(dt, "rsid", "SNP")
-  if ("hm_chrom" %in% names(dt)) setnames(dt, "hm_chrom", "CHR")
-  else if ("chromosome" %in% names(dt)) setnames(dt, "chromosome", "CHR")
-  if ("hm_pos" %in% names(dt)) setnames(dt, "hm_pos", "BP")
-  else if ("base_pair_location" %in% names(dt)) setnames(dt, "base_pair_location", "BP")
+  
+  if ("hm_rsid" %in% names(dt)) {
+    setnames(dt, old = "hm_rsid", new = "SNP")
+  } else if ("rsid" %in% names(dt)) {
+    setnames(dt, old = "rsid", new = "SNP")
+  } else if ("variant_id" %in% names(dt)) {
+    setnames(dt, old = "variant_id", new = "SNP")
+  }
+  
+  if("hm_chrom" %in% names(dt)){ setnames(dt, old="hm_chrom", new="CHR") }
+  else if("chromosome" %in% names(dt)){ setnames(dt, old="chromosome", new="CHR") }
+  
+  if("hm_pos" %in% names(dt)){ setnames(dt, old="hm_pos", new="BP") }
+  else if("base_pair_location" %in% names(dt)){ setnames(dt, old="base_pair_location", new="BP") }
+  
   if ("hm_other_allele" %in% names(dt)) setnames(dt, "hm_other_allele", "A1")
   else if ("other_allele" %in% names(dt)) setnames(dt, "other_allele", "A1")
+  else if ("AlleleB" %in% names(dt)) setnames(dt, "AlleleB", "A1")
+  
   if ("hm_effect_allele" %in% names(dt)) setnames(dt, "hm_effect_allele", "A2")
   else if ("effect_allele" %in% names(dt)) setnames(dt, "effect_allele", "A2")
+  else if ("A1leleA" %in% names(dt)) setnames(dt, "A1leleA", "A2")
+  
   if ("hm_beta" %in% names(dt)) setnames(dt, "hm_beta", "BETA", skip_absent=TRUE)
   if ("beta" %in% names(dt) && !"BETA" %in% names(dt)) setnames(dt, "beta", "BETA", skip_absent=TRUE)
   if ("hm_odds_ratio" %in% names(dt) && !"BETA" %in% names(dt)) dt[, BETA := log(hm_odds_ratio)]
   if ("odds_ratio" %in% names(dt) && !"BETA" %in% names(dt)) dt[, BETA := log(odds_ratio)]
+  if ("OR" %in% names(dt) && !"BETA" %in% names(dt)) dt[, BETA := log(OR)]
+  
   if ("standard_error" %in% names(dt)) setnames(dt, "standard_error", "SE", skip_absent=TRUE)
   if ("p_value" %in% names(dt)) setnames(dt, "p_value", "P", skip_absent=TRUE)
-  req <- c("SNP","CHR","BP","A1","A2","BETA","SE","P")
-  present <- intersect(req, names(dt))
-  dt <- dt[, ..present]
+  if ("P" %in% names(dt) & !"P" %in% names(dt)) setnames(dt, "P", "P", skip_absent=TRUE)
+
+  req_cols <- c("SNP", "CHR", "BP", "A1", "A2", "BETA", "SE", "P")
+  present_cols <- intersect(req_cols, names(dt))
+  missing_cols <- setdiff(req_cols, present_cols)
+  
+  if(length(missing_cols) > 0){
+     if ("SE" %in% missing_cols && "P" %in% names(dt) && "BETA" %in% names(dt)) {
+         dt[, SE := abs(BETA) / qnorm(1 - P/2)]
+         present_cols <- c(present_cols, "SE")
+     }
+  }
+
+  dt <- dt[, ..present_cols]
   dt[, CHR := as.numeric(gsub("chr","",as.character(CHR),ignore.case=TRUE))]
   dt <- dt[CHR %in% 1:22]
   dt[, A1 := toupper(A1)]; dt[, A2 := toupper(A2)]
   dt <- dt[!is.na(P) & !is.na(SE) & !is.na(BETA)]
+  
   # GC correction
   lambda <- median(qchisq(1-dt$P,1),na.rm=TRUE)/qchisq(0.5,1)
   cat("  Lambda:", round(lambda,3), "\n")
@@ -47,7 +74,7 @@ process_gwas <- function(file_path, name) {
 }
 
 dt_bentham <- process_gwas(file.path(RAW_DIR,"Bentham_2015_SLE.h.tsv.gz"), "Bentham")
-dt_julia   <- process_gwas(file.path(RAW_DIR,"Julia_2018_SLE.h.tsv.gz"),   "Julià")
+dt_julia   <- process_gwas(file.path(RAW_DIR,"Julia_2018_Spain_Only.txt"), "Julià")
 # Yin 2022 (East Asian) excluded — European-ancestry analysis only
 
 # Load lead SNPs
