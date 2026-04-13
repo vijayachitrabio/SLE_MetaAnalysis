@@ -74,13 +74,13 @@ All input GWAS summary statistics are publicly available from the sources below.
 | Cohort | Publication | Cases | Controls | Download |
 | :--- | :--- | :---: | :---: | :--- |
 | **Bentham 2015** | Bentham J. et al. *Nat Genet* 2015 | 4,036 | 6,959 | [GWAS Catalog GCST003156](https://www.ebi.ac.uk/gwas/studies/GCST003156) → Harmonised data via [Open GWAS](https://gwas.mrcieu.ac.uk/datasets/ieu-a-293/) |
-| **FinnGen R12** | FinnGen Consortium | 1,306 | 418,172 | [FinnGen R12 Browser — M13_SLE](https://r12.finngen.fi/pheno/M13_SLE) → Direct download: `gs://finngen-public-data-r12/summary_stats/finngen_R12_M13_SLE.gz` |
+| **FinnGen R12** | FinnGen Consortium | 1,306 | 418,172 | Data downloaded from [FinnGen R12 results](https://www.finngen.fi/en/access_results) (phenocode: `M13_SLE`) · Direct GCS download: `gs://finngen-public-data-r12/summary_stats/finngen_R12_M13_SLE.gz` |
 
 ### Validation Cohort
 
 | Cohort | Publication | Cases | Controls | Download |
 | :--- | :--- | :---: | :---: | :--- |
-| **Julià 2018 – Spanish only** | Julià A. et al. *Ann Rheum Dis* 2018 | 907 | 1,558 | [GWAS Catalog GCST006093](https://www.ebi.ac.uk/gwas/studies/GCST006093) · Author data: [http://urr.cat/data/GWAS_SLE_summaryStats.zip](http://urr.cat/data/GWAS_SLE_summaryStats.zip) |
+| **Julià 2018 – Spanish only** | Julià A. et al. *Ann Rheum Dis* 2018 · [doi:10.1136/annrheumdis-2018-213388](https://doi.org/10.1136/annrheumdis-2018-213388) | 907 | 1,558 | Available from authors upon request (see paper). Author-hosted data: [http://urr.cat/data/GWAS_SLE_summaryStats.zip](http://urr.cat/data/GWAS_SLE_summaryStats.zip) |
 
 > **Note**: Use only the Spanish-only subset from the Julià dataset. The full multi-cohort file overlaps with Bentham and must not be used for replication.
 
