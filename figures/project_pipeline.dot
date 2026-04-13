@@ -1,21 +1,22 @@
 digraph SLE_Publication_Pipeline {
-    // --- Global Aesthetics (Optimized for Publication) ---
-    graph [rankdir=TB, nodesep=0.6, ranksep=0.9, fontname="Helvetica", 
-           labeljust="c", labelloc="t", compound=true, penwidth=0.5, size="11,9"];
-    node [fontname="Helvetica", fontsize=10, style="filled,rounded", shape=box, margin="0.15,0.08", penwidth=0.8];
-    edge [color="#666666", arrowhead=vee, arrowsize=0.8, penwidth=1.2];
+    // --- Global Aesthetics ---
+    graph [rankdir=TB, nodesep=0.8, ranksep=1.2, fontname="Helvetica", 
+           labeljust="c", labelloc="t", compound=true, size="12,11"];
+    node [fontname="Helvetica", fontsize=10, style="filled,rounded", shape=box, margin="0.15,0.08", penwidth=1];
+    edge [color="#666666", arrowhead=vee, arrowsize=0.8, penwidth=1.5];
 
     // --- Stage 1: Discovery Phase ---
     subgraph cluster_1 {
         label = "Stage 1: Discovery Meta-Analysis";
-        labeljust="c"; labelloc="t"; fontname="Helvetica Bold"; fontsize=12;
-        color="#4477AA"; style="rounded,filled"; fillcolor="#EEF4FA"; margin=18;
+        labeljust="c"; labelloc="t"; fontname="Helvetica Bold"; fontsize=13;
+        color="#4477AA"; style="solid,filled"; fillcolor="#EEF4FA"; margin=25;
+        penwidth=3;
 
         bentham [label="Bentham et al. 2015\nN=4,036 cases\nN=6,979 controls", 
-                 fillcolor="#FFFFFF", color="#4477AA", style="rounded"];
+                 fillcolor="#FFFFFF", color="#4477AA"];
         finngen [label="FinnGen R12\nN=1,306 cases\nN=19,033 controls", 
-                 fillcolor="#FFFFFF", color="#4477AA", style="rounded"];
-        meta [label="IVW Fixed-Effects\nMeta-Analysis\nP < 5×10⁻⁸", 
+                 fillcolor="#FFFFFF", color="#4477AA"];
+        meta [label="IVW Fixed-Effects\nMeta-Analysis\nP < 5x10-8", 
               fillcolor="#D4E5F7", color="#4477AA", fontname="Helvetica Bold"];
         
         bentham -> meta;
@@ -24,23 +25,25 @@ digraph SLE_Publication_Pipeline {
 
     // --- Stage 2: Independent Validation ---
     subgraph cluster_2 {
-        label = "Stage 2: Independent Geographic Validation";
-        labeljust="c"; labelloc="t"; fontname="Helvetica Bold"; fontsize=12;
-        color="#EE6677"; style="rounded,filled"; fillcolor="#FEF0EF"; margin=18;
+        label = "Stage 2: Independent\n Validation";
+        labeljust="c"; labelloc="t"; fontname="Helvetica Bold"; fontsize=13;
+        color="#EE6677"; style="solid,filled"; fillcolor="#FEF0EF"; margin=25;
+        penwidth=3;
 
-        spanish [label="Julià et al. 2018\n(Spanish Cohort)\nN=907 cases\nN=1,558 controls", 
-                 fillcolor="#FFFFFF", color="#EE6677", fontname="Helvetica Bold"];
+        spanish [label="Julio et al. 2018\n(Spanish Cohort)\nN=907 cases\nN=1,558 controls", 
+                 fillcolor="#FFFFFF", color="#EE6677"];
         validation [label="Replication\nP < 0.05 (one-sided)\nOR consistency check", 
-                   fillcolor="#FCD5CE", color="#EE6677", fontname="Helvetica Bold"];
+                    fillcolor="#FCD5CE", color="#EE6677", fontname="Helvetica Bold"];
         
         spanish -> validation;
     }
 
     // --- Stage 3: Functional & Clinical Translation ---
     subgraph cluster_3 {
-        label = "Stage 3: Functional & Clinical Translation";
-        labeljust="c"; labelloc="t"; fontname="Helvetica Bold"; fontsize=12;
-        color="#66CCEE"; style="rounded,filled"; fillcolor="#F0F9FA"; margin=18;
+        label = "Stage 3: Functional & \n Clinical Translation";
+        labeljust="c"; labelloc="t"; fontname="Helvetica Bold"; fontsize=13;
+        color="#66CCEE"; style="solid,filled"; fillcolor="#F0F9FA"; margin=25;
+        penwidth=3;
 
         enrich  [label="Pathway Enrichment\ngProfiler + fgsea\nGO:BP, KEGG, Reactome", fillcolor="#FFFFFF", color="#66CCEE"];
         eqtl    [label="eQTL Analysis\nGTEx v8\nBlood, Spleen, Lymphocytes", fillcolor="#FFFFFF", color="#66CCEE"];
@@ -49,8 +52,8 @@ digraph SLE_Publication_Pipeline {
     }
 
     // --- Flow Logic ---
-    meta -> validation [label="57 independent\nloci (clumping)", fontname="Helvetica", fontsize=9];
-    validation -> enrich [label="26 replicated\nloci", fontname="Helvetica", fontsize=9];
+    meta -> validation [label="57 independent loci (clumping)", fontname="Helvetica", fontsize=9];
+    validation -> enrich [label="26 replicated loci", fontname="Helvetica", fontsize=9];
     validation -> eqtl;
     validation -> ppi;
 
