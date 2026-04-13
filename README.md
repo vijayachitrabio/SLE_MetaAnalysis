@@ -80,7 +80,7 @@ All input GWAS summary statistics are publicly available from the sources below.
 
 | Cohort | Publication | Cases | Controls | Download |
 | :--- | :--- | :---: | :---: | :--- |
-| **Julià 2018 – Spanish only** | Julià A. et al. *Ann Rheum Dis* 2018 · [doi:10.1136/annrheumdis-2018-213388](https://doi.org/10.1136/annrheumdis-2018-213388) | 907 | 1,558 | Available from authors upon request (see paper). Author-hosted data: [http://urr.cat/data/GWAS_SLE_summaryStats.zip](http://urr.cat/data/GWAS_SLE_summaryStats.zip) |
+| **Julià 2018 – Spanish only** | Julià A. et al. *Ann Rheum Dis* 2018 · [doi:10.1136/annrheumdis-2018-213388](https://doi.org/10.1136/annrheumdis-2018-213388) | 907 | 1,558 | Available as supplementary data from the published paper · Direct download: [http://urr.cat/data/GWAS_SLE_summaryStats.zip](http://urr.cat/data/GWAS_SLE_summaryStats.zip) |
 
 > **Note**: Use only the Spanish-only subset from the Julià dataset. The full multi-cohort file overlaps with Bentham and must not be used for replication.
 
