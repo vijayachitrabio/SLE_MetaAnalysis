@@ -46,7 +46,7 @@ Our analysis identified five loci with **Strong** multi-source functional eviden
 - **Julià et al. (2018)**: *Genome-wide association study identifies novel SLE risk loci.*
 **Independent Replication (European Ancestry):**
 - **FinnGen Release 12**: Systemic Lupus Erythematosus (Phenocode: `L12_LUPUS`).
-    - *Cases: ~850 | Controls: ~418,000*
+    - *Cases: ~850 | Controls: ~465673*
     - [FinnGen R12 Phenotype Page](https://r12.finngen.fi/pheno/L12_LUPUS)
 
 
