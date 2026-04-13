@@ -4,7 +4,7 @@ This repository contains the complete analytical pipeline and manuscript-quality
 
 ## 1. Project Overview
 
-### High-Impact Study Design: "North-to-South" Validation
+###  Study Design: "North-to-South" Validation
 The core novelty of this work lies in its continental genetic validation strategy. We leverage high-powered datasets from Northern/North-Eastern Europe for discovery, and an independent Southern European cohort for validation to characterize the stability of SLE genetic architecture across the European continent.
 
 ### 2. Analytical Statistics
