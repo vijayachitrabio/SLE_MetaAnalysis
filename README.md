@@ -43,7 +43,7 @@ Our analysis identified five loci with **Strong** multi-source functional eviden
 
 **Discovery Meta-Analysis (European Ancestry):**
 - **Bentham et al. (2015)**: *Genetic association study of systemic lupus erythematosus.* [GCST003156](https://www.ebi.ac.uk/gwas/studies/GCST003156)
-- **Julià et al. (2018)**: *Genome-wide association study identifies novel SLE risk loci.*
+- **Julià et al. (2018)**: *Genome-wide association study identifies novel SLE risk loci.* http://urr.cat/data/GWAS_SLE_summaryStats.zip
 **Independent Replication (European Ancestry):**
 - **FinnGen Release 12**: Systemic Lupus Erythematosus (Phenocode: `L12_LUPUS`).
     - *Cases: ~850 | Controls: ~465673*
