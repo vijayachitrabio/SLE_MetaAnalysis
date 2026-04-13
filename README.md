@@ -64,4 +64,35 @@ Scripts are intended to be run sequentially from the project root:
 ```
 
 ---
+
+## 6. Data Sources & Availability
+
+All input GWAS summary statistics are publicly available from the sources below. **Raw data files are not stored in this repository** (file size limits); download them directly to `data/raw/` before running the pipeline.
+
+### Discovery Cohorts
+
+| Cohort | Publication | Cases | Controls | Download |
+| :--- | :--- | :---: | :---: | :--- |
+| **Bentham 2015** | Bentham J. et al. *Nat Genet* 2015 | 4,036 | 6,959 | [GWAS Catalog GCST003156](https://www.ebi.ac.uk/gwas/studies/GCST003156) → Harmonised data via [Open GWAS](https://gwas.mrcieu.ac.uk/datasets/ieu-a-293/) |
+| **FinnGen R12** | FinnGen Consortium | 1,306 | 418,172 | [FinnGen R12 Browser — M13_SLE](https://r12.finngen.fi/pheno/M13_SLE) → Direct download: `gs://finngen-public-data-r12/summary_stats/finngen_R12_M13_SLE.gz` |
+
+### Validation Cohort
+
+| Cohort | Publication | Cases | Controls | Download |
+| :--- | :--- | :---: | :---: | :--- |
+| **Julià 2018 – Spanish only** | Julià A. et al. *Ann Rheum Dis* 2018 | 907 | 1,558 | [GWAS Catalog GCST006093](https://www.ebi.ac.uk/gwas/studies/GCST006093) · Author data: [http://urr.cat/data/GWAS_SLE_summaryStats.zip](http://urr.cat/data/GWAS_SLE_summaryStats.zip) |
+
+> **Note**: Use only the Spanish-only subset from the Julià dataset. The full multi-cohort file overlaps with Bentham and must not be used for replication.
+
+### Additional Databases Used
+
+| Resource | Use | Link |
+| :--- | :--- | :--- |
+| **EBI GWAS Catalog** | Novelty verification (31 novel loci) | [https://www.ebi.ac.uk/gwas/](https://www.ebi.ac.uk/gwas/) |
+| **GTEx v8** | Immune-tissue cis-eQTL mapping | [https://gtexportal.org/](https://gtexportal.org/) |
+| **STRING-DB v12** | Protein-protein interaction network | [https://string-db.org/](https://string-db.org/) |
+| **MSigDB / Reactome** | fgsea pathway gene sets | [https://www.gsea-msigdb.org/](https://www.gsea-msigdb.org/) |
+| **Open Targets** | Therapeutic mapping | [https://www.opentargets.org/](https://www.opentargets.org/) |
+
+---
 *Maintained by [vijayachitramodhukur](https://github.com/vijayachitramodhukur)*
