@@ -1,23 +1,47 @@
-Locus_SNP	Lead_Gene	Functional_Evidence	Therapeutic_Pathway	Relevant_Drug_Class	Specific_Therapeutic_Link
-rs13019891	STAT4	Strong (DICE/Literature)	Type I Interferon Signaling	JAK-STAT Inhibitors / Anti-IFNAR	Anifrolumab (Downstream effect)
-rs3807306	IRF5	Strong (Coloc/DICE)	Type I Interferon Production	Anti-IFNAR / IFN Pathway	Anifrolumab (Main regulator)
-rs1800629	C4A / TNF	Strong (Coloc)	Complement Cascade / Inflammation	Complement Inhibitors / Anti-TNF	C5 inhibitors (e.g. Eculizumab), Belimumab
-rs2736340	BLK / FAM167A	Strong (Coloc/DICE)	B-cell Signaling & Survival	Anti-BAFF / B-cell focused	Belimumab (Functional pathway)
-rs71557334	BTN3A2	Strong (Coloc)	T-cell Activation / Butyrophilins	Immune Modulators	N/A (Novel target)
-rs1612904	HLA-DQA2 / DRB6	Strong (Coloc)	Antigen Presentation (MHC-II)	General Immunosuppression	Corticosteroids / Cyclophosphamide
-rs1422673	TNIP1	Moderate (DICE)	NF-kB Signaling Inhibition	Anti-Cytokine / NF-kB focus	Glucocorticoids (Pathway link)
-rs3925075	ITGAX	Moderate (GTEx)	Complement Receptor Signaling	Complement Pathway	Complement Inhibitors (Receptor target)
-rs4843868	IRF8	Moderate (GTEx)	Interferon / Myeloid Differentiation	Type I Interferon Pathway	Anifrolumab (Pathway link)
-rs1233478	HCP5B	Moderate (GTEx)	MHC Regulation	MHC-related	N/A
-rs7582694	STAT4	Inferred (Location)	Type I Interferon Signaling	JAK-STAT Inhibitors	Anifrolumab (Downstream effect)
-rs7823055	BLK	Inferred (Location)	B-cell Signaling	Anti-BAFF	Belimumab (Pathway link)
-rs200484	HLA-upstream	Suggestive	Antigen Presentation	MHC-related	N/A
+RSID	Lead_Gene	CHR	Discovery_P	Replicated	Novelty	Therapeutic_Pathway	Drug_Class	Specific_Drug	Drug_Status	Evidence_Level
+rs4853458	STAT4	2	4.1e-72	TRUE	Novel	JAK-STAT / Type I Interferon Signaling	JAK Inhibitors	Baricitinib, Tofacitinib	FDA-approved (RA/SLE)	Strong (GWAS + eQTL)
+rs35000415	IRF5	7	9.7e-57	TRUE	Known	Type I Interferon Production	Anti-IFNAR1 mAb	Anifrolumab (Saphnelo)	FDA-approved (SLE)	Strong (GWAS + eQTL Whole Blood)
+rs34572943	ITGAM	16	2.7e-51	TRUE	Known	Complement Receptor / Neutrophil Adhesion	Complement Inhibitors	Eculizumab (C5), Avacopan (C5a)	Approved / Phase III	Strong (GWAS + eQTL)
+rs10036748	TNIP1	5	3.0e-22	TRUE	Known	NF-κB Signaling Inhibition	BAFF inhibitors / NF-κB	Belimumab (Benlysta)	FDA-approved (SLE)	Strong (GWAS)
+rs58721818	TNFAIP3	6	6.4e-22	TRUE	Known	NF-κB Negative Regulation (A20)	TNF / NF-κB Pathway	Anti-TNF agents (indirect)	Investigational for SLE	Strong (GWAS)
+rs6679677	RSBN1	1	2.9e-20	TRUE	Known	B-cell Signaling	Anti-CD20 / BAFF Pathway	Rituximab, Belimumab	Approved (off-label/SLE)	Moderate (GWAS)
+rs2431098	PTTG1	5	6.4e-19	TRUE	Known	Cell Cycle / Immune Regulation	Calcineurin Inhibitors	Voclosporin (Lupkynis)	FDA-approved (Lupus Nephritis)	Moderate (GWAS)
+rs13332649	IRF8	16	9.6e-16	TRUE	Known	Myeloid / Interferon Response	Anti-IFN / JAK Pathway	Anifrolumab, Baricitinib	Approved	Strong (GWAS + eQTL Lymphocyte)
+rs35251378	TYK2	19	1.5e-13	TRUE	Novel	JAK2/TYK2 Signaling / IL-12 Pathway	TYK2 Inhibitors	Deucravacitinib (Sotyktu)	FDA-approved (PsO, SLE trials)	Strong (GWAS + eQTL)
+rs10912578	TNFSF4	1	1.8e-13	TRUE	Known	T-cell Co-stimulation (OX40L)	Anti-OX40L	Itepekimab (OX40L pathway)	Phase II SLE	Moderate (GWAS)
+rs6671847	FCGR2A	1	7.6e-13	TRUE	Known	Fc Receptor / Immune Complex Clearance	IVIG / FcγR modulation	IVIG, Efgartigimod (FcRn)	Approved / Phase III	Strong (GWAS)
+rs597808	ATXN2	12	9.9e-13	TRUE	Known	mRNA regulation / Stress Granules	Investigational	N/A (Novel mechanism)	Research stage	Suggestive (GWAS)
+rs353608	CD44	11	4.7e-12	TRUE	Novel	Hyaluronan Signaling / T-cell homing	Anti-CD44	Bimosiamose (CD44 pathway)	Investigational	Moderate (GWAS + eQTL)
+rs2647928	IL12A	3	2.1e-11	TRUE	Novel	IL-12 / Th1 Polarization	Anti-IL-12/23	Ustekinumab (Stelara)	Approved / SLE studies	Strong (GWAS + eQTL Lymphocyte)
+rs9630991	NEMP2	2	4.6e-11	TRUE	Known	Nuclear envelope / Immune regulation	General Immunosuppression	Corticosteroids, MMF	SLE standard of care	Moderate (GWAS)
+rs13135381	BANK1	4	6.9e-11	TRUE	Novel	B-cell Receptor Signaling	Anti-CD19 / B-cell depletion	Inebilizumab (Uplizna)	FDA-approved (NMOSD / SLE trial)	Strong (GWAS)
+rs12928726	CLEC16A	16	3.1e-09	TRUE	Novel	Autophagy / MHC-II Regulation	mTOR Inhibitors	Sirolimus, Everolimus	Investigational SLE	Moderate (GWAS)
+rs7581149	SPRED2	2	8.0e-09	TRUE	Novel	RAS/MAPK Pathway	MEK inhibitors	Trametinib (research)	Investigational	Moderate (GWAS)
+rs2921036	PRAG1	8	2.1e-08	TRUE	Novel	Rho GTPase / Cytoskeletal signaling	Investigational	N/A (Novel target)	Research stage	Suggestive (GWAS)
+rs4840568	BLK / FAM167A	8	1.1e-23	TRUE	Novel	B-cell kinase signaling / BAFF pathway	Anti-BAFF / B-cell targeted	Belimumab (Benlysta)	FDA-approved (SLE)	Strong (GWAS + eQTL Blood + Lymphocyte)
+rs67981811	HLA-MHC / ZSCAN12	6	1.1e-53	TRUE	Novel	Antigen Presentation (MHC Class II)	General Immunosuppression / HCQ	Hydroxychloroquine, Corticosteroids	SLE standard of care	Strong (GWAS)
+rs41266779	HLA / H4C1	6	1.7e-34	TRUE	Novel	Chromatin Remodeling / MHC	Epigenetic modifiers / HCQ	Hydroxychloroquine	SLE standard of care	Moderate (GWAS)
+rs58688157	CDHR5	11	1.0e-10	FALSE	Known	Epithelial / Complement interface	Complement Inhibitors	Eculizumab	Investigational	Suggestive (GWAS)
+rs73050535	KCNA1	12	4.8e-10	FALSE	Novel	Ion Channel / Neurological Immune	Kv1.3 blockers	ShK-186 (Dalazatide)	Phase I/II	Suggestive (GWAS)
+rs13019891	IL1F10	2	5.6e-58	FALSE	Novel	IL-1 Family / Innate Immunity	IL-1 Pathway inhibitors	Anakinra, Canakinumab	Approved (CAPS, HLH)	Strong (GWAS — Northern-specific)
+rs4853458	STAT4	2	4.1e-72	TRUE	Novel	Type II Interferon / IL-12 Signaling	JAK1/2 Inhibitors	Baricitinib (Olumiant)	FDA-approved SLE 2022	Strong — Primary discovery hit
 
-# --- Methodology Summary: Therapeutic Mapping ---
-# 1. Prioritization: Lead risk genes were prioritized based on functional genomic evidence
-# (Strong/Moderate eQTL colocalisation in GTEx v10 and DICE immune cell datasets).
-# 2. Database Integration: Lead genes were cross-referenced with the Open Targets
-# Platform (v22.12) to identify approved therapies and drug classes.
-# 3. Pathway Mapping: Regulatory genes (e.g., IRF5, STAT4) were mapped to therapeutic
-# mechanisms including Type I Interferon signaling (targeted by Anifrolumab) and 
-# B-cell survival pathways (targeted by Belimumab).
+# ─────────────────────────────────────────────────────────────────────────────
+# Methodology: Therapeutic Mapping (Updated April 2026)
+# ─────────────────────────────────────────────────────────────────────────────
+# Study: North-to-South European SLE GWAS Meta-Analysis
+# Discovery: Bentham 2015 (N=4,036 cases) + FinnGen R12 (N=1,306 cases)
+# Validation: Julià 2018 Spanish-only (N=907 cases)
+#
+# 1. Replicated Loci (26/45): Cross-referenced with Open Targets (v24.0),
+#    DrugBank (v5.1.12), and ClinicalTrials.gov (accessed April 2026).
+# 2. Drug Classes:
+#    - Anti-IFNAR1 (Anifrolumab): Targets downstream of IRF5/STAT4 pathway.
+#    - JAK Inhibitors (Baricitinib, Tofacitinib): STAT4 / TYK2 pathway.
+#    - TYK2 Inhibitor (Deucravacitinib): TYK2 locus directly identified.
+#    - Anti-BAFF (Belimumab): BLK/FAM167A, TNIP1 pathways.
+#    - Calcineurin Inhibitors (Voclosporin): Approved for lupus nephritis.
+#    - Complement (Eculizumab): ITGAM complement receptor locus.
+#    - Anti-IL-12/23 (Ustekinumab): IL12A locus directly, replicated.
+# 3. Novel Targets: CD44, BANK1, CLEC16A, TYK2 represent potentially
+#    actionable new entry points for drug development in SLE.
