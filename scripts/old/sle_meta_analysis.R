@@ -11,7 +11,7 @@ dir.create(RESULTS_DIR, showWarnings = FALSE)
 # Datasets — European-only discovery meta-analysis (2 cohorts)
 datasets <- list(
   Bentham = file.path(RAW_DIR, "Bentham_2015_SLE.h.tsv.gz"),
-  Julia   = file.path(RAW_DIR, "Julia_2018_SLE.h.tsv.gz")
+  Julia   = file.path(RAW_DIR, "Julia_2018_Spain_Only.txt")
 )
 
 # Function to read, clean and align
@@ -41,10 +41,12 @@ process_gwas <- function(file_path, name) {
   # Other allele
   if("hm_other_allele" %in% names(dt)){ setnames(dt, old="hm_other_allele", new="A1") }
   else if("other_allele" %in% names(dt)){ setnames(dt, old="other_allele", new="A1") }
+  else if("AlleleB" %in% names(dt)){ setnames(dt, old="AlleleB", new="A1") }
   
   # Effect allele
   if("hm_effect_allele" %in% names(dt)){ setnames(dt, old="hm_effect_allele", new="A2") }
   else if("effect_allele" %in% names(dt)){ setnames(dt, old="effect_allele", new="A2") }
+  else if("A1leleA" %in% names(dt)){ setnames(dt, old="A1leleA", new="A2") }
   
   # Handle BETA and SE
   if("hm_beta" %in% names(dt)){
@@ -58,6 +60,8 @@ process_gwas <- function(file_path, name) {
       dt[, BETA := log(hm_odds_ratio)]
   } else if ("odds_ratio" %in% names(dt) & !"BETA" %in% names(dt)) {
       dt[, BETA := log(odds_ratio)]
+  } else if ("OR" %in% names(dt) & !"BETA" %in% names(dt)) {
+      dt[, BETA := log(OR)]
   }
   
   if("standard_error" %in% names(dt)) {
@@ -66,6 +70,10 @@ process_gwas <- function(file_path, name) {
   
   if("p_value" %in% names(dt)) {
       setnames(dt, old="p_value", new="P", skip_absent=TRUE)
+  }
+  
+  if("P" %in% names(dt) & !"P" %in% names(dt)){
+       setnames(dt, old="p", new="P", skip_absent=TRUE)
   }
   
   req_cols <- c("SNP", "CHR", "BP", "A1", "A2", "BETA", "SE", "P")
