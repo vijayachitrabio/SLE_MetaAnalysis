@@ -28,6 +28,24 @@ sa1_heterogeneity.pdf
 sa1_heterogeneity.png
 
 # System / IDE
+# Large Data Files (Intermediate)
+results/discovery_meta_results.tsv
+results/sle_meta_analysis_results.tsv
+results/inflation_summary.tsv
+results/lambda_qc_report.tsv
+results/gene_annotation.tsv
+results/heterogeneity_lead_snps.tsv
+results/sle_meta_manhattan.pdf
+results/sle_meta_qq.pdf
+
+# Data & Tools Directory
+data/
+tools/
+references/
+GWAS_SLE_summaryStats/
+.claude/
+s/.DS_Store
+results/.DS_Store
 .DS_Store
 .Rhistory
 .RData
