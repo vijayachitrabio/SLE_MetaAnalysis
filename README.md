@@ -1,10 +1,10 @@
-# Continent-Wide SLE Genetic Architecture: North-to-South European Validation
+# SLE Meta-Analysis: European Ancestry
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-SLE__MetaAnalysis-blue?logo=github)](https://github.com/vijayachitrabio/SLE_MetaAnalysis)
 
 ![GWAS Manhattan Plot](figures/manhattan_plot.png)
 
-This repository contains the complete, audited analytical pipeline for a genome-wide association (GWAS) meta-analysis of **Systemic Lupus Erythematosus (SLE)** across the European continent. Our study leverages a unique "North-to-South" validation strategy to identify stable, high-confidence genetic risk factors for autoimmune disease.
+This repository contains the complete, enhanced analytical pipeline for a genome-wide association (GWAS) meta-analysis of **Systemic Lupus Erythematosus (SLE)** across the European continent. Our study leverages a unique "North-to-South" validation strategy to identify stable, high-confidence genetic risk factors for autoimmune disease.
 
 ---
 
@@ -25,14 +25,14 @@ The repository provides a robust, end-to-end bioinformatics pipeline implemented
 | Module | Scripts | Core Functionality |
 | :--- | :--- | :--- |
 | **Discovery** | `step1` | IVW Fixed-Effects Meta-Analysis (Bentham + FinnGen). |
-| **Validation** | `step2` | Spanish-only cohort replication (N=3,752) & auditing. |
+| **Validation** | `step2` | Spanish-only cohort replication (N=3,752) & improvements. |
 | **Annotation** | `step3-4` | Functional annotation and genomic mapping (GRCh38). |
 | **Visuals** | `step5`, `step14-15` | Manhattan, QQ, Forest, and Top Loci Labeled plots. |
 | **Enrichment** | `step6`, `step10` | fgsea, Reactome, and ImmuneSigDB pathway profiling. |
-| **Sensitivity** | `step8` | Random vs. Fixed effects and HLA-region distance audits. |
+| **Sensitivity** | `step8` | Random vs. Fixed effects and HLA-region distance enhancements. |
 | **eQTL Mapping** | `step9`, `step13` | BioMart-integrated multi-tissue expression profiling (GTEx API). |
 | **Causality** | `step22-24` | **LAVA** regional heritability and **COLOC** colocalization. |
-| **Pleiotropy** | `step26` | Rapid PheWAS audit using the EBI GWAS Catalog v2 API. |
+| **Pleiotropy** | `step26` | Rapid PheWAS profiling using the EBI GWAS Catalog v2 API. |
 
 ---
 
