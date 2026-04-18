@@ -13,8 +13,16 @@ loci <- fread("results/top_loci_summary_table.tsv")
 
 # Top 10 loci for plotting
 top_loci <- loci %>%
-  mutate(Gene_clean = sapply(strsplit(Gene, " / "), function(x) tail(x, 1)),
-         label = paste0(Gene_clean, "\n(", RSID, ")")) %>%
+  mutate(
+    # Handle potentially empty Gene strings
+    Gene_name = ifelse(is.na(Gene) | Gene == "" | Gene == "character(0)", RSID, Gene),
+    Gene_clean = sapply(strsplit(as.character(Gene_name), " / "), function(x) {
+      if(length(x) == 0) return(NA)
+      tail(x, 1)
+    }),
+    Gene_final = ifelse(is.na(Gene_clean), RSID, Gene_clean),
+    label = paste0(Gene_final, "\n(", RSID, ")")
+  ) %>%
   arrange(P_meta) %>%
   head(10)
 

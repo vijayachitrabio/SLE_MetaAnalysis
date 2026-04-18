@@ -75,9 +75,13 @@ results[!is.na(LAVA_P) & LAVA_P < (0.05/nrow(results)) & LAVA_rho > 0, Replicate
 rep_data <- fread("results/sensitivity/SA3_replication_power.tsv")
 results <- merge(results, rep_data[, .(RSID, P_rep)], by = "RSID", all.x = TRUE)
 
-# 5. Add Gene Annotation (placeholder or from previous table)
-prev_table <- fread("results/top_loci_summary_table.tsv", fill=TRUE)
-results <- merge(results, prev_table[, .(RSID, Gene_Annot = Gene, Region)], by = "RSID", all.x = TRUE)
+# 5. Add Gene Annotation from Master Table (Source of Truth)
+master <- fread("results/master_results_table.tsv")
+master_clean <- master[, .(RSID, Master_Gene = coalesce(Effector_Gene, Gene, paste0("Locus_", RSID)), Region_Master = Region)]
+# Filter duplicates and keep first mapping
+master_clean <- master_clean %>% group_by(RSID) %>% slice(1) %>% ungroup()
+
+results <- merge(results, master_clean, by = "RSID", all.x = TRUE)
 
 # 6. Final Clean Table
 final <- results[, .(
@@ -87,8 +91,8 @@ final <- results[, .(
   LAVA_rho,
   LAVA_P,
   P_rep,
-  Gene = Gene_Annot,
-  Region
+  Gene = Master_Gene,
+  Region = Region_Master
 )]
 
 # Save
