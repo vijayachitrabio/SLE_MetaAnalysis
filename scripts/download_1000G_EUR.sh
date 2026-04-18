@@ -1,0 +1,25 @@
+#!/bin/bash
+# scripts/download_1000G_EUR.sh
+# Download 1000 Genomes EUR reference panel for LD clumping
+
+echo "=== Downloading 1000G EUR Reference Panel ==="
+echo ""
+echo "This requires ~50GB disk space."
+echo "Alternative: Use pre-imputed LD reference from:"
+echo "  - UK Biobank LD reference (if available)"
+echo "  - Psychiatric Genomics Consortium LD reference"
+echo ""
+echo "To download 1000G EUR Phase3:"
+echo "1. Go to: https://www.internationalgenome.org/data-portal/download"
+echo "2. Select: Phase3 > EUR > Chromosome 1-22 > GRCh38"
+echo "3. Or use: wget/curl to download from AWS Open Data"
+echo ""
+echo "After download, convert to PLINK format:"
+echo "  plink --bfile 1000G.EUR.QC --make-bed --out 1000G.EUR.QC"
+echo ""
+echo "Files needed:"
+echo "  - 1000G.EUR.QC.bed"
+echo "  - 1000G.EUR.QC.bim"
+echo "  - 1000G.EUR.QC.fam"
+echo "  - 1000G.EUR.QC.snp (variant QC)"
+echo "  - 1000G.EUR.QC.ind (sample QC)"

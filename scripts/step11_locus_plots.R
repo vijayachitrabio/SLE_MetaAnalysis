@@ -14,13 +14,12 @@ FILE_META    <- file.path(DIR_RESULTS, "discovery_meta_results.tsv")
 DIR_FIGS     <- "figures/locus_plots"
 dir.create(DIR_FIGS, showWarnings = FALSE, recursive = TRUE)
 
-# 1. Define Top 5 Loci to Plot
-# Based on discovery P-values and diversity
+# 1. Define Audited High-Confidence Loci to Plot
 loci_to_plot <- data.frame(
-  Gene = c("STAT4", "IRF5", "HLA-MHC", "ITGAM", "TNIP1"),
-  RSID = c("rs4853458", "rs35000415", "rs67981811", "rs34572943", "rs10036748"),
-  CHR  = c(2, 7, 6, 16, 5),
-  BP   = c(191094763, 128945562, 28387058, 31261032, 151078585)
+  Gene = c("CLIC1", "STAT4", "ITGAM", "TNFSF4", "IL12A"),
+  RSID = c("rs389884", "rs4853458", "rs34572943", "rs10912578", "rs2647928"),
+  CHR  = c(6, 2, 16, 1, 3),
+  BP   = c(31973120, 191094763, 31261032, 173282717, 160030028)
 )
 
 cat("=== Generating Regional Locus Plots ===\n")
