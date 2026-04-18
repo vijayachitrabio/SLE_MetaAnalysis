@@ -1,184 +1,400 @@
 source	term_id	term_name	p_value	intersection_size	query_size	log_pval	overlap_ratio	term_clean
-GO:BP	GO:0006952	defense response	0.000145156209148126	15	36	3.83816438221541	41.6666666666667	defense response
-GO:BP	GO:0006955	immune response	0.000366034195811038	15	36	3.43647833985612	41.6666666666667	immune response
-GO:BP	GO:0002376	immune system process	0.000372678652435905	17	36	3.42866548354027	47.2222222222222	immune system process
-GO:BP	GO:0035722	interleukin-12-mediated signaling pathway	0.000372678652435905	3	36	3.42866548354027	8.33333333333333	interleukin-12-mediated signaling pathway
-GO:BP	GO:0071349	cellular response to interleukin-12	0.000406376751565898	3	36	3.39107114559483	8.33333333333333	cellular response to interleukin-12
-GO:BP	GO:0070671	response to interleukin-12	0.000406376751565898	3	36	3.39107114559483	8.33333333333333	response to interleukin-12
-REAC	REAC:R-HSA-8984722	Interleukin-35 Signalling	0.000802551845454571	3	27	3.09552690226573	11.1111111111111	Interleukin-35 Signalling
-GO:BP	GO:0002237	response to molecule of bacterial origin	0.00107333154199638	6	36	2.96926610783911	16.6666666666667	response to molecule of bacterial origin
-GO:BP	GO:0001775	cell activation	0.00200391828771168	10	36	2.69811999134742	27.7777777777778	cell activation
-GO:BP	GO:0043207	response to external biotic stimulus	0.0027603865879618	11	36	2.55903009139078	30.5555555555556	response to external biotic stimulus
-GO:BP	GO:0045087	innate immune response	0.0027603865879618	9	36	2.55903009139078	25	innate immune response
-GO:BP	GO:0045321	leukocyte activation	0.0027603865879618	9	36	2.55903009139078	25	leukocyte activation
-GO:BP	GO:0051707	response to other organism	0.0027603865879618	11	36	2.55903009139078	30.5555555555556	response to other organism
-GO:BP	GO:0071345	cellular response to cytokine stimulus	0.00283407601593948	8	36	2.54758850523171	22.2222222222222	cellular response to cytokine stimulus
-GO:BP	GO:0098542	defense response to other organism	0.00304341640733897	10	36	2.51663862239134	27.7777777777778	defense response to other organism
-GO:BP	GO:0009607	response to biotic stimulus	0.00304341640733897	11	36	2.51663862239134	30.5555555555556	response to biotic stimulus
-GO:BP	GO:0006950	response to stress	0.00304341640733897	18	36	2.51663862239134	50	response to stress
-GO:BP	GO:0019221	cytokine-mediated signaling pathway	0.00316759321284656	7	36	2.49927059626164	19.4444444444444	cytokine-mediated signaling pathway
-GO:BP	GO:0002460	adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains	0.00322135841341524	6	36	2.49196095220333	16.6666666666667	adaptive immune response based on somatic recombinatio...
-REAC	REAC:R-HSA-168256	Immune System	0.00335573525925501	15	27	2.47421230886237	55.5555555555556	Immune System
-GO:BP	GO:0034097	response to cytokine	0.00336810923568095	8	36	2.47261383175548	22.2222222222222	response to cytokine
-GO:BP	GO:0009605	response to external stimulus	0.00336810923568095	13	36	2.47261383175548	36.1111111111111	response to external stimulus
-GO:BP	GO:0009617	response to bacterium	0.00336810923568095	7	36	2.47261383175548	19.4444444444444	response to bacterium
-GO:BP	GO:0044419	biological process involved in interspecies interaction between organisms	0.00336810923568095	11	36	2.47261383175548	30.5555555555556	biological process involved in interspecies interactio...
-GO:BP	GO:0050776	regulation of immune response	0.00336810923568095	9	36	2.47261383175548	25	regulation of immune response
-GO:BP	GO:1901652	response to peptide	0.00336810923568095	8	36	2.47261383175548	22.2222222222222	response to peptide
-GO:BP	GO:0140546	defense response to symbiont	0.00336810923568095	9	36	2.47261383175548	25	defense response to symbiont
-GO:BP	GO:0032496	response to lipopolysaccharide	0.00336810923568095	5	36	2.47261383175548	13.8888888888889	response to lipopolysaccharide
-GO:BP	GO:0001817	regulation of cytokine production	0.00338576440727888	8	36	2.47034326482674	22.2222222222222	regulation of cytokine production
-GO:BP	GO:0032620	interleukin-17 production	0.00338576440727888	3	36	2.47034326482674	8.33333333333333	interleukin-17 production
-GO:BP	GO:0032660	regulation of interleukin-17 production	0.00338576440727888	3	36	2.47034326482674	8.33333333333333	regulation of interleukin-17 production
-GO:BP	GO:0001816	cytokine production	0.00338576440727888	8	36	2.47034326482674	22.2222222222222	cytokine production
-GO:BP	GO:0050778	positive regulation of immune response	0.00356880968391007	8	36	2.44747661131346	22.2222222222222	positive regulation of immune response
-GO:BP	GO:0009615	response to virus	0.00395945324528331	6	36	2.40236478098115	16.6666666666667	response to virus
-GO:BP	GO:0002250	adaptive immune response	0.00480908307046979	6	36	2.31793772100583	16.6666666666667	adaptive immune response
-GO:BP	GO:0002684	positive regulation of immune system process	0.00554402070368252	9	36	2.25617515655673	25	positive regulation of immune system process
-GO:BP	GO:0033993	response to lipid	0.00556477242386474	7	36	2.25455259181098	19.4444444444444	response to lipid
-REAC	REAC:R-HSA-1280215	Cytokine Signaling in Immune system	0.00591435385784136	9	27	2.22809269504317	33.3333333333333	Cytokine Signaling in Immune system
-GO:BP	GO:0051135	positive regulation of NK T cell activation	0.0070868012226984	2	36	2.14954974856992	5.55555555555556	positive regulation of NK T cell activation
-GO:BP	GO:0046635	positive regulation of alpha-beta T cell activation	0.0085462570073135	3	36	2.06822405100165	8.33333333333333	positive regulation of alpha-beta T cell activation
-GO:BP	GO:0046631	alpha-beta T cell activation	0.0085462570073135	4	36	2.06822405100165	11.1111111111111	alpha-beta T cell activation
-GO:BP	GO:0032700	negative regulation of interleukin-17 production	0.00967152433272237	2	36	2.01450507119958	5.55555555555556	negative regulation of interleukin-17 production
-GO:BP	GO:0071396	cellular response to lipid	0.00967152433272237	6	36	2.01450507119958	16.6666666666667	cellular response to lipid
-GO:BP	GO:0071222	cellular response to lipopolysaccharide	0.00967152433272237	4	36	2.01450507119958	11.1111111111111	cellular response to lipopolysaccharide
-GO:BP	GO:0032729	positive regulation of type II interferon production	0.00987267986085759	3	36	2.00556494552594	8.33333333333333	positive regulation of type II interferon production
-GO:BP	GO:0046649	lymphocyte activation	0.00987267986085759	7	36	2.00556494552594	19.4444444444444	lymphocyte activation
-GO:BP	GO:0007165	signal transduction	0.0101493860912406	21	36	1.9935602262483	58.3333333333333	signal transduction
-GO:BP	GO:0006954	inflammatory response	0.0103244127483066	7	36	1.98613464160116	19.4444444444444	inflammatory response
-GO:BP	GO:0051133	regulation of NK T cell activation	0.0103244127483066	2	36	1.98613464160116	5.55555555555556	regulation of NK T cell activation
-GO:BP	GO:0002822	regulation of adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains	0.0103974606424386	4	36	1.98307271489706	11.1111111111111	regulation of adaptive immune response based on somati...
-GO:BP	GO:0071219	cellular response to molecule of bacterial origin	0.0107068210156528	4	36	1.97033945730077	11.1111111111111	cellular response to molecule of bacterial origin
-GO:BP	GO:0002682	regulation of immune system process	0.0108704554587136	10	36	1.96375225912786	27.7777777777778	regulation of immune system process
-GO:BP	GO:0032816	positive regulation of natural killer cell activation	0.0109939828659983	2	36	1.95884494421295	5.55555555555556	positive regulation of natural killer cell activation
-GO:BP	GO:0098586	cellular response to virus	0.0111377856135756	3	36	1.9532011459127	8.33333333333333	cellular response to virus
-REAC	REAC:R-HSA-9020591	Interleukin-12 signaling	0.0118973187006543	3	27	1.92455090455025	11.1111111111111	Interleukin-12 signaling
-REAC	REAC:R-HSA-9020933	Interleukin-23 signaling	0.0118973187006543	2	27	1.92455090455025	7.40740740740741	Interleukin-23 signaling
-GO:BP	GO:0045063	T-helper 1 cell differentiation	0.0123158319188946	2	36	1.90953624679017	5.55555555555556	T-helper 1 cell differentiation
-GO:BP	GO:0002819	regulation of adaptive immune response	0.0132339067216472	4	36	1.87831193077877	11.1111111111111	regulation of adaptive immune response
-REAC	REAC:R-HSA-447115	Interleukin-12 family signaling	0.0149147739603902	3	27	1.82638332416575	11.1111111111111	Interleukin-12 family signaling
-REAC	REAC:R-HSA-8866654	E3 ubiquitin ligases ubiquitinate target proteins	0.0149147739603902	3	27	1.82638332416575	11.1111111111111	E3 ubiquitin ligases ubiquitinate target proteins
-GO:BP	GO:0071216	cellular response to biotic stimulus	0.015192339524481	4	36	1.81837534237577	11.1111111111111	cellular response to biotic stimulus
-GO:BP	GO:0046641	positive regulation of alpha-beta T cell proliferation	0.0153121082358791	2	36	1.81496500968225	5.55555555555556	positive regulation of alpha-beta T cell proliferation
-GO:BP	GO:0001906	cell killing	0.015973049698642	4	36	1.79661215707098	11.1111111111111	cell killing
-GO:BP	GO:1901096	regulation of autophagosome maturation	0.0167215283199437	2	36	1.77672403128786	5.55555555555556	regulation of autophagosome maturation
-GO:BP	GO:0007166	cell surface receptor signaling pathway	0.017625396992249	13	36	1.75386109223152	36.1111111111111	cell surface receptor signaling pathway
-GO:BP	GO:0051132	NK T cell activation	0.018148757424768	2	36	1.74115310407359	5.55555555555556	NK T cell activation
-GO:BP	GO:0048584	positive regulation of response to stimulus	0.0188428450467272	12	36	1.72485352326235	33.3333333333333	positive regulation of response to stimulus
-GO:BP	GO:0042221	response to chemical	0.0188428450467272	14	36	1.72485352326235	38.8888888888889	response to chemical
-GO:BP	GO:0070663	regulation of leukocyte proliferation	0.0188428450467272	4	36	1.72485352326235	11.1111111111111	regulation of leukocyte proliferation
-GO:BP	GO:0051716	cellular response to stimulus	0.0189425915083139	23	36	1.72256060607353	63.8888888888889	cellular response to stimulus
-GO:BP	GO:0007159	leukocyte cell-cell adhesion	0.0189425915083139	5	36	1.72256060607353	13.8888888888889	leukocyte cell-cell adhesion
-GO:BP	GO:0046634	regulation of alpha-beta T cell activation	0.0211326064304902	3	36	1.67504693510243	8.33333333333333	regulation of alpha-beta T cell activation
-GO:BP	GO:0002699	positive regulation of immune effector process	0.0211326064304902	4	36	1.67504693510243	11.1111111111111	positive regulation of immune effector process
-GO:BP	GO:0023052	signaling	0.0211326064304902	21	36	1.67504693510243	58.3333333333333	signaling
-GO:BP	GO:0018108	peptidyl-tyrosine phosphorylation	0.0211326064304902	4	36	1.67504693510243	11.1111111111111	peptidyl-tyrosine phosphorylation
-GO:BP	GO:0032609	type II interferon production	0.0211326064304902	3	36	1.67504693510243	8.33333333333333	type II interferon production
-GO:BP	GO:0032649	regulation of type II interferon production	0.0211326064304902	3	36	1.67504693510243	8.33333333333333	regulation of type II interferon production
-GO:BP	GO:0018212	peptidyl-tyrosine modification	0.0211326064304902	4	36	1.67504693510243	11.1111111111111	peptidyl-tyrosine modification
-GO:BP	GO:0050864	regulation of B cell activation	0.0213851885814835	3	36	1.66988691564161	8.33333333333333	regulation of B cell activation
-GO:BP	GO:0007154	cell communication	0.0214331968227499	21	36	1.66891304785992	58.3333333333333	cell communication
-GO:BP	GO:0009893	positive regulation of metabolic process	0.0214358753063316	15	36	1.66885877793602	41.6666666666667	positive regulation of metabolic process
-GO:BP	GO:0050869	negative regulation of B cell activation	0.0214358753063316	2	36	1.66885877793602	5.55555555555556	negative regulation of B cell activation
-GO:BP	GO:0019222	regulation of metabolic process	0.0218022273416466	22	36	1.66149913608469	61.1111111111111	regulation of metabolic process
-GO:BP	GO:0032814	regulation of natural killer cell activation	0.022543034618763	2	36	1.64698762203108	5.55555555555556	regulation of natural killer cell activation
-GO:BP	GO:0002824	positive regulation of adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains	0.022543034618763	3	36	1.64698762203108	8.33333333333333	positive regulation of adaptive immune response based ...
-GO:BP	GO:0048518	positive regulation of biological process	0.0225558373016905	21	36	1.64674104669731	58.3333333333333	positive regulation of biological process
-GO:BP	GO:0098609	cell-cell adhesion	0.0233114314881182	7	36	1.63243105688259	19.4444444444444	cell-cell adhesion
-GO:BP	GO:0010604	positive regulation of macromolecule metabolic process	0.0233732081289275	14	36	1.63128167369814	38.8888888888889	positive regulation of macromolecule metabolic process
-GO:BP	GO:1901700	response to oxygen-containing compound	0.0234805511180364	8	36	1.62929171386764	22.2222222222222	response to oxygen-containing compound
-GO:BP	GO:0002252	immune effector process	0.0236929975823239	6	36	1.62537998988482	16.6666666666667	immune effector process
-GO:BP	GO:1903039	positive regulation of leukocyte cell-cell adhesion	0.0238573400850189	4	36	1.62237797855309	11.1111111111111	positive regulation of leukocyte cell-cell adhesion
-GO:BP	GO:0043244	regulation of protein-containing complex disassembly	0.0238573400850189	3	36	1.62237797855309	8.33333333333333	regulation of protein-containing complex disassembly
-GO:BP	GO:0009719	response to endogenous stimulus	0.0238674664408112	8	36	1.62219367940853	22.2222222222222	response to endogenous stimulus
-GO:BP	GO:0050671	positive regulation of lymphocyte proliferation	0.0238674664408112	3	36	1.62219367940853	8.33333333333333	positive regulation of lymphocyte proliferation
-GO:BP	GO:0051249	regulation of lymphocyte activation	0.0238674664408112	5	36	1.62219367940853	13.8888888888889	regulation of lymphocyte activation
-GO:BP	GO:0002821	positive regulation of adaptive immune response	0.0238674664408112	3	36	1.62219367940853	8.33333333333333	positive regulation of adaptive immune response
-GO:BP	GO:0045785	positive regulation of cell adhesion	0.0238674664408112	5	36	1.62219367940853	13.8888888888889	positive regulation of cell adhesion
-GO:BP	GO:0032946	positive regulation of mononuclear cell proliferation	0.0242836872952788	3	36	1.61468536823894	8.33333333333333	positive regulation of mononuclear cell proliferation
-GO:BP	GO:0048522	positive regulation of cellular process	0.0246112687000102	20	36	1.60886599803179	55.5555555555556	positive regulation of cellular process
-GO:BP	GO:0048523	negative regulation of cellular process	0.0251550281466324	18	36	1.59937519239427	50	negative regulation of cellular process
-GO:BP	GO:0046640	regulation of alpha-beta T cell proliferation	0.0258077608954892	2	36	1.58824967360091	5.55555555555556	regulation of alpha-beta T cell proliferation
-GO:BP	GO:0001818	negative regulation of cytokine production	0.0258418710672413	4	36	1.58767604467232	11.1111111111111	negative regulation of cytokine production
-GO:BP	GO:0046633	alpha-beta T cell proliferation	0.027176152985391	2	36	1.5658120213145	5.55555555555556	alpha-beta T cell proliferation
-GO:BP	GO:0051250	negative regulation of lymphocyte activation	0.0275149095242797	3	36	1.56043191091645	8.33333333333333	negative regulation of lymphocyte activation
-GO:BP	GO:0070661	leukocyte proliferation	0.0275149095242797	4	36	1.56043191091645	11.1111111111111	leukocyte proliferation
-REAC	REAC:R-HSA-909733	Interferon alpha/beta signaling	0.0276816673013769	3	27	1.5578077553287	11.1111111111111	Interferon alpha/beta signaling
-REAC	REAC:R-HSA-8852135	Protein ubiquitination	0.0276816673013769	3	27	1.5578077553287	11.1111111111111	Protein ubiquitination
-GO:BP	GO:0043516	regulation of DNA damage response, signal transduction by p53 class mediator	0.0282653702222231	2	36	1.54874532174055	5.55555555555556	regulation of DNA damage response, signal transduction...
-GO:BP	GO:0001819	positive regulation of cytokine production	0.0286707814925929	5	36	1.54256046912903	13.8888888888889	positive regulation of cytokine production
-GO:BP	GO:0032479	regulation of type I interferon production	0.0286707814925929	3	36	1.54256046912903	8.33333333333333	regulation of type I interferon production
-GO:BP	GO:0001909	leukocyte mediated cytotoxicity	0.0286707814925929	3	36	1.54256046912903	8.33333333333333	leukocyte mediated cytotoxicity
-GO:BP	GO:0042088	T-helper 1 type immune response	0.0286707814925929	2	36	1.54256046912903	5.55555555555556	T-helper 1 type immune response
-GO:BP	GO:0002705	positive regulation of leukocyte mediated immunity	0.0286707814925929	3	36	1.54256046912903	8.33333333333333	positive regulation of leukocyte mediated immunity
-GO:BP	GO:0050731	positive regulation of peptidyl-tyrosine phosphorylation	0.0286707814925929	3	36	1.54256046912903	8.33333333333333	positive regulation of peptidyl-tyrosine phosphorylation
-GO:BP	GO:0032606	type I interferon production	0.0286707814925929	3	36	1.54256046912903	8.33333333333333	type I interferon production
-GO:BP	GO:1900281	positive regulation of CD4-positive, alpha-beta T cell costimulation	0.0286727487006373	1	36	1.54253067160537	2.77777777777778	positive regulation of CD4-positive, alpha-beta T cell...
-GO:BP	GO:0051638	barbed-end actin filament uncapping	0.0286727487006373	1	36	1.54253067160537	2.77777777777778	barbed-end actin filament uncapping
-GO:BP	GO:0035713	response to nitrogen dioxide	0.0286727487006373	1	36	1.54253067160537	2.77777777777778	response to nitrogen dioxide
-GO:BP	GO:0002273	plasmacytoid dendritic cell differentiation	0.0286727487006373	1	36	1.54253067160537	2.77777777777778	plasmacytoid dendritic cell differentiation
-GO:BP	GO:0002215	defense response to nematode	0.0286727487006373	1	36	1.54253067160537	2.77777777777778	defense response to nematode
-GO:BP	GO:0035708	interleukin-4-dependent isotype switching to IgE isotypes	0.0286727487006373	1	36	1.54253067160537	2.77777777777778	interleukin-4-dependent isotype switching to IgE isotypes
-GO:BP	GO:0001922	B-1 B cell homeostasis	0.0286727487006373	1	36	1.54253067160537	2.77777777777778	B-1 B cell homeostasis
-GO:BP	GO:2000571	regulation of interleukin-4-dependent isotype switching to IgE isotypes	0.0286727487006373	1	36	1.54253067160537	2.77777777777778	regulation of interleukin-4-dependent isotype switchin...
-GO:BP	GO:2000572	positive regulation of interleukin-4-dependent isotype switching to IgE isotypes	0.0286727487006373	1	36	1.54253067160537	2.77777777777778	positive regulation of interleukin-4-dependent isotype...
-GO:BP	GO:0070665	positive regulation of leukocyte proliferation	0.0286727487006373	3	36	1.54253067160537	8.33333333333333	positive regulation of leukocyte proliferation
-GO:BP	GO:0048585	negative regulation of response to stimulus	0.0298740028349271	9	36	1.52470658212803	25	negative regulation of response to stimulus
-GO:BP	GO:0032735	positive regulation of interleukin-12 production	0.0304114621715961	2	36	1.51696269863949	5.55555555555556	positive regulation of interleukin-12 production
-GO:BP	GO:0042110	T cell activation	0.0304114621715961	5	36	1.51696269863949	13.8888888888889	T cell activation
-GO:BP	GO:0007259	cell surface receptor signaling pathway via JAK-STAT	0.0307207708068086	3	36	1.5125678917348	8.33333333333333	cell surface receptor signaling pathway via JAK-STAT
-GO:BP	GO:0002757	immune response-activating signaling pathway	0.0310094939241907	5	36	1.50850532140295	13.8888888888889	immune response-activating signaling pathway
-GO:BP	GO:0002694	regulation of leukocyte activation	0.0310094939241907	5	36	1.50850532140295	13.8888888888889	regulation of leukocyte activation
-GO:BP	GO:0022409	positive regulation of cell-cell adhesion	0.0315947504051518	4	36	1.50038507116226	11.1111111111111	positive regulation of cell-cell adhesion
-GO:BP	GO:0031399	regulation of protein modification process	0.0315947504051518	7	36	1.50038507116226	19.4444444444444	regulation of protein modification process
-GO:BP	GO:0048519	negative regulation of biological process	0.0315947504051518	18	36	1.50038507116226	50	negative regulation of biological process
-GO:BP	GO:0050794	regulation of cellular process	0.0317296770075066	30	36	1.49853434878114	83.3333333333333	regulation of cellular process
-GO:BP	GO:0060255	regulation of macromolecule metabolic process	0.032153691402186	20	36	1.49276916073132	55.5555555555556	regulation of macromolecule metabolic process
-GO:BP	GO:0051239	regulation of multicellular organismal process	0.0322509663380871	12	36	1.49145726803611	33.3333333333333	regulation of multicellular organismal process
-GO:BP	GO:0002695	negative regulation of leukocyte activation	0.0339493852360782	3	36	1.4691680856249	8.33333333333333	negative regulation of leukocyte activation
-GO:BP	GO:0002429	immune response-activating cell surface receptor signaling pathway	0.0339493852360782	4	36	1.4691680856249	11.1111111111111	immune response-activating cell surface receptor signa...
-GO:BP	GO:0048662	negative regulation of smooth muscle cell proliferation	0.0344838294210588	2	36	1.46238451187029	5.55555555555556	negative regulation of smooth muscle cell proliferation
-GO:BP	GO:0120035	regulation of plasma membrane bounded cell projection organization	0.0344838294210588	5	36	1.46238451187029	13.8888888888889	regulation of plasma membrane bounded cell projection ...
-GO:BP	GO:0097696	cell surface receptor signaling pathway via STAT	0.0346462230537493	3	36	1.46034410293733	8.33333333333333	cell surface receptor signaling pathway via STAT
-GO:BP	GO:0071495	cellular response to endogenous stimulus	0.0363048727903419	7	36	1.44003508064069	19.4444444444444	cellular response to endogenous stimulus
-GO:BP	GO:0031344	regulation of cell projection organization	0.0384206027157557	5	36	1.41543582651041	13.8888888888889	regulation of cell projection organization
-REAC	REAC:R-HSA-877300	Interferon gamma signaling	0.0389487824608718	3	27	1.40950611382683	11.1111111111111	Interferon gamma signaling
-GO:BP	GO:0002764	immune response-regulating signaling pathway	0.0407962490088942	5	36	1.38937976606764	13.8888888888889	immune response-regulating signaling pathway
-GO:BP	GO:0002697	regulation of immune effector process	0.0407962490088942	4	36	1.38937976606764	11.1111111111111	regulation of immune effector process
-GO:BP	GO:0032501	multicellular organismal process	0.0409416232564392	20	36	1.38783494239313	55.5555555555556	multicellular organismal process
-GO:BP	GO:0045818	negative regulation of glycogen catabolic process	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	negative regulation of glycogen catabolic process
-GO:BP	GO:2000525	positive regulation of T cell costimulation	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	positive regulation of T cell costimulation
-GO:BP	GO:2000363	positive regulation of prostaglandin-E synthase activity	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	positive regulation of prostaglandin-E synthase activity
-GO:BP	GO:0045914	negative regulation of catecholamine metabolic process	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	negative regulation of catecholamine metabolic process
-GO:BP	GO:2000349	negative regulation of CD40 signaling pathway	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	negative regulation of CD40 signaling pathway
-GO:BP	GO:1904973	positive regulation of viral translation	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	positive regulation of viral translation
-GO:BP	GO:1904971	regulation of viral translation	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	regulation of viral translation
-GO:BP	GO:0030330	DNA damage response, signal transduction by p53 class mediator	0.0409416232564392	2	36	1.38783494239313	5.55555555555556	DNA damage response, signal transduction by p53 class ...
-GO:BP	GO:0045963	negative regulation of dopamine metabolic process	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	negative regulation of dopamine metabolic process
-GO:BP	GO:1903037	regulation of leukocyte cell-cell adhesion	0.0409416232564392	4	36	1.38783494239313	11.1111111111111	regulation of leukocyte cell-cell adhesion
-GO:BP	GO:0045626	negative regulation of T-helper 1 cell differentiation	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	negative regulation of T-helper 1 cell differentiation
-GO:BP	GO:0065007	biological regulation	0.0409416232564392	31	36	1.38783494239313	86.1111111111111	biological regulation
-GO:BP	GO:0072573	tolerance induction to lipopolysaccharide	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	tolerance induction to lipopolysaccharide
-GO:BP	GO:0035712	T-helper 2 cell activation	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	T-helper 2 cell activation
-GO:BP	GO:0034140	negative regulation of toll-like receptor 3 signaling pathway	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	negative regulation of toll-like receptor 3 signaling ...
-GO:BP	GO:1900279	regulation of CD4-positive, alpha-beta T cell costimulation	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	regulation of CD4-positive, alpha-beta T cell costimulation
-GO:BP	GO:0050865	regulation of cell activation	0.0409416232564392	5	36	1.38783494239313	13.8888888888889	regulation of cell activation
-GO:BP	GO:0051695	actin filament uncapping	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	actin filament uncapping
-GO:BP	GO:0050866	negative regulation of cell activation	0.0409416232564392	3	36	1.38783494239313	8.33333333333333	negative regulation of cell activation
-GO:BP	GO:0002253	activation of immune response	0.0409416232564392	5	36	1.38783494239313	13.8888888888889	activation of immune response
-GO:BP	GO:0090675	intermicrovillar adhesion	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	intermicrovillar adhesion
-GO:BP	GO:0090291	negative regulation of osteoclast proliferation	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	negative regulation of osteoclast proliferation
-GO:BP	GO:0002768	immune response-regulating cell surface receptor signaling pathway	0.0409416232564392	4	36	1.38783494239313	11.1111111111111	immune response-regulating cell surface receptor signa...
-GO:BP	GO:0007155	cell adhesion	0.0409416232564392	8	36	1.38783494239313	22.2222222222222	cell adhesion
-GO:BP	GO:0002270	plasmacytoid dendritic cell activation	0.0409416232564392	1	36	1.38783494239313	2.77777777777778	plasmacytoid dendritic cell activation
-GO:BP	GO:0006911	phagocytosis, engulfment	0.0422251938144135	2	36	1.37442834833275	5.55555555555556	phagocytosis, engulfment
-GO:BP	GO:1902743	regulation of lamellipodium organization	0.0422251938144135	2	36	1.37442834833275	5.55555555555556	regulation of lamellipodium organization
-GO:BP	GO:0050777	negative regulation of immune response	0.0427790416323785	3	36	1.3687689490406	8.33333333333333	negative regulation of immune response
-REAC	REAC:R-HSA-8854691	Interleukin-20 family signaling	0.0429128606707146	2	27	1.36741253342596	7.40740740740741	Interleukin-20 family signaling
-GO:BP	GO:0002437	inflammatory response to antigenic stimulus	0.0435133307148628	2	36	1.36137767249393	5.55555555555556	inflammatory response to antigenic stimulus
-GO:BP	GO:0050730	regulation of peptidyl-tyrosine phosphorylation	0.0446028984344087	3	36	1.35063691857105	8.33333333333333	regulation of peptidyl-tyrosine phosphorylation
-GO:BP	GO:0070373	negative regulation of ERK1 and ERK2 cascade	0.0448057177071382	2	36	1.34866656166675	5.55555555555556	negative regulation of ERK1 and ERK2 cascade
-GO:BP	GO:0010803	regulation of tumor necrosis factor-mediated signaling pathway	0.0458340186121579	2	36	1.33881206323148	5.55555555555556	regulation of tumor necrosis factor-mediated signaling...
-GO:BP	GO:0032615	interleukin-12 production	0.0458340186121579	2	36	1.33881206323148	5.55555555555556	interleukin-12 production
-GO:BP	GO:0032655	regulation of interleukin-12 production	0.0458340186121579	2	36	1.33881206323148	5.55555555555556	regulation of interleukin-12 production
+KEGG	KEGG:05133	Pertussis	0.000304954746535497	3	6	3.5157646025813	50	Pertussis
+KEGG	KEGG:05140	Leishmaniasis	0.000304954746535497	3	6	3.5157646025813	50	Leishmaniasis
+REAC	REAC:R-HSA-8984722	Interleukin-35 Signalling	0.00030995892489337	2	6	3.50869585414661	33.3333333333333	Interleukin-35 Signalling
+REAC	REAC:R-HSA-1280215	Cytokine Signaling in Immune system	0.00030995892489337	5	6	3.50869585414661	83.3333333333333	Cytokine Signaling in Immune system
+GO:BP	GO:0045321	leukocyte activation	0.000537303524890095	5	7	3.2697803103055	71.4285714285714	leukocyte activation
+GO:BP	GO:0002252	immune effector process	0.000537303524890095	5	7	3.2697803103055	71.4285714285714	immune effector process
+GO:BP	GO:0002250	adaptive immune response	0.000537303524890095	4	7	3.2697803103055	57.1428571428571	adaptive immune response
+GO:BP	GO:0032700	negative regulation of interleukin-17 production	0.000537303524890095	2	7	3.2697803103055	28.5714285714286	negative regulation of interleukin-17 production
+GO:BP	GO:0071349	cellular response to interleukin-12	0.000537303524890095	2	7	3.2697803103055	28.5714285714286	cellular response to interleukin-12
+GO:BP	GO:0002443	leukocyte mediated immunity	0.000537303524890095	4	7	3.2697803103055	57.1428571428571	leukocyte mediated immunity
+GO:BP	GO:0070671	response to interleukin-12	0.000537303524890095	2	7	3.2697803103055	28.5714285714286	response to interleukin-12
+GO:BP	GO:0002460	adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains	0.000537303524890095	4	7	3.2697803103055	57.1428571428571	adaptive immune response based on somatic recombinatio...
+GO:BP	GO:0006952	defense response	0.000537303524890095	6	7	3.2697803103055	85.7142857142857	defense response
+GO:BP	GO:0035722	interleukin-12-mediated signaling pathway	0.000537303524890095	2	7	3.2697803103055	28.5714285714286	interleukin-12-mediated signaling pathway
+GO:BP	GO:0001775	cell activation	0.000537303524890095	5	7	3.2697803103055	71.4285714285714	cell activation
+GO:BP	GO:0006955	immune response	0.000537303524890095	6	7	3.2697803103055	85.7142857142857	immune response
+GO:BP	GO:0006950	response to stress	0.000558806656723052	7	7	3.25273842904163	100	response to stress
+GO:BP	GO:0001909	leukocyte mediated cytotoxicity	0.000566992150528136	3	7	3.2464229534632	42.8571428571429	leukocyte mediated cytotoxicity
+GO:BP	GO:0002705	positive regulation of leukocyte mediated immunity	0.000566992150528136	3	7	3.2464229534632	42.8571428571429	positive regulation of leukocyte mediated immunity
+REAC	REAC:R-HSA-168256	Immune System	0.000582720288264376	6	6	3.23453986104512	100	Immune System
+GO:BP	GO:0045063	T-helper 1 cell differentiation	0.000666334927797056	2	7	3.17630742138298	28.5714285714286	T-helper 1 cell differentiation
+GO:BP	GO:0046631	alpha-beta T cell activation	0.000812716505228519	3	7	3.09006092019441	42.8571428571429	alpha-beta T cell activation
+GO:BP	GO:0002376	immune system process	0.00150670133912825	6	7	2.8219728257365	85.7142857142857	immune system process
+GO:BP	GO:0001906	cell killing	0.00164369212544023	3	7	2.78417952544796	42.8571428571429	cell killing
+GO:BP	GO:0002703	regulation of leukocyte mediated immunity	0.00178295072516982	3	7	2.74886065911435	42.8571428571429	regulation of leukocyte mediated immunity
+GO:BP	GO:0002699	positive regulation of immune effector process	0.00211284622257037	3	7	2.67513211067104	42.8571428571429	positive regulation of immune effector process
+GO:BP	GO:0042088	T-helper 1 type immune response	0.00230894217236213	2	7	2.63658694388599	28.5714285714286	T-helper 1 type immune response
+GO:BP	GO:0001817	regulation of cytokine production	0.00241573614105008	4	7	2.61695050330583	57.1428571428571	regulation of cytokine production
+GO:BP	GO:0001816	cytokine production	0.00241573614105008	4	7	2.61695050330583	57.1428571428571	cytokine production
+KEGG	KEGG:05152	Tuberculosis	0.00247260866035866	3	6	2.60684461396446	50	Tuberculosis
+GO:BP	GO:0002366	leukocyte activation involved in immune response	0.00259606418802271	3	7	2.5856845737517	42.8571428571429	leukocyte activation involved in immune response
+GO:BP	GO:0032660	regulation of interleukin-17 production	0.00262418603307583	2	7	2.58100538031984	28.5714285714286	regulation of interleukin-17 production
+GO:BP	GO:0032620	interleukin-17 production	0.00262418603307583	2	7	2.58100538031984	28.5714285714286	interleukin-17 production
+GO:BP	GO:0002263	cell activation involved in immune response	0.00262418603307583	3	7	2.58100538031984	42.8571428571429	cell activation involved in immune response
+REAC	REAC:R-HSA-9020591	Interleukin-12 signaling	0.00262570174795611	2	6	2.58075460672071	33.3333333333333	Interleukin-12 signaling
+REAC	REAC:R-HSA-447115	Interleukin-12 family signaling	0.00307074923035252	2	6	2.51275564833093	33.3333333333333	Interleukin-12 family signaling
+GO:BP	GO:0002449	lymphocyte mediated immunity	0.00455741781155951	3	7	2.34128115466597	42.8571428571429	lymphocyte mediated immunity
+GO:BP	GO:0002697	regulation of immune effector process	0.00459019206374491	3	7	2.33816914224499	42.8571428571429	regulation of immune effector process
+GO:BP	GO:0046635	positive regulation of alpha-beta T cell activation	0.00516636633855286	2	7	2.28681480196232	28.5714285714286	positive regulation of alpha-beta T cell activation
+GO:BP	GO:0009893	positive regulation of metabolic process	0.0054338563890278	6	7	2.26489184370189	85.7142857142857	positive regulation of metabolic process
+GO:BP	GO:0001912	positive regulation of leukocyte mediated cytotoxicity	0.00545123911181941	2	7	2.26350476776754	28.5714285714286	positive regulation of leukocyte mediated cytotoxicity
+GO:BP	GO:0048522	positive regulation of cellular process	0.00545123911181941	7	7	2.26350476776754	100	positive regulation of cellular process
+GO:BP	GO:0032729	positive regulation of type II interferon production	0.00548348884009953	2	7	2.26094303606173	28.5714285714286	positive regulation of type II interferon production
+GO:BP	GO:0042093	T-helper cell differentiation	0.00580823562273879	2	7	2.23595577392304	28.5714285714286	T-helper cell differentiation
+GO:BP	GO:0002711	positive regulation of T cell mediated immunity	0.00580823562273879	2	7	2.23595577392304	28.5714285714286	positive regulation of T cell mediated immunity
+GO:BP	GO:0002526	acute inflammatory response	0.00580823562273879	2	7	2.23595577392304	28.5714285714286	acute inflammatory response
+GO:BP	GO:0031343	positive regulation of cell killing	0.00580823562273879	2	7	2.23595577392304	28.5714285714286	positive regulation of cell killing
+GO:BP	GO:0002294	CD4-positive, alpha-beta T cell differentiation involved in immune response	0.00591993904837825	2	7	2.22768276474486	28.5714285714286	CD4-positive, alpha-beta T cell differentiation involv...
+GO:BP	GO:0002293	alpha-beta T cell differentiation involved in immune response	0.00591993904837825	2	7	2.22768276474486	28.5714285714286	alpha-beta T cell differentiation involved in immune r...
+GO:BP	GO:0002287	alpha-beta T cell activation involved in immune response	0.00591993904837825	2	7	2.22768276474486	28.5714285714286	alpha-beta T cell activation involved in immune response
+GO:BP	GO:2000571	regulation of interleukin-4-dependent isotype switching to IgE isotypes	0.00600785892897766	1	7	2.22128027358808	14.2857142857143	regulation of interleukin-4-dependent isotype switchin...
+GO:BP	GO:0035713	response to nitrogen dioxide	0.00600785892897766	1	7	2.22128027358808	14.2857142857143	response to nitrogen dioxide
+GO:BP	GO:0002273	plasmacytoid dendritic cell differentiation	0.00600785892897766	1	7	2.22128027358808	14.2857142857143	plasmacytoid dendritic cell differentiation
+GO:BP	GO:0048518	positive regulation of biological process	0.00600785892897766	7	7	2.22128027358808	100	positive regulation of biological process
+GO:BP	GO:1900281	positive regulation of CD4-positive, alpha-beta T cell costimulation	0.00600785892897766	1	7	2.22128027358808	14.2857142857143	positive regulation of CD4-positive, alpha-beta T cell...
+GO:BP	GO:0002444	myeloid leukocyte mediated immunity	0.00600785892897766	2	7	2.22128027358808	28.5714285714286	myeloid leukocyte mediated immunity
+GO:BP	GO:1903131	mononuclear cell differentiation	0.00600785892897766	3	7	2.22128027358808	42.8571428571429	mononuclear cell differentiation
+GO:BP	GO:0035708	interleukin-4-dependent isotype switching to IgE isotypes	0.00600785892897766	1	7	2.22128027358808	14.2857142857143	interleukin-4-dependent isotype switching to IgE isotypes
+GO:BP	GO:0002215	defense response to nematode	0.00600785892897766	1	7	2.22128027358808	14.2857142857143	defense response to nematode
+GO:BP	GO:2000572	positive regulation of interleukin-4-dependent isotype switching to IgE isotypes	0.00600785892897766	1	7	2.22128027358808	14.2857142857143	positive regulation of interleukin-4-dependent isotype...
+GO:BP	GO:0002292	T cell differentiation involved in immune response	0.00600785892897766	2	7	2.22128027358808	28.5714285714286	T cell differentiation involved in immune response
+GO:BP	GO:0043367	CD4-positive, alpha-beta T cell differentiation	0.00626670612626355	2	7	2.20296067082334	28.5714285714286	CD4-positive, alpha-beta T cell differentiation
+GO:BP	GO:0001910	regulation of leukocyte mediated cytotoxicity	0.00631338488472216	2	7	2.19973773384455	28.5714285714286	regulation of leukocyte mediated cytotoxicity
+GO:BP	GO:0001819	positive regulation of cytokine production	0.00671864891752719	3	7	2.17271805234148	42.8571428571429	positive regulation of cytokine production
+KEGG	KEGG:05134	Legionellosis	0.0069614501062266	2	6	2.15730028516885	33.3333333333333	Legionellosis
+KEGG	KEGG:05321	Inflammatory bowel disease	0.0069614501062266	2	6	2.15730028516885	33.3333333333333	Inflammatory bowel disease
+GO:BP	GO:0046634	regulation of alpha-beta T cell activation	0.00715840317558155	2	7	2.14518384492348	28.5714285714286	regulation of alpha-beta T cell activation
+GO:BP	GO:0002709	regulation of T cell mediated immunity	0.00715840317558155	2	7	2.14518384492348	28.5714285714286	regulation of T cell mediated immunity
+GO:BP	GO:0031341	regulation of cell killing	0.00715840317558155	2	7	2.14518384492348	28.5714285714286	regulation of cell killing
+GO:BP	GO:0046632	alpha-beta T cell differentiation	0.00715840317558155	2	7	2.14518384492348	28.5714285714286	alpha-beta T cell differentiation
+GO:BP	GO:0010557	positive regulation of macromolecule biosynthetic process	0.00715840317558155	5	7	2.14518384492348	71.4285714285714	positive regulation of macromolecule biosynthetic process
+GO:BP	GO:0032609	type II interferon production	0.00715840317558155	2	7	2.14518384492348	28.5714285714286	type II interferon production
+GO:BP	GO:0042110	T cell activation	0.00715840317558155	3	7	2.14518384492348	42.8571428571429	T cell activation
+GO:BP	GO:0032649	regulation of type II interferon production	0.00715840317558155	2	7	2.14518384492348	28.5714285714286	regulation of type II interferon production
+GO:BP	GO:0019222	regulation of metabolic process	0.00715840317558155	7	7	2.14518384492348	100	regulation of metabolic process
+GO:BP	GO:0002521	leukocyte differentiation	0.00715840317558155	3	7	2.14518384492348	42.8571428571429	leukocyte differentiation
+GO:BP	GO:0002824	positive regulation of adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains	0.00730087298859837	2	7	2.13662520680242	28.5714285714286	positive regulation of adaptive immune response based ...
+GO:BP	GO:0035710	CD4-positive, alpha-beta T cell activation	0.00730087298859837	2	7	2.13662520680242	28.5714285714286	CD4-positive, alpha-beta T cell activation
+GO:BP	GO:0009891	positive regulation of biosynthetic process	0.00730087298859837	5	7	2.13662520680242	71.4285714285714	positive regulation of biosynthetic process
+GO:BP	GO:0002708	positive regulation of lymphocyte mediated immunity	0.00766108851634835	2	7	2.11570951978543	28.5714285714286	positive regulation of lymphocyte mediated immunity
+GO:BP	GO:0045626	negative regulation of T-helper 1 cell differentiation	0.00780232759228643	1	7	2.107775819144	14.2857142857143	negative regulation of T-helper 1 cell differentiation
+GO:BP	GO:0002270	plasmacytoid dendritic cell activation	0.00780232759228643	1	7	2.107775819144	14.2857142857143	plasmacytoid dendritic cell activation
+GO:BP	GO:2000525	positive regulation of T cell costimulation	0.00780232759228643	1	7	2.107775819144	14.2857142857143	positive regulation of T cell costimulation
+GO:BP	GO:2000363	positive regulation of prostaglandin-E synthase activity	0.00780232759228643	1	7	2.107775819144	14.2857142857143	positive regulation of prostaglandin-E synthase activity
+GO:BP	GO:1900279	regulation of CD4-positive, alpha-beta T cell costimulation	0.00780232759228643	1	7	2.107775819144	14.2857142857143	regulation of CD4-positive, alpha-beta T cell costimulation
+GO:BP	GO:0045914	negative regulation of catecholamine metabolic process	0.00780232759228643	1	7	2.107775819144	14.2857142857143	negative regulation of catecholamine metabolic process
+GO:BP	GO:0002456	T cell mediated immunity	0.00780232759228643	2	7	2.107775819144	28.5714285714286	T cell mediated immunity
+GO:BP	GO:0035712	T-helper 2 cell activation	0.00780232759228643	1	7	2.107775819144	14.2857142857143	T-helper 2 cell activation
+GO:BP	GO:0050671	positive regulation of lymphocyte proliferation	0.00780232759228643	2	7	2.107775819144	28.5714285714286	positive regulation of lymphocyte proliferation
+GO:BP	GO:0032946	positive regulation of mononuclear cell proliferation	0.00780232759228643	2	7	2.107775819144	28.5714285714286	positive regulation of mononuclear cell proliferation
+GO:BP	GO:0045963	negative regulation of dopamine metabolic process	0.00780232759228643	1	7	2.107775819144	14.2857142857143	negative regulation of dopamine metabolic process
+GO:BP	GO:0002821	positive regulation of adaptive immune response	0.00780232759228643	2	7	2.107775819144	28.5714285714286	positive regulation of adaptive immune response
+GO:BP	GO:0002286	T cell activation involved in immune response	0.00785353571965833	2	7	2.10493477665236	28.5714285714286	T cell activation involved in immune response
+REAC	REAC:R-HSA-449147	Signaling by Interleukins	0.00799709299921227	3	6	2.09706785348757	50	Signaling by Interleukins
+REAC	REAC:R-HSA-6785807	Interleukin-4 and Interleukin-13 signaling	0.00799709299921227	2	6	2.09706785348757	33.3333333333333	Interleukin-4 and Interleukin-13 signaling
+GO:BP	GO:0009892	negative regulation of metabolic process	0.00910762024696554	5	7	2.04059508610319	71.4285714285714	negative regulation of metabolic process
+GO:BP	GO:0070665	positive regulation of leukocyte proliferation	0.00915770264339946	2	7	2.03821346240555	28.5714285714286	positive regulation of leukocyte proliferation
+GO:BP	GO:0007259	cell surface receptor signaling pathway via JAK-STAT	0.00983472598958311	2	7	2.00723773568057	28.5714285714286	cell surface receptor signaling pathway via JAK-STAT
+GO:BP	GO:0048293	regulation of isotype switching to IgE isotypes	0.00994684652996157	1	7	2.0023145827424	14.2857142857143	regulation of isotype switching to IgE isotypes
+GO:BP	GO:0150064	vertebrate eye-specific patterning	0.00994684652996157	1	7	2.0023145827424	14.2857142857143	vertebrate eye-specific patterning
+GO:BP	GO:0071345	cellular response to cytokine stimulus	0.00994684652996157	3	7	2.0023145827424	42.8571428571429	cellular response to cytokine stimulus
+GO:BP	GO:0048295	positive regulation of isotype switching to IgE isotypes	0.00994684652996157	1	7	2.0023145827424	14.2857142857143	positive regulation of isotype switching to IgE isotypes
+GO:BP	GO:0033239	negative regulation of amine metabolic process	0.00994684652996157	1	7	2.0023145827424	14.2857142857143	negative regulation of amine metabolic process
+GO:BP	GO:0035709	memory T cell activation	0.00994684652996157	1	7	2.0023145827424	14.2857142857143	memory T cell activation
+GO:BP	GO:0035783	CD4-positive, alpha-beta T cell costimulation	0.00994684652996157	1	7	2.0023145827424	14.2857142857143	CD4-positive, alpha-beta T cell costimulation
+GO:BP	GO:0048289	isotype switching to IgE isotypes	0.00994684652996157	1	7	2.0023145827424	14.2857142857143	isotype switching to IgE isotypes
+GO:BP	GO:0043315	positive regulation of neutrophil degranulation	0.00994684652996157	1	7	2.0023145827424	14.2857142857143	positive regulation of neutrophil degranulation
+GO:BP	GO:0002826	negative regulation of T-helper 1 type immune response	0.00994684652996157	1	7	2.0023145827424	14.2857142857143	negative regulation of T-helper 1 type immune response
+GO:BP	GO:0097696	cell surface receptor signaling pathway via STAT	0.010192874492794	2	7	1.99170332332284	28.5714285714286	cell surface receptor signaling pathway via STAT
+KEGG	KEGG:05150	Staphylococcus aureus infection	0.0102099243129674	2	6	1.99097747736289	33.3333333333333	Staphylococcus aureus infection
+KEGG	KEGG:04658	Th1 and Th2 cell differentiation	0.0102099243129674	2	6	1.99097747736289	33.3333333333333	Th1 and Th2 cell differentiation
+KEGG	KEGG:05146	Amoebiasis	0.0114771253632213	2	6	1.94016687458818	33.3333333333333	Amoebiasis
+GO:BP	GO:0046649	lymphocyte activation	0.0115229233736872	3	7	1.93843732612136	42.8571428571429	lymphocyte activation
+GO:BP	GO:0016064	immunoglobulin mediated immune response	0.0118452215857884	2	7	1.92645681061998	28.5714285714286	immunoglobulin mediated immune response
+GO:BP	GO:0002706	regulation of lymphocyte mediated immunity	0.0118452215857884	2	7	1.92645681061998	28.5714285714286	regulation of lymphocyte mediated immunity
+GO:BP	GO:0006954	inflammatory response	0.0118452215857884	3	7	1.92645681061998	42.8571428571429	inflammatory response
+GO:BP	GO:0010668	ectodermal cell differentiation	0.0120112497816625	1	7	1.92041180150295	14.2857142857143	ectodermal cell differentiation
+GO:BP	GO:1904151	positive regulation of microglial cell mediated cytotoxicity	0.0120112497816625	1	7	1.92041180150295	14.2857142857143	positive regulation of microglial cell mediated cytotoxicity
+GO:BP	GO:0150062	complement-mediated synapse pruning	0.0120112497816625	1	7	1.92041180150295	14.2857142857143	complement-mediated synapse pruning
+GO:BP	GO:0019724	B cell mediated immunity	0.0120112497816625	2	7	1.92041180150295	28.5714285714286	B cell mediated immunity
+GO:BP	GO:0002822	regulation of adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains	0.0120112497816625	2	7	1.92041180150295	28.5714285714286	regulation of adaptive immune response based on somati...
+GO:BP	GO:1901652	response to peptide	0.0123336066004028	3	7	1.90890990818789	42.8571428571429	response to peptide
+GO:BP	GO:0034097	response to cytokine	0.0123336066004028	3	7	1.90890990818789	42.8571428571429	response to cytokine
+GO:BP	GO:0032944	regulation of mononuclear cell proliferation	0.0130519448312913	2	7	1.8843247705811	28.5714285714286	regulation of mononuclear cell proliferation
+GO:BP	GO:2000523	regulation of T cell costimulation	0.0130519448312913	1	7	1.8843247705811	14.2857142857143	regulation of T cell costimulation
+GO:BP	GO:0050778	positive regulation of immune response	0.0130519448312913	3	7	1.8843247705811	42.8571428571429	positive regulation of immune response
+GO:BP	GO:0010604	positive regulation of macromolecule metabolic process	0.0130519448312913	5	7	1.8843247705811	71.4285714285714	positive regulation of macromolecule metabolic process
+GO:BP	GO:1904149	regulation of microglial cell mediated cytotoxicity	0.0130519448312913	1	7	1.8843247705811	14.2857142857143	regulation of microglial cell mediated cytotoxicity
+GO:BP	GO:1901097	negative regulation of autophagosome maturation	0.0130519448312913	1	7	1.8843247705811	14.2857142857143	negative regulation of autophagosome maturation
+GO:BP	GO:0043313	regulation of neutrophil degranulation	0.0130519448312913	1	7	1.8843247705811	14.2857142857143	regulation of neutrophil degranulation
+GO:BP	GO:0050670	regulation of lymphocyte proliferation	0.0130519448312913	2	7	1.8843247705811	28.5714285714286	regulation of lymphocyte proliferation
+GO:BP	GO:0002285	lymphocyte activation involved in immune response	0.0130519448312913	2	7	1.8843247705811	28.5714285714286	lymphocyte activation involved in immune response
+GO:BP	GO:0090634	microglial cell mediated cytotoxicity	0.0130519448312913	1	7	1.8843247705811	14.2857142857143	microglial cell mediated cytotoxicity
+GO:BP	GO:0002819	regulation of adaptive immune response	0.0130519448312913	2	7	1.8843247705811	28.5714285714286	regulation of adaptive immune response
+GO:BP	GO:0030097	hemopoiesis	0.0130519448312913	3	7	1.8843247705811	42.8571428571429	hemopoiesis
+GO:BP	GO:0045590	negative regulation of regulatory T cell differentiation	0.0130519448312913	1	7	1.8843247705811	14.2857142857143	negative regulation of regulatory T cell differentiation
+GO:BP	GO:0045630	positive regulation of T-helper 2 cell differentiation	0.0130519448312913	1	7	1.8843247705811	14.2857142857143	positive regulation of T-helper 2 cell differentiation
+GO:BP	GO:0002860	positive regulation of natural killer cell mediated cytotoxicity directed against tumor cell target	0.0153930497310791	1	7	1.81267532752625	14.2857142857143	positive regulation of natural killer cell mediated cy...
+GO:BP	GO:0002857	positive regulation of natural killer cell mediated immune response to tumor cell	0.0153930497310791	1	7	1.81267532752625	14.2857142857143	positive regulation of natural killer cell mediated im...
+GO:BP	GO:0032496	response to lipopolysaccharide	0.0157310132225287	2	7	1.80324330390045	28.5714285714286	response to lipopolysaccharide
+GO:BP	GO:0006909	phagocytosis	0.0157707274941883	2	7	1.80214827246537	28.5714285714286	phagocytosis
+GO:BP	GO:0070663	regulation of leukocyte proliferation	0.0158106383952864	2	7	1.8010505939544	28.5714285714286	regulation of leukocyte proliferation
+GO:BP	GO:0045628	regulation of T-helper 2 cell differentiation	0.0169958057509398	1	7	1.76965824120791	14.2857142857143	regulation of T-helper 2 cell differentiation
+GO:BP	GO:0045625	regulation of T-helper 1 cell differentiation	0.0169958057509398	1	7	1.76965824120791	14.2857142857143	regulation of T-helper 1 cell differentiation
+GO:BP	GO:1903588	negative regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis	0.0169958057509398	1	7	1.76965824120791	14.2857142857143	negative regulation of blood vessel endothelial cell p...
+GO:BP	GO:0050870	positive regulation of T cell activation	0.0169958057509398	2	7	1.76965824120791	28.5714285714286	positive regulation of T cell activation
+GO:BP	GO:0002237	response to molecule of bacterial origin	0.0174289393461905	2	7	1.7587290414679	28.5714285714286	response to molecule of bacterial origin
+GO:BP	GO:0098609	cell-cell adhesion	0.0174289393461905	3	7	1.7587290414679	42.8571428571429	cell-cell adhesion
+GO:BP	GO:0002445	type II hypersensitivity	0.0176395896102868	1	7	1.75351152306254	14.2857142857143	type II hypersensitivity
+GO:BP	GO:2000510	positive regulation of dendritic cell chemotaxis	0.0176395896102868	1	7	1.75351152306254	14.2857142857143	positive regulation of dendritic cell chemotaxis
+GO:BP	GO:0002855	regulation of natural killer cell mediated immune response to tumor cell	0.0176395896102868	1	7	1.75351152306254	14.2857142857143	regulation of natural killer cell mediated immune resp...
+GO:BP	GO:0002858	regulation of natural killer cell mediated cytotoxicity directed against tumor cell target	0.0176395896102868	1	7	1.75351152306254	14.2857142857143	regulation of natural killer cell mediated cytotoxicit...
+GO:BP	GO:0071380	cellular response to prostaglandin E stimulus	0.0176395896102868	1	7	1.75351152306254	14.2857142857143	cellular response to prostaglandin E stimulus
+GO:BP	GO:0046651	lymphocyte proliferation	0.0176395896102868	2	7	1.75351152306254	28.5714285714286	lymphocyte proliferation
+GO:BP	GO:0030217	T cell differentiation	0.0176395896102868	2	7	1.75351152306254	28.5714285714286	T cell differentiation
+GO:BP	GO:0032943	mononuclear cell proliferation	0.0176395896102868	2	7	1.75351152306254	28.5714285714286	mononuclear cell proliferation
+GO:BP	GO:0001788	antibody-dependent cellular cytotoxicity	0.0176395896102868	1	7	1.75351152306254	14.2857142857143	antibody-dependent cellular cytotoxicity
+GO:BP	GO:0001794	type IIa hypersensitivity	0.0176395896102868	1	7	1.75351152306254	14.2857142857143	type IIa hypersensitivity
+GO:BP	GO:0007165	signal transduction	0.0176395896102868	6	7	1.75351152306254	85.7142857142857	signal transduction
+GO:BP	GO:0098883	synapse pruning	0.0176395896102868	1	7	1.75351152306254	14.2857142857143	synapse pruning
+GO:BP	GO:0050896	response to stimulus	0.0180477464302262	7	7	1.74357701946577	100	response to stimulus
+GO:BP	GO:0050776	regulation of immune response	0.0180489144486674	3	7	1.74354891359937	42.8571428571429	regulation of immune response
+GO:BP	GO:1903039	positive regulation of leukocyte cell-cell adhesion	0.0181172066671132	2	7	1.74190876154745	28.5714285714286	positive regulation of leukocyte cell-cell adhesion
+GO:BP	GO:0051135	positive regulation of NK T cell activation	0.0184614430539406	1	7	1.7337343549965	14.2857142857143	positive regulation of NK T cell activation
+GO:BP	GO:0043382	positive regulation of memory T cell differentiation	0.0184614430539406	1	7	1.7337343549965	14.2857142857143	positive regulation of memory T cell differentiation
+GO:BP	GO:0042053	regulation of dopamine metabolic process	0.0184614430539406	1	7	1.7337343549965	14.2857142857143	regulation of dopamine metabolic process
+GO:BP	GO:2000508	regulation of dendritic cell chemotaxis	0.0184614430539406	1	7	1.7337343549965	14.2857142857143	regulation of dendritic cell chemotaxis
+GO:BP	GO:0002423	natural killer cell mediated immune response to tumor cell	0.0184614430539406	1	7	1.7337343549965	14.2857142857143	natural killer cell mediated immune response to tumor cell
+GO:BP	GO:0002420	natural killer cell mediated cytotoxicity directed against tumor cell target	0.0184614430539406	1	7	1.7337343549965	14.2857142857143	natural killer cell mediated cytotoxicity directed aga...
+GO:BP	GO:0042069	regulation of catecholamine metabolic process	0.0184614430539406	1	7	1.7337343549965	14.2857142857143	regulation of catecholamine metabolic process
+GO:BP	GO:0001818	negative regulation of cytokine production	0.0190807157983961	2	7	1.71940533710244	28.5714285714286	negative regulation of cytokine production
+GO:BP	GO:0043379	memory T cell differentiation	0.0197446240914092	1	7	1.70455113017665	14.2857142857143	memory T cell differentiation
+GO:BP	GO:0070661	leukocyte proliferation	0.0197446240914092	2	7	1.70455113017665	28.5714285714286	leukocyte proliferation
+GO:BP	GO:0090715	immunological memory formation process	0.0197446240914092	1	7	1.70455113017665	14.2857142857143	immunological memory formation process
+GO:BP	GO:0043380	regulation of memory T cell differentiation	0.0197446240914092	1	7	1.70455113017665	14.2857142857143	regulation of memory T cell differentiation
+GO:BP	GO:0043312	neutrophil degranulation	0.0197446240914092	1	7	1.70455113017665	14.2857142857143	neutrophil degranulation
+GO:BP	GO:0032736	positive regulation of interleukin-13 production	0.0211886555294465	1	7	1.67389659943205	14.2857142857143	positive regulation of interleukin-13 production
+GO:BP	GO:0007398	ectoderm development	0.0211886555294465	1	7	1.67389659943205	14.2857142857143	ectoderm development
+GO:BP	GO:0071379	cellular response to prostaglandin stimulus	0.0211886555294465	1	7	1.67389659943205	14.2857142857143	cellular response to prostaglandin stimulus
+GO:BP	GO:1900747	negative regulation of vascular endothelial growth factor signaling pathway	0.0211886555294465	1	7	1.67389659943205	14.2857142857143	negative regulation of vascular endothelial growth fac...
+GO:BP	GO:0051251	positive regulation of lymphocyte activation	0.021255309292883	2	7	1.67253257109135	28.5714285714286	positive regulation of lymphocyte activation
+KEGG	KEGG:04145	Phagosome	0.0213653643116576	2	6	1.67028969740828	33.3333333333333	Phagosome
+GO:BP	GO:0034393	positive regulation of smooth muscle cell apoptotic process	0.0220458920289279	1	7	1.65667232390033	14.2857142857143	positive regulation of smooth muscle cell apoptotic process
+GO:BP	GO:0002430	complement receptor mediated signaling pathway	0.0220458920289279	1	7	1.65667232390033	14.2857142857143	complement receptor mediated signaling pathway
+GO:BP	GO:0051133	regulation of NK T cell activation	0.0220458920289279	1	7	1.65667232390033	14.2857142857143	regulation of NK T cell activation
+GO:BP	GO:0002684	positive regulation of immune system process	0.0220458920289279	3	7	1.65667232390033	42.8571428571429	positive regulation of immune system process
+GO:BP	GO:0022409	positive regulation of cell-cell adhesion	0.0220458920289279	2	7	1.65667232390033	28.5714285714286	positive regulation of cell-cell adhesion
+GO:BP	GO:0045064	T-helper 2 cell differentiation	0.0220458920289279	1	7	1.65667232390033	14.2857142857143	T-helper 2 cell differentiation
+GO:BP	GO:0033238	regulation of amine metabolic process	0.0220458920289279	1	7	1.65667232390033	14.2857142857143	regulation of amine metabolic process
+GO:BP	GO:0002524	hypersensitivity	0.0220458920289279	1	7	1.65667232390033	14.2857142857143	hypersensitivity
+GO:BP	GO:1902548	negative regulation of cellular response to vascular endothelial growth factor stimulus	0.0229459128254352	1	7	1.63929466069044	14.2857142857143	negative regulation of cellular response to vascular e...
+GO:BP	GO:0002888	positive regulation of myeloid leukocyte mediated immunity	0.0229459128254352	1	7	1.63929466069044	14.2857142857143	positive regulation of myeloid leukocyte mediated immunity
+GO:BP	GO:0002830	positive regulation of type 2 immune response	0.0229459128254352	1	7	1.63929466069044	14.2857142857143	positive regulation of type 2 immune response
+GO:BP	GO:0007154	cell communication	0.0229459128254352	6	7	1.63929466069044	85.7142857142857	cell communication
+GO:BP	GO:0032816	positive regulation of natural killer cell activation	0.0229459128254352	1	7	1.63929466069044	14.2857142857143	positive regulation of natural killer cell activation
+GO:BP	GO:0023052	signaling	0.0229459128254352	6	7	1.63929466069044	85.7142857142857	signaling
+REAC	REAC:R-HSA-9020933	Interleukin-23 signaling	0.0229748995647335	1	6	1.63874637846535	16.6666666666667	Interleukin-23 signaling
+REAC	REAC:R-HSA-9020958	Interleukin-21 signaling	0.0229748995647335	1	6	1.63874637846535	16.6666666666667	Interleukin-21 signaling
+GO:BP	GO:0048584	positive regulation of response to stimulus	0.0231638097729882	4	7	1.63519001025916	57.1428571428571	positive regulation of response to stimulus
+KEGG	KEGG:04630	JAK-STAT signaling pathway	0.023257331585903	2	6	1.63344011523082	33.3333333333333	JAK-STAT signaling pathway
+GO:BP	GO:0002696	positive regulation of leukocyte activation	0.0236408398492649	2	7	1.62633709905041	28.5714285714286	positive regulation of leukocyte activation
+GO:BP	GO:0010628	positive regulation of gene expression	0.0241693306694197	3	7	1.61673537651012	42.8571428571429	positive regulation of gene expression
+GO:BP	GO:0045623	negative regulation of T-helper cell differentiation	0.0241693306694197	1	7	1.61673537651012	14.2857142857143	negative regulation of T-helper cell differentiation
+GO:BP	GO:0098542	defense response to other organism	0.0242502923724532	3	7	1.61528302098017	42.8571428571429	defense response to other organism
+GO:BP	GO:0010661	positive regulation of muscle cell apoptotic process	0.0246835875652238	1	7	1.60759171876567	14.2857142857143	positive regulation of muscle cell apoptotic process
+GO:BP	GO:0050867	positive regulation of cell activation	0.0246835875652238	2	7	1.60759171876567	28.5714285714286	positive regulation of cell activation
+GO:BP	GO:0002283	neutrophil activation involved in immune response	0.0246835875652238	1	7	1.60759171876567	14.2857142857143	neutrophil activation involved in immune response
+GO:BP	GO:0032501	multicellular organismal process	0.0246835875652238	6	7	1.60759171876567	85.7142857142857	multicellular organismal process
+GO:BP	GO:0090713	immunological memory process	0.0246835875652238	1	7	1.60759171876567	14.2857142857143	immunological memory process
+GO:BP	GO:0032930	positive regulation of superoxide anion generation	0.0246835875652238	1	7	1.60759171876567	14.2857142857143	positive regulation of superoxide anion generation
+GO:BP	GO:0032928	regulation of superoxide anion generation	0.0246835875652238	1	7	1.60759171876567	14.2857142857143	regulation of superoxide anion generation
+GO:BP	GO:0034695	response to prostaglandin E	0.0246835875652238	1	7	1.60759171876567	14.2857142857143	response to prostaglandin E
+GO:BP	GO:0050863	regulation of T cell activation	0.0247184147633641	2	7	1.6069793847806	28.5714285714286	regulation of T cell activation
+GO:BP	GO:1903037	regulation of leukocyte cell-cell adhesion	0.0249165253789341	2	7	1.60351252035824	28.5714285714286	regulation of leukocyte cell-cell adhesion
+GO:BP	GO:0002836	positive regulation of response to tumor cell	0.0250419019549527	1	7	1.60133268915282	14.2857142857143	positive regulation of response to tumor cell
+GO:BP	GO:0002839	positive regulation of immune response to tumor cell	0.0250419019549527	1	7	1.60133268915282	14.2857142857143	positive regulation of immune response to tumor cell
+GO:BP	GO:0030098	lymphocyte differentiation	0.0250419019549527	2	7	1.60133268915282	28.5714285714286	lymphocyte differentiation
+GO:BP	GO:0045830	positive regulation of isotype switching	0.0250419019549527	1	7	1.60133268915282	14.2857142857143	positive regulation of isotype switching
+GO:BP	GO:0046641	positive regulation of alpha-beta T cell proliferation	0.0250419019549527	1	7	1.60133268915282	14.2857142857143	positive regulation of alpha-beta T cell proliferation
+GO:BP	GO:0032656	regulation of interleukin-13 production	0.0250419019549527	1	7	1.60133268915282	14.2857142857143	regulation of interleukin-13 production
+GO:BP	GO:1901700	response to oxygen-containing compound	0.0250419019549527	3	7	1.60133268915282	42.8571428571429	response to oxygen-containing compound
+GO:BP	GO:0032616	interleukin-13 production	0.0250419019549527	1	7	1.60133268915282	14.2857142857143	interleukin-13 production
+GO:BP	GO:0009719	response to endogenous stimulus	0.0252842716488043	3	7	1.59714955235223	42.8571428571429	response to endogenous stimulus
+GO:BP	GO:0010224	response to UV-B	0.0257006320229328	1	7	1.59005619648594	14.2857142857143	response to UV-B
+GO:BP	GO:0002438	acute inflammatory response to antigenic stimulus	0.0257006320229328	1	7	1.59005619648594	14.2857142857143	acute inflammatory response to antigenic stimulus
+GO:BP	GO:1901096	regulation of autophagosome maturation	0.0257006320229328	1	7	1.59005619648594	14.2857142857143	regulation of autophagosome maturation
+GO:BP	GO:0032753	positive regulation of interleukin-4 production	0.0257006320229328	1	7	1.59005619648594	14.2857142857143	positive regulation of interleukin-4 production
+GO:BP	GO:0150146	cell junction disassembly	0.0257006320229328	1	7	1.59005619648594	14.2857142857143	cell junction disassembly
+GO:BP	GO:1903587	regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis	0.0257006320229328	1	7	1.59005619648594	14.2857142857143	regulation of blood vessel endothelial cell proliferat...
+GO:BP	GO:0034694	response to prostaglandin	0.0266988671241832	1	7	1.57350716605692	14.2857142857143	response to prostaglandin
+GO:BP	GO:0051132	NK T cell activation	0.0266988671241832	1	7	1.57350716605692	14.2857142857143	NK T cell activation
+GO:BP	GO:0043371	negative regulation of CD4-positive, alpha-beta T cell differentiation	0.0266988671241832	1	7	1.57350716605692	14.2857142857143	negative regulation of CD4-positive, alpha-beta T cell...
+GO:BP	GO:0043302	positive regulation of leukocyte degranulation	0.0266988671241832	1	7	1.57350716605692	14.2857142857143	positive regulation of leukocyte degranulation
+KEGG	KEGG:04613	Neutrophil extracellular trap formation	0.0282647578458947	2	6	1.54875473094125	33.3333333333333	Neutrophil extracellular trap formation
+GO:BP	GO:0007159	leukocyte cell-cell adhesion	0.0284058520702359	2	7	1.5465921789672	28.5714285714286	leukocyte cell-cell adhesion
+GO:BP	GO:0009615	response to virus	0.0284058520702359	2	7	1.5465921789672	28.5714285714286	response to virus
+GO:BP	GO:0045624	positive regulation of T-helper cell differentiation	0.0288457126303808	1	7	1.53991872737254	14.2857142857143	positive regulation of T-helper cell differentiation
+GO:BP	GO:0045191	regulation of isotype switching	0.0288457126303808	1	7	1.53991872737254	14.2857142857143	regulation of isotype switching
+GO:BP	GO:0002825	regulation of T-helper 1 type immune response	0.0288457126303808	1	7	1.53991872737254	14.2857142857143	regulation of T-helper 1 type immune response
+GO:BP	GO:0002828	regulation of type 2 immune response	0.0288457126303808	1	7	1.53991872737254	14.2857142857143	regulation of type 2 immune response
+GO:BP	GO:0007166	cell surface receptor signaling pathway	0.030133610533266	4	7	1.52094882913874	57.1428571428571	cell surface receptor signaling pathway
+GO:BP	GO:0090322	regulation of superoxide metabolic process	0.030133610533266	1	7	1.52094882913874	14.2857142857143	regulation of superoxide metabolic process
+GO:BP	GO:0002714	positive regulation of B cell mediated immunity	0.0304720041275476	1	7	1.51609898152028	14.2857142857143	positive regulation of B cell mediated immunity
+GO:BP	GO:0002891	positive regulation of immunoglobulin mediated immune response	0.0304720041275476	1	7	1.51609898152028	14.2857142857143	positive regulation of immunoglobulin mediated immune ...
+GO:BP	GO:0002407	dendritic cell chemotaxis	0.0304720041275476	1	7	1.51609898152028	14.2857142857143	dendritic cell chemotaxis
+GO:BP	GO:1900746	regulation of vascular endothelial growth factor signaling pathway	0.0304720041275476	1	7	1.51609898152028	14.2857142857143	regulation of vascular endothelial growth factor signa...
+GO:BP	GO:0032633	interleukin-4 production	0.0304720041275476	1	7	1.51609898152028	14.2857142857143	interleukin-4 production
+GO:BP	GO:0090314	positive regulation of protein targeting to membrane	0.0304720041275476	1	7	1.51609898152028	14.2857142857143	positive regulation of protein targeting to membrane
+GO:BP	GO:0032673	regulation of interleukin-4 production	0.0304720041275476	1	7	1.51609898152028	14.2857142857143	regulation of interleukin-4 production
+GO:BP	GO:0046639	negative regulation of alpha-beta T cell differentiation	0.0305185354621546	1	7	1.51543631134513	14.2857142857143	negative regulation of alpha-beta T cell differentiation
+GO:BP	GO:0051239	regulation of multicellular organismal process	0.0305185354621546	4	7	1.51543631134513	57.1428571428571	regulation of multicellular organismal process
+GO:BP	GO:0045954	positive regulation of natural killer cell mediated cytotoxicity	0.0305185354621546	1	7	1.51543631134513	14.2857142857143	positive regulation of natural killer cell mediated cy...
+GO:BP	GO:0051707	response to other organism	0.0305185354621546	3	7	1.51543631134513	42.8571428571429	response to other organism
+GO:BP	GO:0002726	positive regulation of T cell cytokine production	0.0305185354621546	1	7	1.51543631134513	14.2857142857143	positive regulation of T cell cytokine production
+GO:BP	GO:0002043	blood vessel endothelial cell proliferation involved in sprouting angiogenesis	0.0305185354621546	1	7	1.51543631134513	14.2857142857143	blood vessel endothelial cell proliferation involved i...
+GO:BP	GO:0032814	regulation of natural killer cell activation	0.0305185354621546	1	7	1.51543631134513	14.2857142857143	regulation of natural killer cell activation
+GO:BP	GO:0034390	smooth muscle cell apoptotic process	0.0305185354621546	1	7	1.51543631134513	14.2857142857143	smooth muscle cell apoptotic process
+GO:BP	GO:0034391	regulation of smooth muscle cell apoptotic process	0.0305185354621546	1	7	1.51543631134513	14.2857142857143	regulation of smooth muscle cell apoptotic process
+GO:BP	GO:0043207	response to external biotic stimulus	0.0305185354621546	3	7	1.51543631134513	42.8571428571429	response to external biotic stimulus
+GO:BP	GO:0002837	regulation of immune response to tumor cell	0.0315753292596731	1	7	1.50065211203428	14.2857142857143	regulation of immune response to tumor cell
+GO:BP	GO:1902547	regulation of cellular response to vascular endothelial growth factor stimulus	0.0315753292596731	1	7	1.50065211203428	14.2857142857143	regulation of cellular response to vascular endothelia...
+GO:BP	GO:0051249	regulation of lymphocyte activation	0.0321693088196741	2	7	1.49255827012154	28.5714285714286	regulation of lymphocyte activation
+GO:BP	GO:0009607	response to biotic stimulus	0.0321996945759113	3	7	1.49214824770247	42.8571428571429	response to biotic stimulus
+GO:BP	GO:0002834	regulation of response to tumor cell	0.0322165126402209	1	7	1.49192147270259	14.2857142857143	regulation of response to tumor cell
+GO:BP	GO:0036336	dendritic cell migration	0.0322165126402209	1	7	1.49192147270259	14.2857142857143	dendritic cell migration
+GO:BP	GO:0045785	positive regulation of cell adhesion	0.0322165126402209	2	7	1.49192147270259	28.5714285714286	positive regulation of cell adhesion
+GO:BP	GO:0022411	cellular component disassembly	0.0323229292119819	2	7	1.49048928889512	28.5714285714286	cellular component disassembly
+GO:BP	GO:1903530	regulation of secretion by cell	0.0326779784438065	2	7	1.48574481804707	28.5714285714286	regulation of secretion by cell
+GO:BP	GO:0016242	negative regulation of macroautophagy	0.0329630131403682	1	7	1.48197309641593	14.2857142857143	negative regulation of macroautophagy
+GO:BP	GO:2000515	negative regulation of CD4-positive, alpha-beta T cell activation	0.0329630131403682	1	7	1.48197309641593	14.2857142857143	negative regulation of CD4-positive, alpha-beta T cell...
+GO:BP	GO:0070201	regulation of establishment of protein localization	0.0334191766503179	2	7	1.47600425404252	28.5714285714286	regulation of establishment of protein localization
+GO:BP	GO:0042127	regulation of cell population proliferation	0.0335339468268111	3	7	1.47451532864007	42.8571428571429	regulation of cell population proliferation
+GO:BP	GO:0046640	regulation of alpha-beta T cell proliferation	0.0335339468268111	1	7	1.47451532864007	14.2857142857143	regulation of alpha-beta T cell proliferation
+GO:BP	GO:0051716	cellular response to stimulus	0.0335339468268111	6	7	1.47451532864007	85.7142857142857	cellular response to stimulus
+GO:BP	GO:0007155	cell adhesion	0.0335339468268111	3	7	1.47451532864007	42.8571428571429	cell adhesion
+GO:BP	GO:0090313	regulation of protein targeting to membrane	0.0335339468268111	1	7	1.47451532864007	14.2857142857143	regulation of protein targeting to membrane
+GO:BP	GO:0060627	regulation of vesicle-mediated transport	0.0336002255606328	2	7	1.47365780715154	28.5714285714286	regulation of vesicle-mediated transport
+GO:BP	GO:0022407	regulation of cell-cell adhesion	0.0336308132987281	2	7	1.47326262995331	28.5714285714286	regulation of cell-cell adhesion
+GO:BP	GO:0042417	dopamine metabolic process	0.0337315058284766	1	7	1.47196427077639	14.2857142857143	dopamine metabolic process
+GO:BP	GO:0002418	immune response to tumor cell	0.0337315058284766	1	7	1.47196427077639	14.2857142857143	immune response to tumor cell
+GO:BP	GO:0002717	positive regulation of natural killer cell mediated immunity	0.0337315058284766	1	7	1.47196427077639	14.2857142857143	positive regulation of natural killer cell mediated immunity
+GO:BP	GO:0002446	neutrophil mediated immunity	0.0337315058284766	1	7	1.47196427077639	14.2857142857143	neutrophil mediated immunity
+GO:BP	GO:0046633	alpha-beta T cell proliferation	0.0337315058284766	1	7	1.47196427077639	14.2857142857143	alpha-beta T cell proliferation
+GO:BP	GO:0032689	negative regulation of type II interferon production	0.0342780883464197	1	7	1.46498340622816	14.2857142857143	negative regulation of type II interferon production
+GO:BP	GO:0045589	regulation of regulatory T cell differentiation	0.0342780883464197	1	7	1.46498340622816	14.2857142857143	regulation of regulatory T cell differentiation
+GO:BP	GO:0043372	positive regulation of CD4-positive, alpha-beta T cell differentiation	0.0342780883464197	1	7	1.46498340622816	14.2857142857143	positive regulation of CD4-positive, alpha-beta T cell...
+GO:BP	GO:0042092	type 2 immune response	0.0342780883464197	1	7	1.46498340622816	14.2857142857143	type 2 immune response
+GO:BP	GO:0097028	dendritic cell differentiation	0.0342780883464197	1	7	1.46498340622816	14.2857142857143	dendritic cell differentiation
+GO:BP	GO:0051049	regulation of transport	0.0343653636531307	3	7	1.4638790560409	42.8571428571429	regulation of transport
+GO:BP	GO:0044419	biological process involved in interspecies interaction between organisms	0.0353848384706063	3	7	1.45118278257913	42.8571428571429	biological process involved in interspecies interactio...
+GO:BP	GO:0032733	positive regulation of interleukin-10 production	0.0358798628766972	1	7	1.44514922538289	14.2857142857143	positive regulation of interleukin-10 production
+GO:BP	GO:0051240	positive regulation of multicellular organismal process	0.0358798628766972	3	7	1.44514922538289	42.8571428571429	positive regulation of multicellular organismal process
+GO:BP	GO:0051046	regulation of secretion	0.0358798628766972	2	7	1.44514922538289	28.5714285714286	regulation of secretion
+GO:BP	GO:0019221	cytokine-mediated signaling pathway	0.0358798628766972	2	7	1.44514922538289	28.5714285714286	cytokine-mediated signaling pathway
+GO:BP	GO:0016192	vesicle-mediated transport	0.0361998827769498	3	7	1.44129283580402	42.8571428571429	vesicle-mediated transport
+GO:BP	GO:0045190	isotype switching	0.0363028889023064	1	7	1.44005881340993	14.2857142857143	isotype switching
+GO:BP	GO:0009712	catechol-containing compound metabolic process	0.0363028889023064	1	7	1.44005881340993	14.2857142857143	catechol-containing compound metabolic process
+GO:BP	GO:0045066	regulatory T cell differentiation	0.0363028889023064	1	7	1.44005881340993	14.2857142857143	regulatory T cell differentiation
+GO:BP	GO:0043300	regulation of leukocyte degranulation	0.0363028889023064	1	7	1.44005881340993	14.2857142857143	regulation of leukocyte degranulation
+GO:BP	GO:0042554	superoxide anion generation	0.0363028889023064	1	7	1.44005881340993	14.2857142857143	superoxide anion generation
+GO:BP	GO:0002204	somatic recombination of immunoglobulin genes involved in immune response	0.0363028889023064	1	7	1.44005881340993	14.2857142857143	somatic recombination of immunoglobulin genes involved...
+GO:BP	GO:0002208	somatic diversification of immunoglobulins involved in immune response	0.0363028889023064	1	7	1.44005881340993	14.2857142857143	somatic diversification of immunoglobulins involved in...
+GO:BP	GO:0002694	regulation of leukocyte activation	0.0363028889023064	2	7	1.44005881340993	28.5714285714286	regulation of leukocyte activation
+GO:BP	GO:0031349	positive regulation of defense response	0.0363028889023064	2	7	1.44005881340993	28.5714285714286	positive regulation of defense response
+GO:BP	GO:0032735	positive regulation of interleukin-12 production	0.0363028889023064	1	7	1.44005881340993	14.2857142857143	positive regulation of interleukin-12 production
+GO:BP	GO:0070741	response to interleukin-6	0.0363028889023064	1	7	1.44005881340993	14.2857142857143	response to interleukin-6
+GO:BP	GO:0006584	catecholamine metabolic process	0.0363028889023064	1	7	1.44005881340993	14.2857142857143	catecholamine metabolic process
+GO:BP	GO:0002682	regulation of immune system process	0.0363028889023064	3	7	1.44005881340993	42.8571428571429	regulation of immune system process
+GO:BP	GO:0002369	T cell cytokine production	0.0363530068627194	1	7	1.43945966156204	14.2857142857143	T cell cytokine production
+GO:BP	GO:1903307	positive regulation of regulated secretory pathway	0.0363530068627194	1	7	1.43945966156204	14.2857142857143	positive regulation of regulated secretory pathway
+GO:BP	GO:0002269	leukocyte activation involved in inflammatory response	0.0363530068627194	1	7	1.43945966156204	14.2857142857143	leukocyte activation involved in inflammatory response
+GO:BP	GO:0001916	positive regulation of T cell mediated cytotoxicity	0.0363530068627194	1	7	1.43945966156204	14.2857142857143	positive regulation of T cell mediated cytotoxicity
+GO:BP	GO:0001774	microglial cell activation	0.0363530068627194	1	7	1.43945966156204	14.2857142857143	microglial cell activation
+GO:BP	GO:0009617	response to bacterium	0.0363530068627194	2	7	1.43945966156204	28.5714285714286	response to bacterium
+GO:BP	GO:0002724	regulation of T cell cytokine production	0.0363530068627194	1	7	1.43945966156204	14.2857142857143	regulation of T cell cytokine production
+GO:BP	GO:0042119	neutrophil activation	0.0363530068627194	1	7	1.43945966156204	14.2857142857143	neutrophil activation
+GO:BP	GO:0048523	negative regulation of cellular process	0.0368441361270197	5	7	1.43363162178922	71.4285714285714	negative regulation of cellular process
+GO:BP	GO:0002381	immunoglobulin production involved in immunoglobulin-mediated immune response	0.0370399116390513	1	7	1.43133005802461	14.2857142857143	immunoglobulin production involved in immunoglobulin-m...
+GO:BP	GO:2000516	positive regulation of CD4-positive, alpha-beta T cell activation	0.0370399116390513	1	7	1.43133005802461	14.2857142857143	positive regulation of CD4-positive, alpha-beta T cell...
+GO:BP	GO:0042221	response to chemical	0.0371605009085074	4	7	1.42991844052515	57.1428571428571	response to chemical
+GO:BP	GO:0002886	regulation of myeloid leukocyte mediated immunity	0.0374646740294942	1	7	1.42637804173418	14.2857142857143	regulation of myeloid leukocyte mediated immunity
+GO:BP	GO:0046636	negative regulation of alpha-beta T cell activation	0.0374646740294942	1	7	1.42637804173418	14.2857142857143	negative regulation of alpha-beta T cell activation
+GO:BP	GO:0002889	regulation of immunoglobulin mediated immune response	0.0374646740294942	1	7	1.42637804173418	14.2857142857143	regulation of immunoglobulin mediated immune response
+GO:BP	GO:0097242	amyloid-beta clearance	0.0374646740294942	1	7	1.42637804173418	14.2857142857143	amyloid-beta clearance
+GO:BP	GO:0002712	regulation of B cell mediated immunity	0.037753135618825	1	7	1.42304697183878	14.2857142857143	regulation of B cell mediated immunity
+GO:BP	GO:0045622	regulation of T-helper cell differentiation	0.037753135618825	1	7	1.42304697183878	14.2857142857143	regulation of T-helper cell differentiation
+GO:BP	GO:0048662	negative regulation of smooth muscle cell proliferation	0.037753135618825	1	7	1.42304697183878	14.2857142857143	negative regulation of smooth muscle cell proliferation
+GO:BP	GO:0002639	positive regulation of immunoglobulin production	0.037753135618825	1	7	1.42304697183878	14.2857142857143	positive regulation of immunoglobulin production
+GO:BP	GO:0061900	glial cell activation	0.037753135618825	1	7	1.42304697183878	14.2857142857143	glial cell activation
+GO:BP	GO:0045581	negative regulation of T cell differentiation	0.037753135618825	1	7	1.42304697183878	14.2857142857143	negative regulation of T cell differentiation
+GO:BP	GO:0048856	anatomical structure development	0.0379557057604103	5	7	1.42072292875405	71.4285714285714	anatomical structure development
+GO:BP	GO:0010660	regulation of muscle cell apoptotic process	0.0382725064537477	1	7	1.41711309504263	14.2857142857143	regulation of muscle cell apoptotic process
+GO:BP	GO:0038084	vascular endothelial growth factor signaling pathway	0.0382725064537477	1	7	1.41711309504263	14.2857142857143	vascular endothelial growth factor signaling pathway
+GO:BP	GO:0042269	regulation of natural killer cell mediated cytotoxicity	0.0382725064537477	1	7	1.41711309504263	14.2857142857143	regulation of natural killer cell mediated cytotoxicity
+GO:BP	GO:0050865	regulation of cell activation	0.0385690236521719	2	7	1.41376135485553	28.5714285714286	regulation of cell activation
+GO:BP	GO:0046638	positive regulation of alpha-beta T cell differentiation	0.0385690236521719	1	7	1.41376135485553	14.2857142857143	positive regulation of alpha-beta T cell differentiation
+GO:BP	GO:0016447	somatic recombination of immunoglobulin gene segments	0.0385690236521719	1	7	1.41376135485553	14.2857142857143	somatic recombination of immunoglobulin gene segments
+GO:BP	GO:0010657	muscle cell apoptotic process	0.0385690236521719	1	7	1.41376135485553	14.2857142857143	muscle cell apoptotic process
+GO:BP	GO:0010468	regulation of gene expression	0.0385690236521719	5	7	1.41376135485553	71.4285714285714	regulation of gene expression
+GO:BP	GO:0008283	cell population proliferation	0.0385690236521719	3	7	1.41376135485553	42.8571428571429	cell population proliferation
+KEGG	KEGG:05171	Coronavirus disease - COVID-19	0.0386247462577721	2	6	1.41313436062113	33.3333333333333	Coronavirus disease - COVID-19
+GO:BP	GO:0001937	negative regulation of endothelial cell proliferation	0.039271455534773	1	7	1.40592300198893	14.2857142857143	negative regulation of endothelial cell proliferation
+GO:BP	GO:0031295	T cell costimulation	0.039271455534773	1	7	1.40592300198893	14.2857142857143	T cell costimulation
+GO:BP	GO:0002715	regulation of natural killer cell mediated immunity	0.0398743243840496	1	7	1.39930666239909	14.2857142857143	regulation of natural killer cell mediated immunity
+GO:BP	GO:0002823	negative regulation of adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains	0.0398743243840496	1	7	1.39930666239909	14.2857142857143	negative regulation of adaptive immune response based ...
+GO:BP	GO:0031294	lymphocyte costimulation	0.0398743243840496	1	7	1.39930666239909	14.2857142857143	lymphocyte costimulation
+GO:BP	GO:0001914	regulation of T cell mediated cytotoxicity	0.04034281507078	1	7	1.39423380054442	14.2857142857143	regulation of T cell mediated cytotoxicity
+GO:BP	GO:0036230	granulocyte activation	0.04034281507078	1	7	1.39423380054442	14.2857142857143	granulocyte activation
+GO:BP	GO:0048519	negative regulation of biological process	0.04034281507078	5	7	1.39423380054442	71.4285714285714	negative regulation of biological process
+GO:BP	GO:0045620	negative regulation of lymphocyte differentiation	0.04034281507078	1	7	1.39423380054442	14.2857142857143	negative regulation of lymphocyte differentiation
+GO:BP	GO:0050709	negative regulation of protein secretion	0.0410462263394448	1	7	1.38672676437378	14.2857142857143	negative regulation of protein secretion
+GO:BP	GO:0002347	response to tumor cell	0.0410462263394448	1	7	1.38672676437378	14.2857142857143	response to tumor cell
+GO:BP	GO:0010556	regulation of macromolecule biosynthetic process	0.041070279270487	5	7	1.38647234401221	71.4285714285714	regulation of macromolecule biosynthetic process
+GO:BP	GO:0042531	positive regulation of tyrosine phosphorylation of STAT protein	0.0413681539903704	1	7	1.38333385859888	14.2857142857143	positive regulation of tyrosine phosphorylation of STA...
+GO:BP	GO:0002562	somatic diversification of immune receptors via germline recombination within a single locus	0.0413681539903704	1	7	1.38333385859888	14.2857142857143	somatic diversification of immune receptors via germli...
+GO:BP	GO:0016444	somatic cell DNA recombination	0.0413681539903704	1	7	1.38333385859888	14.2857142857143	somatic cell DNA recombination
+GO:BP	GO:0002637	regulation of immunoglobulin production	0.0413681539903704	1	7	1.38333385859888	14.2857142857143	regulation of immunoglobulin production
+GO:BP	GO:0001913	T cell mediated cytotoxicity	0.0421750227336532	1	7	1.3749446746405	14.2857142857143	T cell mediated cytotoxicity
+GO:BP	GO:0032613	interleukin-10 production	0.0424741219751699	1	7	1.37187559009941	14.2857142857143	interleukin-10 production
+GO:BP	GO:0032653	regulation of interleukin-10 production	0.0424741219751699	1	7	1.37187559009941	14.2857142857143	regulation of interleukin-10 production
+GO:BP	GO:0006911	phagocytosis, engulfment	0.0424741219751699	1	7	1.37187559009941	14.2857142857143	phagocytosis, engulfment
+GO:BP	GO:0033993	response to lipid	0.0424741219751699	2	7	1.37187559009941	28.5714285714286	response to lipid
+GO:BP	GO:0002820	negative regulation of adaptive immune response	0.0424741219751699	1	7	1.37187559009941	14.2857142857143	negative regulation of adaptive immune response
+GO:BP	GO:0002437	inflammatory response to antigenic stimulus	0.043137212032784	1	7	1.36514792687149	14.2857142857143	inflammatory response to antigenic stimulus
+GO:BP	GO:0016445	somatic diversification of immunoglobulins	0.043137212032784	1	7	1.36514792687149	14.2857142857143	somatic diversification of immunoglobulins
+GO:BP	GO:0032655	regulation of interleukin-12 production	0.0445675966516776	1	7	1.35098078500866	14.2857142857143	regulation of interleukin-12 production
+GO:BP	GO:0043370	regulation of CD4-positive, alpha-beta T cell differentiation	0.0445675966516776	1	7	1.35098078500866	14.2857142857143	regulation of CD4-positive, alpha-beta T cell differen...
+GO:BP	GO:0032615	interleukin-12 production	0.0445675966516776	1	7	1.35098078500866	14.2857142857143	interleukin-12 production
+GO:BP	GO:0009725	response to hormone	0.0445784384577298	2	7	1.35087514853117	28.5714285714286	response to hormone
+GO:BP	GO:0009889	regulation of biosynthetic process	0.0445893259690371	5	7	1.35076909257841	71.4285714285714	regulation of biosynthetic process
+GO:BP	GO:0006897	endocytosis	0.0446320191315599	2	7	1.35035346543688	28.5714285714286	endocytosis
+GO:BP	GO:0032103	positive regulation of response to external stimulus	0.0449677656864498	2	7	1.34709869068761	28.5714285714286	positive regulation of response to external stimulus
+GO:BP	GO:0042509	regulation of tyrosine phosphorylation of STAT protein	0.0457109325094599	1	7	1.33997991895171	14.2857142857143	regulation of tyrosine phosphorylation of STAT protein
+GO:BP	GO:0002200	somatic diversification of immune receptors	0.0463353696327554	1	7	1.33408736811658	14.2857142857143	somatic diversification of immune receptors
+GO:BP	GO:1901655	cellular response to ketone	0.0463353696327554	1	7	1.33408736811658	14.2857142857143	cellular response to ketone
+GO:BP	GO:1904263	positive regulation of TORC1 signaling	0.0470847263105773	1	7	1.32711994966079	14.2857142857143	positive regulation of TORC1 signaling
+GO:BP	GO:0150076	neuroinflammatory response	0.0476955721281783	1	7	1.32152193730282	14.2857142857143	neuroinflammatory response
+GO:BP	GO:0099024	plasma membrane invagination	0.0476955721281783	1	7	1.32152193730282	14.2857142857143	plasma membrane invagination
+GO:BP	GO:2000379	positive regulation of reactive oxygen species metabolic process	0.0478990196523525	1	7	1.31967337518524	14.2857142857143	positive regulation of reactive oxygen species metabol...
+GO:BP	GO:0006801	superoxide metabolic process	0.0478990196523525	1	7	1.31967337518524	14.2857142857143	superoxide metabolic process
+GO:BP	GO:0002312	B cell activation involved in immune response	0.0478990196523525	1	7	1.31967337518524	14.2857142857143	B cell activation involved in immune response
+GO:BP	GO:0043299	leukocyte degranulation	0.0478990196523525	1	7	1.31967337518524	14.2857142857143	leukocyte degranulation
+GO:BP	GO:0007260	tyrosine phosphorylation of STAT protein	0.0478990196523525	1	7	1.31967337518524	14.2857142857143	tyrosine phosphorylation of STAT protein
+GO:BP	GO:0032502	developmental process	0.0483939470437424	5	7	1.31520895508893	71.4285714285714	developmental process
+GO:BP	GO:0032722	positive regulation of chemokine production	0.0483939470437424	1	7	1.31520895508893	14.2857142857143	positive regulation of chemokine production
+GO:BP	GO:0002720	positive regulation of cytokine production involved in immune response	0.0483939470437424	1	7	1.31520895508893	14.2857142857143	positive regulation of cytokine production involved in...
+GO:BP	GO:0050871	positive regulation of B cell activation	0.0490801922134502	1	7	1.30909374510809	14.2857142857143	positive regulation of B cell activation
+GO:BP	GO:0030154	cell differentiation	0.0491824421563614	4	7	1.30818991014999	57.1428571428571	cell differentiation
+GO:BP	GO:0032879	regulation of localization	0.0491824421563614	3	7	1.30818991014999	42.8571428571429	regulation of localization
+GO:BP	GO:0032940	secretion by cell	0.0491824421563614	2	7	1.30818991014999	28.5714285714286	secretion by cell
+GO:BP	GO:0048869	cellular developmental process	0.0491824421563614	4	7	1.30818991014999	57.1428571428571	cellular developmental process
+GO:BP	GO:0097352	autophagosome maturation	0.0492591099540225	1	7	1.30751343954419	14.2857142857143	autophagosome maturation
+GO:BP	GO:0097306	cellular response to alcohol	0.0494329623221555	1	7	1.30598336320669	14.2857142857143	cellular response to alcohol
+GO:BP	GO:0046637	regulation of alpha-beta T cell differentiation	0.0494329623221555	1	7	1.30598336320669	14.2857142857143	regulation of alpha-beta T cell differentiation
+GO:BP	GO:0035924	cellular response to vascular endothelial growth factor stimulus	0.0494329623221555	1	7	1.30598336320669	14.2857142857143	cellular response to vascular endothelial growth facto...
+GO:BP	GO:0080090	regulation of primary metabolic process	0.0494329623221555	5	7	1.30598336320669	71.4285714285714	regulation of primary metabolic process
+GO:BP	GO:0000423	mitophagy	0.0494329623221555	1	7	1.30598336320669	14.2857142857143	mitophagy
+GO:BP	GO:0050766	positive regulation of phagocytosis	0.0499956150959934	1	7	1.30106808412642	14.2857142857143	positive regulation of phagocytosis
+GO:BP	GO:0043242	negative regulation of protein-containing complex disassembly	0.0499956150959934	1	7	1.30106808412642	14.2857142857143	negative regulation of protein-containing complex disa...
