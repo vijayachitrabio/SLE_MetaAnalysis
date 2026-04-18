@@ -1,0 +1,7 @@
+Method	Database	N_significant	Top_pathway	Top_NES
+fgsea (pre-ranked GSEA)	Hallmark	1	HALLMARK_INTERFERON_GAMMA_RESPONSE	-1.772
+fgsea (pre-ranked GSEA)	Reactome	2	REACTOME_COMPLEMENT_CASCADE	-2.276
+fgsea (pre-ranked GSEA)	GO_BP	15	GOBP_COMPLEMENT_ACTIVATION_GZMK_PATHWAY	-2.035
+fgsea (pre-ranked GSEA)	ImmuneSigDB	1	GSE20727_CTRL_VS_H2O2_TREATED_DC_DN	2.032
+g:Profiler (ordered query, g:SCS)	GO:BP	21	MHC class II protein complex assembly	
+g:Profiler (ordered query, g:SCS)	GO:MF	18	peptide antigen binding	
