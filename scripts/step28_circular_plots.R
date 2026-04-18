@@ -75,19 +75,36 @@ draw_chord <- function() {
     preAllocateTracks = list(track.height = 0.05)
   )
   
-  # Custom labels with text wrapping and bold gene names
+  # Custom labels with dynamic orientation (auto-flip bottom labels)
   circos.track(track.index = 1, panel.fun = function(x, y) {
     label <- wrapped_labels[CELL_META$sector.index]
-    circos.text(
-      CELL_META$xcenter, 
-      CELL_META$ylim[1] + 1.25, 
-      label, 
-      facing = "clockwise", 
-      niceFacing = TRUE, 
-      adj = c(0, 0.5), 
-      cex = 0.55, 
-      font = 2
-    )
+    # Calculate degree to determine flip
+    region_degree <- CELL_META$xcenter
+    
+    # Logic for professional orientation: Flip if in the bottom half
+    if(region_degree > 90 & region_degree < 270) {
+      circos.text(
+        CELL_META$xcenter, 
+        CELL_META$ylim[1] + 1.25, 
+        label, 
+        facing = "reverse.clockwise", 
+        niceFacing = TRUE, 
+        adj = c(1, 0.5), 
+        cex = 0.55, 
+        font = 2
+      )
+    } else {
+      circos.text(
+        CELL_META$xcenter, 
+        CELL_META$ylim[1] + 1.25, 
+        label, 
+        facing = "clockwise", 
+        niceFacing = TRUE, 
+        adj = c(0, 0.5), 
+        cex = 0.55, 
+        font = 2
+      )
+    }
   }, bg.border = NA)
 }
 
