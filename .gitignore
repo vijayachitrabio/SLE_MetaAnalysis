@@ -1,23 +1,37 @@
-# Local IDE and System Settings
-.*
-~$*
+# SLE Meta-Analysis Final Gitignore
 
-# Large Research Assets and Data
-data/
-raw/
-*analysis/
-results/*.pdf
-results/pathway/
-results/sle_meta_analysis_results.tsv
-
-# Binary Documents
-*.docx
-*.pptx
-
-# Local Manuscript Documentation
+# Exclude Manuscripts (requested)
 manuscript_sle_meta_analysis.md
-*.tsv.gz
-results/discovery_meta_results.tsv
-results/sle_meta_analysis_results.tsv
-GWAS_SLE_summaryStats/
-figures/internal/
+SLE_Manuscript.docx
+SLE_Manuscript_Frontiers_Immunology.docx
+SLE_Manuscript_Revised_new.docx
+~$*.docx
+~$*.pptx
+
+# Exclude Intermediate Data & Logs
+*.log
+*.dot
+results/coloc_output.log
+results/lava_output.log
+results/lava_rerun_log.txt
+results/lava_progress_checkpoint.csv
+results/processed_locs.txt
+data/raw/
+data/munged/
+data/ref_panel/
+
+# Exclude Internal Artifacts
+implementation_plan.md
+task.md
+walkthrough.md
+sa1_heterogeneity.pdf
+sa1_heterogeneity.png
+
+# System / IDE
+.DS_Store
+.Rhistory
+.RData
+.gemini/
+scripts/.DS_Store
+figures/.DS_Store
+results/.DS_Store

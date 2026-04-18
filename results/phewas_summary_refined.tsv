@@ -1,0 +1,35 @@
+RSID	Study_ID	Reported_Trait	EFO_Trait	EFO_ID	P_value	Beta	Odds_Ratio	Risk_Allele	Pubmed_ID	Category
+rs389884	GCST90468568	CCL16 protein levels	C-C motif chemokine 16 measurement	EFO_0008044	9e-25			rs389884-G	39789286	Other Trait
+rs389884	GCST90313921	CD93/CLEC14A protein level ratio	CD93/CLEC14A protein level ratio in blood	OBA_2053392	2e-24			rs389884-?	38412862	Other Trait
+rs389884	GCST90090013	Serum levels of protein FTMT	blood protein amount	OBA_VT0005416	6e-137			rs389884-G	35078996	Other Trait
+rs389884	GCST90027168	Inguinal hernia	inguinal hernia	HP_0000023	1e-08		1.1	rs389884-A	34382107	Other Trait
+rs389884	GCST001779	Hematology traits	leukocyte quantity	OBA_VT0000217	2e-08			rs389884-C	23263863	Other Trait
+rs389884	GCST000984	Idiopathic membranous nephropathy	membranous glomerulonephritis	MONDO_0005376	8e-66		3.65	rs389884-C	21323541	Other Trait
+rs389884	GCST90247643	Ferritin, mitochondrial levels	protein measurement	EFO_0004747	0			rs389884-A	34648354	Other Trait
+rs389884	GCST005541	Sarcoidosis (Lofgren's syndrome vs non-Lofgren's syndrome)	sarcoidosis	MONDO_0019338	1e-32			rs389884-G	26651848	Other Trait
+rs4853458	GCST90131439	Rheumatoid arthritis (rheumatoid factor and anti-cyclic citrullinated peptide seronegative)	ACPA-negative rheumatoid arthritis	EFO_0009460	1e-06		1.1	rs4853458-A	35470158	Immune-Mediated
+rs4853458	GCST90131438	Rheumatoid arthritis (rheumatoid factor and/or anti-cyclic citrullinated peptide seropositive)	ACPA-positive rheumatoid arthritis	EFO_0009459	5e-14		1.11	rs4853458-A	35470158	Immune-Mediated
+rs4853458	GCST90479869	Hypothyroidism NOS (PheCode 244.4)	hypothyroidism	MONDO_0005420	7e-17			rs4853458-A	39024449	Other Trait
+rs4853458	GCST90131437	Rheumatoid arthritis	rheumatoid arthritis	MONDO_0008383	3e-19		1.1	rs4853458-A	35470158	Immune-Mediated
+rs4853458	GCST90319682	Systemic sclerosis	systemic sclerosis	MONDO_0005100	2e-35			rs4853458-A	38296975	Other Trait
+rs4853458	GCST90479596	Takes medication for Thyroid problems?	thyroid gland disorder	MONDO_0003240	2e-13			rs4853458-A	39024449	Other Trait
+rs17849501	GCST90480454	Lupus (localized and systemic) (PheCode 695.4)	autoimmune disorder of musculoskeletal system	MONDO_0000589	7e-13			rs17849501-C	39024449	Immune-Mediated
+rs17849501	GCST003155	Systemic lupus erythematosus	systemic lupus erythematosus	MONDO_0007915	3e-88		2.1	rs17849501-T	26502338	Immune-Mediated
+rs41272536	GCST90002407	White blood cell count	leukocyte quantity	OBA_VT0000217	5e-11			rs41272536-G	32888494	Other Trait
+rs41272536	GCST90002374	White blood cell count	myeloid leukocyte count	OBA_2045223	4e-13			rs41272536-G	32888493	Other Trait
+rs41272536	GCST90002351	Neutrophil count	neutrophil count	EFO_0004833	2e-13			rs41272536-G	32888493	Other Trait
+rs34572943	GCST90480454	Lupus (localized and systemic) (PheCode 695.4)	autoimmune disorder of musculoskeletal system	MONDO_0000589	8e-36			rs34572943-G	39024449	Immune-Mediated
+rs34572943	GCST90480452	Cutaneous lupus erythematosus (PheCode 695.41)	cutaneous lupus erythematosus	MONDO_0005282	9e-37			rs34572943-G	39024449	Immune-Mediated
+rs34572943	GCST005752	Systemic lupus erythematosus	systemic lupus erythematosus	MONDO_0007915	9e-85		1.68	rs34572943-?	28714469	Immune-Mediated
+rs13332649	GCST003156	Systemic lupus erythematosus	systemic lupus erythematosus	MONDO_0007915	2e-18		1.34	rs13332649-A	26502338	Immune-Mediated
+rs10912578	GCST003156	Systemic lupus erythematosus	systemic lupus erythematosus	MONDO_0007915	4e-19		1.27	rs10912578-A	26502338	Immune-Mediated
+rs10912578	GCST90444202	Type 2 diabetes	type 2 diabetes mellitus	MONDO_0005148	5e-07			rs10912578-A	39379762	Immune-Mediated
+rs6671847	GCST90013537	Kawasaki disease	Kawasaki disease	MONDO_0012727	3e-09		0.7	rs6671847-A	33772158	Other Trait
+rs6671847	GCST90001983	CD14 on CD14+ CD16+ monocyte	blood protein amount	OBA_VT0005416	5e-11			rs6671847-A	32929287	Other Trait
+rs6671847	GCST011501	Inflammatory bowel disease	inflammatory bowel disease	MONDO_0005265	2e-12		1.13	rs6671847-G	33608531	Other Trait
+rs6671847	GCST003156	Systemic lupus erythematosus	systemic lupus erythematosus	MONDO_0007915	1e-12		1.2	rs6671847-A	26502338	Immune-Mediated
+rs6671847	GCST90446795	Ulcerative colitis	ulcerative colitis	MONDO_0005101	3e-11		0.82365793	rs6671847-?	37156999	Immune-Mediated
+rs693109	GCST90092959	Cholesteryl esters to total lipids ratio in small LDL	Cholesteryl esters:total lipids ratio	EFO_0020944	2e-20			rs693109-C	35213538	Other Trait
+rs693109	GCST90092965	Phospholipids to total lipids ratio in small LDL	Phospholipids:total lipids ratio	EFO_0020946	3e-22			rs693109-C	35213538	Other Trait
+rs693109	GCST90102598	Endometriosis or asthma (pleiotropy)	endometriosis	MONDO_0005133	1e-07			rs693109-A	35472084	Other Trait
+rs693109	GCST90502555	Polyunsaturated fatty acids to monounsaturated fatty acids ratio	polyunsaturated fatty acids to monounsaturated fatty acids ratio 	EFO_0022302	2e-08			rs693109-C	40545721	Other Trait

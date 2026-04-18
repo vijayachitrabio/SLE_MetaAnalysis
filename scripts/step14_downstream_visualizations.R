@@ -9,6 +9,8 @@ suppressPackageStartupMessages({
   library(ggpubr)
   library(stringr)
   library(igraph)
+  library(ggrepel)
+  library(RColorBrewer)
 })
 
 setwd("/Users/vijayachitramodhukur/Library/Mobile Documents/com~apple~CloudDocs/ECLAI/GWAs_meta_analysis/AMH_MEnopause/SLE_MetaAnalysis")
@@ -97,54 +99,62 @@ therapeutic <- fread("results/therapeutic_mapping_summary.tsv", nrows = 26)
 therapeutic <- therapeutic[RSID != "" & !is.na(RSID)]
 
 # Filter to replicated genes for cleaner visualization
-therap_rep <- therapeutic[Replicated == TRUE]
+# Filter to only High-Confidence Loci from the final summary
+hc_loci <- fread("results/top_loci_summary_table.tsv")$RSID
+therap_hc <- therapeutic[RSID %in% hc_loci]
 
-# Drug class colors - simplified labels
-drug_colors <- c(
-  "JAK Inhibitors" = "#E91E63",
-  "Anti-IFNAR1 mAb" = "#9C27B0",
-  "Complement Inhibitors" = "#3F51B5",
-  "BAFF inhibitors" = "#009688",
-  "TNF Pathway" = "#4CAF50",
-  "Anti-CD20" = "#8BC34A",
-  "Calcineurin Inhibitors" = "#CDDC39",
-  "Anti-IFN" = "#FFEB3B",
-  "TYK2 Inhibitors" = "#FFC107",
-  "Anti-OX40L" = "#FF9800",
-  "IVIG modulation" = "#795548",
-  "Anti-IL-12/23" = "#607D8B",
-  "Other" = "#9E9E9E"
+# Custom professional color palette for Drug Status
+status_colors <- c(
+  "FDA-approved" = "#2E7D32",         # Royal Green
+  "FDA-approved (RA/SLE)" = "#2E7D32", 
+  "Approved" = "#2E7D32",
+  "Approved / Phase III" = "#1565C0", # Deep Blue
+  "Phase III" = "#1565C0",
+  "Phase II" = "#F9A825",            # Amber/Orange
+  "Phase II SLE" = "#F9A825",
+  "Preclinical" = "#757575"           # Grey
 )
 
-# Simplify drug class names for plotting
-therap_rep[, Drug_Class_simple := sub(" / .*", "", Drug_Class)]
-therap_rep[, Drug_Class_simple := gsub("NF-kB.*", "TNF Pathway", Drug_Class_simple)]
-therap_rep[, Drug_Class_simple := gsub("BAFF inhibitors.*", "BAFF inhibitors", Drug_Class_simple)]
-therap_rep[, Drug_Class_simple := gsub("Anti-CD20 /.*", "Anti-CD20", Drug_Class_simple)]
-therap_rep[, Drug_Class_simple := gsub("Anti-IFN /.*", "Anti-IFN", Drug_Class_simple)]
-therap_rep[, Drug_Class_simple := gsub("IVIG /.*", "IVIG modulation", Drug_Class_simple)]
+# Clean up drug status for plotting
+therap_hc[, Status_Simple := factor(Drug_Status, levels = c("FDA-approved", "FDA-approved (RA/SLE)", "Approved", "Approved / Phase III", "Phase III", "Phase II", "Phase II SLE", "Preclinical"))]
 
-# Create a cleaner horizontal version
-p_therap <- ggplot(therap_rep, aes(x = Drug_Class_simple, y = reorder(Lead_Gene, -Discovery_P))) +
-  geom_point(aes(size = -log10(Discovery_P), color = Drug_Class_simple), alpha = 0.85, shape = 16) +
-  scale_color_manual(values = drug_colors, name = "Drug Class") +
-  scale_size_continuous(name = "-log10(P)", range = c(3, 10)) +
-  labs(title = "Therapeutic Mapping: Drug Repurposing Potential",
-       subtitle = "Replicated SLE loci with existing drug targets",
-       x = "", y = "Target Gene") +
-  theme_minimal(base_size = 11) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 9),
-        axis.text.y = element_text(face = "italic", size = 10),
-        legend.position = "right",
-        plot.title = element_text(face = "bold", hjust = 0.5),
-        legend.text = element_text(size = 8)) +
-  guides(color = guide_legend(ncol = 1))
+# Create the premium visualization
+p_therap <- ggplot(therap_hc, aes(x = Drug_Class, y = reorder(Lead_Gene, -Discovery_P))) +
+  # Background panel styling
+  annotate("rect", xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf, fill = "#F5F5F5", alpha = 0.2) +
+  # Bubble Plot
+  geom_point(aes(size = -log10(Discovery_P), color = Drug_Status, shape = Drug_Status), alpha = 0.8) +
+  # Labels with ggrepel
+  geom_text_repel(aes(label = Specific_Drug), size = 3, fontface = "bold", box.padding = 0.5, max.overlaps = 15) +
+  # Scales
+  scale_color_manual(values = status_colors, name = "Clinical Status") +
+  scale_shape_manual(values = c(16, 16, 16, 17, 17, 18, 18, 15), name = "Clinical Status") +
+  scale_size_continuous(name = expression(-log[10](P[discovery])), range = c(4, 12)) +
+  # Labels and Theme
+  labs(title = "Figure 5: Therapeutic Landscape of SLE High-Confidence Loci",
+       subtitle = "Mapping of validated genetic associations to existing and emerging drug targets",
+       x = "Drug Category", y = "Target Effector Gene") +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 35, hjust = 1, size = 10, face = "bold"),
+    axis.text.y = element_text(face = "italic", size = 11),
+    legend.position = "right",
+    plot.title = element_text(face = "bold", size = 16, color = "#1A237E"),
+    plot.subtitle = element_text(size = 11, color = "#455A64"),
+    panel.grid.major = element_line(color = "white"),
+    panel.background = element_rect(fill = "white", color = NA),
+    legend.background = element_rect(fill = "#FAFAFA", color = "grey90")
+  ) +
+  guides(
+    color = guide_legend(override.aes = list(size = 5)),
+    shape = guide_legend(override.aes = list(size = 5))
+  )
 
 ggsave("figures/therapeutic_mapping.png", p_therap, width = 12, height = 10, dpi = 300, bg = "white")
 ggsave("figures/therapeutic_mapping.pdf", p_therap, width = 12, height = 10)
 
 # Create drug status summary
-drug_summary <- therap_rep %>%
+drug_summary <- therap_hc %>%
   group_by(Drug_Status) %>%
   summarise(n = n(), genes = paste(Lead_Gene, collapse = ", ")) %>%
   ungroup()
@@ -157,17 +167,17 @@ fwrite(drug_summary, "results/drug_status_summary.tsv", sep = "\t")
 
 loci <- fread("results/top_loci_summary_table.tsv")
 loci_plot <- loci %>%
-  filter(!is.na(Gene) & Gene != "TBD" & Gene != "Intergenic") %>%
+  filter(!is.na(Gene) & Gene != "TBD" & Gene != "Intergenic" & Gene != "") %>%
   mutate(Gene_clean = sapply(strsplit(Gene, " / "), function(x) tail(x, 1))) %>%
   head(30)
 
-p_table <- ggplot(loci_plot, aes(x = reorder(Gene_clean, P_disco), y = -log10(P_disco))) +
-  geom_bar(aes(fill = Replicated), stat = "identity", alpha = 0.85) +
+p_table <- ggplot(loci_plot, aes(x = reorder(Gene_clean, P_meta), y = -log10(P_meta))) +
+  geom_bar(aes(fill = as.character(Replicated)), stat = "identity", alpha = 0.85) +
   scale_fill_manual(values = c("TRUE" = "#4CAF50", "FALSE" = "#FF5722"), name = "Replicated") +
   coord_flip() +
   labs(title = "Top 30 SLE-Associated Loci",
-       subtitle = "Sorted by discovery P-value",
-       x = "", y = expression(-log[10](P[discovery]))) +
+       subtitle = "Sorted by discovery meta P-value",
+       x = "", y = expression(-log[10](P[meta]))) +
   theme_minimal(base_size = 11) +
   theme(axis.text.y = element_text(face = "italic", size = 9),
         legend.position = "bottom",
@@ -176,30 +186,7 @@ p_table <- ggplot(loci_plot, aes(x = reorder(Gene_clean, P_disco), y = -log10(P_
 ggsave("figures/top_loci_summary.png", p_table, width = 10, height = 12, dpi = 300, bg = "white")
 ggsave("figures/top_loci_summary.pdf", p_table, width = 10, height = 12)
 
-# ============================================================
-# 4. NOVELTY CLASSIFICATION VISUALIZATION
-# ============================================================
-
-novelty_counts <- loci %>%
-  filter(!is.na(Known_SLE)) %>%
-  mutate(Novelty = ifelse(Known_SLE == TRUE, "Known SLE", "Novel")) %>%
-  group_by(Novelty) %>%
-  summarise(n = n())
-
-p_novelty <- ggplot(novelty_counts, aes(x = Novelty, y = n, fill = Novelty)) +
-  geom_bar(stat = "identity", alpha = 0.85) +
-  geom_text(aes(label = n), vjust = -0.5, size = 5, fontface = "bold") +
-  scale_fill_brewer(palette = "Set2", name = "Novelty Status") +
-  labs(title = "Novelty Classification of SLE Loci",
-       subtitle = "Known vs Novel genetic associations",
-       x = "", y = "Count") +
-  theme_minimal(base_size = 12) +
-  theme(legend.position = "none",
-        plot.title = element_text(face = "bold", hjust = 0.5))
-
-ggsave("figures/novelty_classification.png", p_novelty, width = 6, height = 5, dpi = 300, bg = "white")
-ggsave("figures/novelty_classification.pdf", p_novelty, width = 6, height = 5)
-
+# = [Removed Section 4: Novelty Classification] = #
 cat("All downstream visualizations complete.\n")
 cat("Output files in figures/:\n")
 cat("- SA1_heterogeneity.png/pdf\n")
@@ -207,4 +194,3 @@ cat("- SA2_hla_distance.png\n")
 cat("- SA3_replication.png/pdf\n")
 cat("- therapeutic_mapping.png/pdf\n")
 cat("- top_loci_summary.png/pdf\n")
-cat("- novelty_classification.png/pdf\n")
