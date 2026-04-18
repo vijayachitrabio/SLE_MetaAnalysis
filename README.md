@@ -14,7 +14,7 @@ This repository contains the complete, enhanced analytical pipeline for a genome
 - **25 Novel Signals**: Putative novel associations validated against the EBI GWAS Catalog (as of April 2026).
 - **15 High-Confidence Targets**: Prioritized via the **LAVA** framework (Regional Genetic Correlation) and Bayesian **COLOC** (GTEx v10 immune eQTLs).
 - **Discovery Power**: Consolidated sample size of **N = 388,655** (5,342 SLE cases).
-- **Novel Biological Insights**: Identification of ***CLIC1*** and ***TNFSF4*** as definitive causal mediators of SLE risk.
+- **Novel Biological Insights**: Identification of ***CLIC1*** and ***TNFSF4*** as suggested causal mediators of SLE risk.
 
 ---
 
