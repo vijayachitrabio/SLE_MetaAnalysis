@@ -1,25 +1,19 @@
 source	term_id	term_name	p_value	intersection_size	query_size	log_pval	overlap_ratio	term_clean
-GO:BP	GO:0006952	defense response	0.000145156209148126	15	36	3.83816438221541	41.6666666666667	defense response
-GO:BP	GO:0006955	immune response	0.000366034195811038	15	36	3.43647833985612	41.6666666666667	immune response
-GO:BP	GO:0002376	immune system process	0.000372678652435905	17	36	3.42866548354027	47.2222222222222	immune system process
-GO:BP	GO:0035722	interleukin-12-mediated signaling pathway	0.000372678652435905	3	36	3.42866548354027	8.33333333333333	interleukin-12-mediated signaling pathway
-GO:BP	GO:0071349	cellular response to interleukin-12	0.000406376751565898	3	36	3.39107114559483	8.33333333333333	cellular response to interleukin-12
-GO:BP	GO:0070671	response to interleukin-12	0.000406376751565898	3	36	3.39107114559483	8.33333333333333	response to interleukin-12
-REAC	REAC:R-HSA-8984722	Interleukin-35 Signalling	0.000802551845454571	3	27	3.09552690226573	11.1111111111111	Interleukin-35 Signalling
-GO:BP	GO:0002237	response to molecule of bacterial origin	0.00107333154199638	6	36	2.96926610783911	16.6666666666667	response to molecule of bacterial origin
-GO:BP	GO:0001775	cell activation	0.00200391828771168	10	36	2.69811999134742	27.7777777777778	cell activation
-GO:BP	GO:0043207	response to external biotic stimulus	0.0027603865879618	11	36	2.55903009139078	30.5555555555556	response to external biotic stimulus
-GO:BP	GO:0045087	innate immune response	0.0027603865879618	9	36	2.55903009139078	25	innate immune response
-GO:BP	GO:0045321	leukocyte activation	0.0027603865879618	9	36	2.55903009139078	25	leukocyte activation
-GO:BP	GO:0051707	response to other organism	0.0027603865879618	11	36	2.55903009139078	30.5555555555556	response to other organism
-GO:BP	GO:0071345	cellular response to cytokine stimulus	0.00283407601593948	8	36	2.54758850523171	22.2222222222222	cellular response to cytokine stimulus
-GO:BP	GO:0098542	defense response to other organism	0.00304341640733897	10	36	2.51663862239134	27.7777777777778	defense response to other organism
-GO:BP	GO:0009607	response to biotic stimulus	0.00304341640733897	11	36	2.51663862239134	30.5555555555556	response to biotic stimulus
-REAC	REAC:R-HSA-168256	Immune System	0.00335573525925501	15	27	2.47421230886237	55.5555555555556	Immune System
-REAC	REAC:R-HSA-1280215	Cytokine Signaling in Immune system	0.00591435385784136	9	27	2.22809269504317	33.3333333333333	Cytokine Signaling in Immune system
-REAC	REAC:R-HSA-9020591	Interleukin-12 signaling	0.0118973187006543	3	27	1.92455090455025	11.1111111111111	Interleukin-12 signaling
-REAC	REAC:R-HSA-447115	Interleukin-12 family signaling	0.0149147739603902	3	27	1.82638332416575	11.1111111111111	Interleukin-12 family signaling
-REAC	REAC:R-HSA-8866654	E3 ubiquitin ligases ubiquitinate target proteins	0.0149147739603902	3	27	1.82638332416575	11.1111111111111	E3 ubiquitin ligases ubiquitinate target proteins
-REAC	REAC:R-HSA-909733	Interferon alpha/beta signaling	0.0276816673013769	3	27	1.5578077553287	11.1111111111111	Interferon alpha/beta signaling
-REAC	REAC:R-HSA-8852135	Protein ubiquitination	0.0276816673013769	3	27	1.5578077553287	11.1111111111111	Protein ubiquitination
-REAC	REAC:R-HSA-877300	Interferon gamma signaling	0.0389487824608718	3	27	1.40950611382683	11.1111111111111	Interferon gamma signaling
+REAC	REAC:R-HSA-1280215	Cytokine Signaling in Immune system	0.00030995892489337	5	6	3.50869585414661	83.3333333333333	Cytokine Signaling in Immune system
+GO:BP	GO:0045321	leukocyte activation	0.000537303524890095	5	7	3.2697803103055	71.4285714285714	leukocyte activation
+GO:BP	GO:0002252	immune effector process	0.000537303524890095	5	7	3.2697803103055	71.4285714285714	immune effector process
+GO:BP	GO:0002250	adaptive immune response	0.000537303524890095	4	7	3.2697803103055	57.1428571428571	adaptive immune response
+GO:BP	GO:0002443	leukocyte mediated immunity	0.000537303524890095	4	7	3.2697803103055	57.1428571428571	leukocyte mediated immunity
+GO:BP	GO:0002460	adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains	0.000537303524890095	4	7	3.2697803103055	57.1428571428571	adaptive immune response based on somatic recombinatio...
+GO:BP	GO:0006952	defense response	0.000537303524890095	6	7	3.2697803103055	85.7142857142857	defense response
+GO:BP	GO:0001775	cell activation	0.000537303524890095	5	7	3.2697803103055	71.4285714285714	cell activation
+GO:BP	GO:0006955	immune response	0.000537303524890095	6	7	3.2697803103055	85.7142857142857	immune response
+GO:BP	GO:0006950	response to stress	0.000558806656723052	7	7	3.25273842904163	100	response to stress
+GO:BP	GO:0001909	leukocyte mediated cytotoxicity	0.000566992150528136	3	7	3.2464229534632	42.8571428571429	leukocyte mediated cytotoxicity
+GO:BP	GO:0002705	positive regulation of leukocyte mediated immunity	0.000566992150528136	3	7	3.2464229534632	42.8571428571429	positive regulation of leukocyte mediated immunity
+REAC	REAC:R-HSA-168256	Immune System	0.000582720288264376	6	6	3.23453986104512	100	Immune System
+GO:BP	GO:0046631	alpha-beta T cell activation	0.000812716505228519	3	7	3.09006092019441	42.8571428571429	alpha-beta T cell activation
+GO:BP	GO:0002376	immune system process	0.00150670133912825	6	7	2.8219728257365	85.7142857142857	immune system process
+GO:BP	GO:0001906	cell killing	0.00164369212544023	3	7	2.78417952544796	42.8571428571429	cell killing
+GO:BP	GO:0002703	regulation of leukocyte mediated immunity	0.00178295072516982	3	7	2.74886065911435	42.8571428571429	regulation of leukocyte mediated immunity
+REAC	REAC:R-HSA-449147	Signaling by Interleukins	0.00799709299921227	3	6	2.09706785348757	50	Signaling by Interleukins

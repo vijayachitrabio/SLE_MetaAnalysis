@@ -1,17 +1,8 @@
 Drug_Status	n	genes
 Approved	1	IRF8
-Approved (off-label/SLE)	1	RSBN1
 Approved / Phase III	2	ITGAM, FCGR2A
 Approved / SLE studies	1	IL12A
-FDA-approved (Lupus Nephritis)	1	PTTG1
-FDA-approved (NMOSD / SLE trial)	1	BANK1
-FDA-approved (PsO, SLE trials)	1	TYK2
 FDA-approved (RA/SLE)	1	STAT4
-FDA-approved (SLE)	3	IRF5, TNIP1, BLK / FAM167A
 FDA-approved SLE 2022	1	STAT4
-Investigational	2	CD44, SPRED2
 Investigational SLE	1	CLEC16A
-Investigational for SLE	1	TNFAIP3
 Phase II SLE	1	TNFSF4
-Research stage	2	ATXN2, PRAG1
-SLE standard of care	3	NEMP2, HLA-MHC / ZSCAN12, HLA / H4C1
