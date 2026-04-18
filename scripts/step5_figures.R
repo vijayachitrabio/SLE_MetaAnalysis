@@ -35,20 +35,42 @@ plot_data <- plot_data %>%
 axisdf <- plot_data %>% group_by(CHR) %>% summarize(center=( max(bp_cum) + min(bp_cum) ) / 2 )
 
 message("Generating Manhattan Plot...")
+
+# Identify Top Genes for labels (High-Confidence & Replicated)
+top_loci <- fread("results/top_loci_summary_table.tsv")
+label_data <- top_loci %>%
+  filter(Replicated == TRUE) %>%
+  mutate(label = Gene) %>%
+  arrange(P_meta) %>%
+  head(15)
+
+# Merge with bp_cum 
+label_points <- label_data %>%
+  inner_join(plot_data %>% select(RSID, bp_cum), by = "RSID")
+
 p_manhattan <- ggplot(plot_data, aes(x=bp_cum, y=minuslog10p)) +
   geom_point(aes(color=as.factor(CHR)), alpha=0.8, size=1.3) +
   scale_color_manual(values = rep(c("#2c3e50", "#2980b9"), 22)) +
   scale_x_continuous(label = axisdf$CHR, breaks = axisdf$center) +
-  scale_y_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
   geom_hline(yintercept = -log10(5e-8), color = "#e74c3c", linetype="dashed") +
+  # Add Labels
+  ggrepel::geom_text_repel(
+    data = label_points,
+    aes(x = bp_cum, y = -log10(P_meta), label = label),
+    size = 3.2, fontface = "italic", color = "black",
+    box.padding = 0.5, point.padding = 0.5, force = 4,
+    max.overlaps = Inf
+  ) +
   theme_minimal() +
   theme(legend.position="none",
         panel.grid.major.x = element_blank(),
         panel.grid.minor.x = element_blank(),
-        axis.text.x = element_text(angle = 90, vjust = 0.5)) +
+        axis.text.x = element_text(angle = 90, vjust = 0.5),
+        plot.title = element_text(face = "bold", size = 14)) +
   labs(x = "Chromosome", y = "-log10(P-value)", title = "North-to-South European SLE Meta-Analysis")
 
-ggsave("figures/manhattan_plot.png", p_manhattan, width = 12, height = 6, dpi = 300)
+ggsave("figures/manhattan_plot.png", p_manhattan, width = 14, height = 7, dpi = 300)
 
 message("Generating QQ Plot...")
 # Downsample for QQ plot speed
