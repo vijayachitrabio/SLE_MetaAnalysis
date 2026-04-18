@@ -36,16 +36,16 @@ The repository provides a robust, end-to-end bioinformatics pipeline implemented
 
 ---
 
-## 3. Targeted Causal Evidence (Hero Genes)
+## 3. Prioritized Causal Drivers and Functional Validation
 
-Our study provides definitive statistical support for key causal mediators of SLE:
+Our study provides rigorous statistical support for key causal mediators of SLE pathogenesis:
 
-| Gene | Locus | Evidence Type | Score | Biological Context |
+| Gene | Lead RSID | Evidence Framework | Causal Probability | Biological Mechanism |
 | :--- | :--- | :--- | :--- | :--- |
-| ***CLIC1*** | rs389884 | Bayesian COLOC | **PP4 = 0.94** | Macrophage polarization & Inflammasome activation. |
-| ***TNFSF4*** | rs10912578| Regional correlation| Replicated | T-cell costimulation (OX40L signaling). |
+| ***CLIC1*** | rs389884 | Bayesian COLOC | **PP4 = 0.94** | Inflammasome regulation & Macrophage function. |
+| ***TNFSF4*** | rs10912578| Regional Heritability| Replicated | T-cell costimulation (OX40L pathway). |
 
-*Note: CLIC1 achieves a posterior probability of 94% in Spleen tissue, identifying it as a primary therapeutic target.*
+*Note: Bayesian colocalization (COLOC) identifies CLIC1 as a high-confidence causal driver in Spleen tissue, exceeding the standard posterior probability threshold of 0.8.*
 
 ---
 
