@@ -45,16 +45,26 @@ grid_col <- c(brewer.pal(length(unique(clean_links$Gene)), "Set1"),
 names(grid_col) <- unique(c(clean_links$Gene, clean_links$EFO_Trait))
 
 # 3. Generating High-Resolution Plots (PNG and PDF)
-message("Generating Refined Pleiotropy Chord Diagram...")
+message("Generating Refined Pleiotropy Chord Diagram (Fixed Labels)...")
 
-# Function to draw the diagram (Repeated for PNG and PDF)
+# Function to wrap long strings
+wrap_string <- function(s, width = 15) {
+  paste(strwrap(s, width = width), collapse = "\n")
+}
+
+# Apply wrapping to labels
+wrapped_names <- unique(c(clean_links$Gene, clean_links$EFO_Trait))
+names(wrapped_names) <- wrapped_names
+wrapped_labels <- sapply(wrapped_names, wrap_string)
+
+# Function to draw the diagram
 draw_chord <- function() {
   circos.clear()
-  # Adjust margins to ensure labels aren't cut off
+  # Significant expansion of canvas to prevent cropping
   circos.par(
     gap.after = c(rep(2, length(unique(clean_links$Gene))-1), 10, rep(2, length(unique(clean_links$EFO_Trait))-1), 10),
-    canvas.xlim = c(-1.3, 1.3),
-    canvas.ylim = c(-1.3, 1.3)
+    canvas.xlim = c(-1.6, 1.6), 
+    canvas.ylim = c(-1.6, 1.6)
   )
   
   chordDiagram(
@@ -65,17 +75,18 @@ draw_chord <- function() {
     preAllocateTracks = list(track.height = 0.05)
   )
   
-  # Custom labels with optimized text size and distancing
+  # Custom labels with text wrapping and bold gene names
   circos.track(track.index = 1, panel.fun = function(x, y) {
+    label <- wrapped_labels[CELL_META$sector.index]
     circos.text(
       CELL_META$xcenter, 
-      CELL_META$ylim[1] + 1.2, 
-      CELL_META$sector.index, 
+      CELL_META$ylim[1] + 1.25, 
+      label, 
       facing = "clockwise", 
       niceFacing = TRUE, 
       adj = c(0, 0.5), 
-      cex = 0.65, # Adjusted for uniform readability
-      font = 2     # Bold labels
+      cex = 0.55, 
+      font = 2
     )
   }, bg.border = NA)
 }
