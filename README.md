@@ -97,4 +97,4 @@ Input summary statistics are sourced from public repositories:
 ---
 *Last Updated: April 18, 2026*  
 *GitHub Repository: [vijayachitrabio/SLE_MetaAnalysis](https://github.com/vijayachitrabio/SLE_MetaAnalysis)*  
-*Maintained by: [vijayachitramodhukur](https://github.com/vijayachitramodhukur)*
+*Maintained by: [vijayachitra Modhukur](https://github.com/vijayachitrachitrabio)*
