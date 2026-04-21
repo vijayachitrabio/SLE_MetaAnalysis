@@ -36,6 +36,18 @@ The repository provides a robust, end-to-end bioinformatics pipeline implemented
 
 ---
 
+## 2.1. Publication Figure Helpers
+
+The repository also includes a small set of helper scripts for publication-ready visual summaries derived from existing results tables:
+
+- `scripts/create_supplementary_pipeline_figure.py`: supplementary workflow schematic
+- `scripts/create_replication_concordance_figure.R`: discovery-vs-replication effect direction plot
+- `scripts/create_replication_forest_top7.R`: focused forest plot for replicated loci
+
+These scripts are downstream formatting utilities and do not change the core association or validation results.
+
+---
+
 ## 3. Prioritized Causal Drivers and Functional Validation
 
 Our study provides rigorous statistical support for key causal mediators of SLE pathogenesis:
@@ -103,6 +115,14 @@ Rscript scripts/step1_meta_discovery.R
 Rscript scripts/step26_phewas_lookup.R
 ```
 
+Optional publication figure helpers can then be run separately:
+
+```bash
+python3 scripts/create_supplementary_pipeline_figure.py
+Rscript scripts/create_replication_concordance_figure.R
+Rscript scripts/create_replication_forest_top7.R
+```
+
 ---
 
 ## 6. Data Availability
@@ -112,6 +132,6 @@ Input summary statistics are sourced from public repositories:
 - **Julia et al. (2018)**: Spanish-only replication cohort.
 
 ---
-*Last Updated: April 18, 2026*  
+*Last Updated: April 21, 2026*  
 *GitHub Repository: [vijayachitrabio/SLE_MetaAnalysis](https://github.com/vijayachitrabio/SLE_MetaAnalysis)*  
 *Maintained by: [vijayachitra Modhukur](https://github.com/vijayachitrachitrabio)*
