@@ -74,11 +74,28 @@ The following heatmap shows the tissue-specific expression modulation ($P_{eQTL}
 
 ## 5. Usage and Execution
 
-### Prerequisites
-- **R version** ≥ 4.2.0
-- **Key Packages**: `data.table`, `dplyr`, `gwasrapidd`, `coloc`, `LAVA`, `httr`, `jsonlite`, `ggplot2`.
+### Option A: Using Docker (Recommended for Reproducibility)
+We provide a complete Docker container configured with the exact R (`rocker/tidyverse`) and Python environment needed to run the entire pipeline seamlessly without package conflicts. All required dependencies listed in `requirements.txt` and the Dockerfile are pre-installed.
 
-### Running the Pipeline
+```bash
+# Build and start the container as a background daemon
+docker-compose up -d
+
+# Enter the container's interactive shell
+docker exec -it sle-gwas-pipeline /bin/bash
+
+# Once inside the container, execute scripts sequentially from the root
+Rscript scripts/step1_meta_discovery.R
+```
+
+### Option B: Local Setup
+#### Prerequisites
+- **R version** ≥ 4.3.0
+- **Python version** ≥ 3.11
+- **R Packages**: `data.table`, `dplyr`, `ggplot2`, `coloc`, `LAVA`, `httr`, `jsonlite`, `gwasrapidd`, `gprofiler2`.
+- **Python Packages**: Listed in `requirements.txt`.
+
+#### Running the Pipeline Locally
 Scripts are strictly ordered and should be executed from the project root:
 ```bash
 Rscript scripts/step1_meta_discovery.R
