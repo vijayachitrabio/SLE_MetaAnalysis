@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  sle-analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: sle-gwas-pipeline
+
+    image: sle-gwas-pipeline:latest
+
+    # Mount volumes for data and output correctly mapping to existing directories
+    volumes:
+      # Mount the publication package data (Read-Only)
+      - ./SLE_Publication_Package:/sle_analysis/SLE_Publication_Package:ro
+      
+      # Mount main data folder
+      - ./data:/sle_analysis/data:rw
+
+      # Mount results and figures directories for generated files
+      - ./results:/sle_analysis/results:rw
+      - ./figures:/sle_analysis/figures:rw
+
+      # Mount scripts directory for dynamic updates without rebuilding
+      - ./scripts:/sle_analysis/scripts:rw
+
+    # Environment variables
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+      - MPLBACKEND=Agg
+
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+        reservations:
+          cpus: '2'
+          memory: 4G
+
+    # Keep container running
+    stdin_open: true
+    tty: true
+
+    # Working directory
+    working_dir: /sle_analysis
+
+# Network configuration
+networks:
+  default:
+    name: sle-pipeline-network
+    driver: bridge
