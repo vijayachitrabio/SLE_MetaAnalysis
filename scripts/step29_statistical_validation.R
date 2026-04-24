@@ -18,11 +18,18 @@ S_GWAS <- 0.0137
 gwas_full <- fread("results/discovery_meta_results.tsv")
 
 target_loci <- list(
-  list(rsid = "rs389884", gene = "CLIC1", chr = 6, pos = 32173684),
+  list(rsid = "rs389884", gene = "CLIC1", chr = 6, pos = 31973120),
   list(rsid = "rs10912578", gene = "TNFSF4", chr = 1, pos = 173282717)
 )
 
-tissues_to_test <- c("Whole_Blood", "Spleen", "Cells_EBV-transformed_lymphocytes", "Lung")
+# Focus on tissues with plausible immune relevance for SLE and B/T-cell biology.
+tissues_to_test <- c(
+  "Whole_Blood",
+  "Spleen",
+  "Cells_EBV-transformed_lymphocytes",
+  "Minor_Salivary_Gland",
+  "Lung"
+)
 
 # API helper
 get_gtex_eqtl <- function(gene_symbol, tissue) {

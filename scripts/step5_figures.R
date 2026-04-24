@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(cowplot)
 
-setwd("/Users/vijayachitramodhukur/Library/Mobile Documents/com~apple~CloudDocs/ECLAI/GWAs_meta_analysis/AMH_MEnopause/SLE_MetaAnalysis")
+
 dir.create("figures", showWarnings = FALSE)
 
 message("Loading full discovery meta-results for Manhattan/QQ...")
@@ -48,6 +48,9 @@ label_data <- top_loci %>%
 label_points <- label_data %>%
   inner_join(plot_data %>% select(RSID, bp_cum), by = "RSID")
 
+clic1_label <- label_points %>% filter(label == "CLIC1")
+other_labels <- label_points %>% filter(label != "CLIC1")
+
 p_manhattan <- ggplot(plot_data, aes(x=bp_cum, y=minuslog10p)) +
   geom_point(aes(color=as.factor(CHR)), alpha=0.8, size=1.3) +
   scale_color_manual(values = rep(c("#2c3e50", "#2980b9"), 22)) +
@@ -56,19 +59,25 @@ p_manhattan <- ggplot(plot_data, aes(x=bp_cum, y=minuslog10p)) +
   geom_hline(yintercept = -log10(5e-8), color = "#e74c3c", linetype="dashed") +
   # Add Labels
   ggrepel::geom_text_repel(
-    data = label_points,
+    data = other_labels,
     aes(x = bp_cum, y = -log10(P_meta), label = label),
     size = 3.2, fontface = "italic", color = "black",
     box.padding = 0.5, point.padding = 0.5, force = 4,
+    max.overlaps = Inf
+  ) +
+  ggrepel::geom_text_repel(
+    data = clic1_label,
+    aes(x = bp_cum, y = -log10(P_meta), label = label),
+    size = 3.5, fontface = "bold", color = "black",
+    box.padding = 0.6, point.padding = 0.6, force = 5,
     max.overlaps = Inf
   ) +
   theme_minimal() +
   theme(legend.position="none",
         panel.grid.major.x = element_blank(),
         panel.grid.minor.x = element_blank(),
-        axis.text.x = element_text(angle = 90, vjust = 0.5),
-        plot.title = element_text(face = "bold", size = 14)) +
-  labs(x = "Chromosome", y = "-log10(P-value)", title = "North-to-South European SLE Meta-Analysis")
+        axis.text.x = element_text(angle = 90, vjust = 0.5)) +
+  labs(x = "Chromosome", y = "-log10(P-value)", title = NULL)
 
 ggsave("figures/manhattan_plot.png", p_manhattan, width = 14, height = 7, dpi = 300)
 
@@ -82,7 +91,7 @@ p_qq <- ggplot(data.frame(x=x, y=y), aes(x=x, y=y)) +
   geom_point(color="#2980b9", alpha=0.5, size=1) +
   geom_abline(intercept = 0, slope = 1, color="#e74c3c") +
   theme_minimal() +
-  labs(x="Expected -log10(P)", y="Observed -log10(P)", title="QQ Plot of Meta-Analysis")
+  labs(x="Expected -log10(P)", y="Observed -log10(P)", title = NULL)
 
 ggsave("figures/qq_plot.png", p_qq, width = 6, height = 6, dpi = 300)
 

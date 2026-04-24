@@ -8,11 +8,11 @@ suppressPackageStartupMessages({
   library(dplyr)
 })
 
+
 cat("=========================================\n")
 cat("Starting Final Results Synthesis\n")
 cat("=========================================\n")
 
-setwd("/Users/vijayachitramodhukur/Library/Mobile Documents/com~apple~CloudDocs/ECLAI/GWAs_meta_analysis/AMH_MEnopause/SLE_MetaAnalysis")
 
 # 1. Load Datasets
 # Main Loci list (from audited LAVA run)

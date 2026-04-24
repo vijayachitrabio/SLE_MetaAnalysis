@@ -10,7 +10,7 @@ suppressPackageStartupMessages({
   library(jsonlite)
 })
 
-setwd("/Users/vijayachitramodhukur/Library/Mobile Documents/com~apple~CloudDocs/ECLAI/GWAs_meta_analysis/AMH_MEnopause/SLE_MetaAnalysis")
+
 
 cat("=== Refined Locus Analysis Pipeline ===\n")
 

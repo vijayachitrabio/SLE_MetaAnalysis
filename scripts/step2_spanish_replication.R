@@ -2,8 +2,8 @@ library(vroom)
 library(dplyr)
 library(data.table)
 
+
 # Set working directory to project root
-setwd("/Users/vijayachitramodhukur/Library/Mobile Documents/com~apple~CloudDocs/ECLAI/GWAs_meta_analysis/AMH_MEnopause/SLE_MetaAnalysis")
 
 # Define file paths
 path_discovery <- "results/discovery_meta_results.tsv"

@@ -2,8 +2,8 @@ library(vroom)
 library(dplyr)
 library(biomaRt)
 
+
 # Set working directory to project root
-setwd("/Users/vijayachitramodhukur/Library/Mobile Documents/com~apple~CloudDocs/ECLAI/GWAs_meta_analysis/AMH_MEnopause/SLE_MetaAnalysis")
 
 message("Loading top loci summary table...")
 path_table <- "results/top_loci_summary_table.tsv"
