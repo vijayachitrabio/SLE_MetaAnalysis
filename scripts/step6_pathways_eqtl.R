@@ -5,7 +5,7 @@ library(gprofiler2)
 library(ggpubr)
 library(stringr)
 
-setwd("/Users/vijayachitramodhukur/Library/Mobile Documents/com~apple~CloudDocs/ECLAI/GWAs_meta_analysis/AMH_MEnopause/SLE_MetaAnalysis")
+
 
 message("Loading full audited loci mapping...")
 master <- fread("results/master_results_table.tsv")

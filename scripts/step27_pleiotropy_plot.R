@@ -1,81 +1,149 @@
 #!/usr/bin/env Rscript
 # scripts/step27_pleiotropy_plot.R
-# Final Linear Pleiotropy Map (High-aesthetic Bubble Plot with Horizontal Traits)
+# Cleaner publication-style pleiotropy figure
 
 suppressPackageStartupMessages({
   library(data.table)
   library(dplyr)
   library(ggplot2)
+  library(stringr)
+  library(forcats)
   library(viridis)
 })
 
-setwd("/Users/vijayachitramodhukur/Library/Mobile Documents/com~apple~CloudDocs/ECLAI/GWAs_meta_analysis/AMH_MEnopause/SLE_MetaAnalysis")
 
-# 1. Load Data
+dir.create("figures", showWarnings = FALSE)
+
+clean_gene <- function(gene, rsid) {
+  gene <- as.character(gene)
+  gene <- trimws(gsub('^"|"$', "", gene))
+  gene[gene %in% c("", "NA", "TBD", "character(0)")] <- NA_character_
+  ifelse(is.na(gene), rsid, gene)
+}
+
+wrap_trait <- function(x, width = 30) {
+  stringr::str_wrap(x, width = width)
+}
+
 phewas <- fread("results/phewas_summary_refined.tsv")
 master <- fread("results/master_results_table.tsv")
 
-# Identify High-Confidence Genes
 genes_map <- master %>%
-  select(RSID, Gene) %>%
-  mutate(Gene = ifelse(Gene == "" | is.na(Gene), RSID, Gene)) %>%
-  unique()
+  transmute(RSID, Gene = clean_gene(Gene, RSID)) %>%
+  distinct()
 
-# 2. Filter & Refine Traits
-# Only include Immune-Mediated, Blood markers, or relevant inflammatory signals
-whitelist_keywords <- c("Lupus", "SLE", "Arthritis", "Sclerosis", "Thyroid", "Diabetes", "Crohn", 
-                        "Colitis", "Psoriasis", "Leukocyte", "Neutrophil", "Lymphocyte", 
-                        "Monocyte", "Platelet", "Hematology", "C-reactive", "Chemokine", 
-                        "Interferon", "Autoimmune", "Ankylosing", "Sjogren", "Vitiligo",
-                        "membranous glomerulonephritis", "Scleroderma")
+whitelist_keywords <- c(
+  "lupus", "arthritis", "sclerosis", "sjogren", "vitiligo", "psoriasis",
+  "crohn", "colitis", "thyroid", "kawasaki", "diabetes",
+  "leukocyte", "neutrophil", "lymphocyte", "monocyte", "platelet",
+  "hematology", "glomerulonephritis", "sarcoidosis", "inflammatory bowel"
+)
+
+blacklist_keywords <- c(
+  "protein amount", "protein level", "ratio", "lipids", "fatty acids",
+  "inguinal hernia", "medication", "takes medication"
+)
 
 plot_data <- phewas %>%
   inner_join(genes_map, by = "RSID") %>%
-  filter(grepl(paste(whitelist_keywords, collapse="|"), EFO_Trait, ignore.case = TRUE)) %>%
-  filter(!grepl("hernia|hearing|body mass|stature|intelligence|intelligence|hernia", EFO_Trait, ignore.case=TRUE)) %>%
-  filter(P_value < 1e-6) %>%
-  mutate(logP = -log10(P_value)) %>%
-  mutate(logP = ifelse(logP > 100, 100, logP))
+  filter(grepl(paste(whitelist_keywords, collapse = "|"), EFO_Trait, ignore.case = TRUE)) %>%
+  filter(!grepl(paste(blacklist_keywords, collapse = "|"), EFO_Trait, ignore.case = TRUE)) %>%
+  filter(is.finite(P_value), P_value < 1e-6) %>%
+  mutate(
+    logP = pmin(-log10(P_value), 60),
+    Category = ifelse(Category == "Immune-Mediated", "Immune-mediated", "Other trait"),
+    Trait_Label = wrap_trait(EFO_Trait)
+  ) %>%
+  group_by(Gene, EFO_Trait, Trait_Label, Category) %>%
+  summarise(logP = max(logP, na.rm = TRUE), .groups = "drop")
 
-# Filter to top traits for a clean horizontal table
 top_traits <- plot_data %>%
-  group_by(EFO_Trait) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  head(25) %>%
-  pull(EFO_Trait)
+  group_by(EFO_Trait, Trait_Label, Category) %>%
+  summarise(
+    peak_logP = max(logP, na.rm = TRUE),
+    n_loci = n_distinct(Gene),
+    .groups = "drop"
+  ) %>%
+  arrange(desc(n_loci), desc(peak_logP)) %>%
+  slice_head(n = 12)
 
 plot_data_sub <- plot_data %>%
-  filter(EFO_Trait %in% top_traits)
+  semi_join(top_traits, by = c("EFO_Trait", "Trait_Label", "Category"))
 
-# 3. Visualization
-message("Generating Linear Pleiotropy Map...")
+gene_order <- plot_data_sub %>%
+  group_by(Gene) %>%
+  summarise(peak_logP = max(logP, na.rm = TRUE), .groups = "drop") %>%
+  arrange(desc(peak_logP)) %>%
+  pull(Gene)
 
-# Professional Bubbles
-p <- ggplot(plot_data_sub, aes(x = Gene, y = reorder(EFO_Trait, logP))) +
-  geom_point(aes(size = logP, fill = logP), shape = 21, color = "black", alpha = 0.8) +
-  scale_fill_viridis_c(option = "magma", name = "-log10(P)") +
-  scale_size_continuous(range = c(2, 10), name = "Association Significance") +
-  theme_bw() +
-  facet_grid(Category ~ ., scales = "free_y", space = "free_y") +
-  theme(
-    axis.text.x = element_text(angle = 45, hjust = 1, face = "bold", size = 10, color = "black"),
-    axis.text.y = element_text(size = 9, color = "black"),
-    strip.text.y = element_text(angle = 0, face = "bold"),
-    panel.grid.major = element_line(color = "grey90", size = 0.1),
-    plot.title = element_text(face = "bold", size = 15),
-    legend.position = "right"
-  ) +
-  labs(
-    title = "SLE Genetic Cross-Talk Portfolio",
-    subtitle = "Shared susceptibility between SLE loci and other autoimmune/blood traits (GWAS Catalog)",
-    x = "SLE High-Confidence Risk Genes",
-    y = "Pleiotropic Trait (All labels horizontal and readable)"
+trait_order <- top_traits %>%
+  arrange(Category, peak_logP) %>%
+  pull(Trait_Label)
+
+plot_data_sub <- plot_data_sub %>%
+  mutate(
+    Gene = factor(Gene, levels = gene_order),
+    Trait_Label = factor(Trait_Label, levels = trait_order)
   )
 
-# Save
-dir.create("figures", showWarnings = FALSE)
-ggsave("figures/pleiotropy_map_linear.png", p, width = 12, height = 10, dpi = 300)
-ggsave("figures/pleiotropy_map_linear.pdf", p, width = 12, height = 10)
+lane_df <- expand.grid(
+  Gene = levels(plot_data_sub$Gene),
+  Trait_Label = levels(plot_data_sub$Trait_Label),
+  stringsAsFactors = FALSE
+) %>%
+  as_tibble() %>%
+  left_join(top_traits %>% select(Trait_Label, Category), by = "Trait_Label") %>%
+  mutate(
+    Gene = factor(Gene, levels = levels(plot_data_sub$Gene)),
+    Trait_Label = factor(Trait_Label, levels = levels(plot_data_sub$Trait_Label))
+  )
 
-message("Linear Pleiotropy Map saved to figures/pleiotropy_map_linear.png/pdf")
+p <- ggplot() +
+  geom_point(
+    data = lane_df,
+    aes(x = Gene, y = Trait_Label),
+    shape = 21,
+    size = 1.7,
+    stroke = 0.15,
+    fill = "#eef2f7",
+    color = "#d9e2ec"
+  ) +
+  geom_point(
+    data = plot_data_sub,
+    aes(x = Gene, y = Trait_Label, size = logP, fill = logP),
+    shape = 21,
+    color = "#1f2937",
+    stroke = 0.35,
+    alpha = 0.98
+  ) +
+  facet_grid(Category ~ ., scales = "free_y", space = "free_y", switch = "y") +
+  scale_fill_viridis_c(option = "C", end = 0.95, name = expression(-log[10](P))) +
+  scale_size_continuous(range = c(3.2, 8.2), guide = "none") +
+  labs(
+    title = "SLE Genetic Cross-Talk Portfolio",
+    subtitle = "GWAS Catalog pleiotropic associations for prioritized SLE loci",
+    x = "Prioritized SLE loci",
+    y = NULL
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    panel.grid = element_blank(),
+    axis.text.x = element_text(angle = 38, hjust = 1, vjust = 1, face = "bold", color = "#102a43"),
+    axis.text.y = element_text(size = 10, color = "#1f2937"),
+    strip.placement = "outside",
+    strip.text.y.left = element_text(angle = 0, face = "bold", color = "#102a43", size = 11),
+    strip.background = element_rect(fill = "#e5e7eb", color = "#d1d5db"),
+    plot.title = element_text(face = "bold", size = 16, color = "#102a43"),
+    plot.subtitle = element_text(size = 10.5, color = "#486581"),
+    legend.position = c(0.86, 0.16),
+    legend.title = element_text(size = 10),
+    legend.text = element_text(size = 9),
+    legend.background = element_blank(),
+    plot.margin = margin(10, 14, 10, 10)
+  ) +
+  guides(fill = guide_colorbar(title.position = "top", barheight = unit(3.2, "cm")))
+
+ggsave("figures/pleiotropy_map_linear.png", p, width = 11, height = 8.2, dpi = 320, bg = "white")
+ggsave("figures/pleiotropy_map_linear.pdf", p, width = 11, height = 8.2, bg = "white")
+
+message("Cleaned pleiotropy map saved to figures/pleiotropy_map_linear.png/pdf")

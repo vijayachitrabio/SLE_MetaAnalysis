@@ -6,7 +6,7 @@ suppressPackageStartupMessages({
   library(ggplot2)
 })
 
-setwd("/Users/vijayachitramodhukur/Library/Mobile Documents/com~apple~CloudDocs/ECLAI/GWAs_meta_analysis/AMH_MEnopause/SLE_MetaAnalysis")
+
 
 rep_df <- fread("results/spanish_replication_results.tsv")
 master <- fread("results/master_results_table.tsv")

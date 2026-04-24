@@ -7,7 +7,7 @@ suppressPackageStartupMessages({
   library(dplyr)
 })
 
-setwd("/Users/vijayachitramodhukur/Library/Mobile Documents/com~apple~CloudDocs/ECLAI/GWAs_meta_analysis/AMH_MEnopause/SLE_MetaAnalysis")
+
 
 cat("=== Finalizing SLE Meta-Analysis Results ===\n")
 
@@ -77,7 +77,18 @@ results <- merge(results, rep_data[, .(RSID, P_rep)], by = "RSID", all.x = TRUE)
 
 # 5. Add Gene Annotation from Master Table (Source of Truth)
 master <- fread("results/master_results_table.tsv")
-master_clean <- master[, .(RSID, Master_Gene = coalesce(Effector_Gene, Gene, paste0("Locus_", RSID)), Region_Master = Region)]
+master_clean <- master[, .(
+  RSID,
+  Master_Gene = dplyr::coalesce(
+    na_if(trimws(Effector_Gene), ""),
+    na_if(trimws(Gene), ""),
+    paste0("Locus_", RSID)
+  ),
+  Region_Master = dplyr::coalesce(
+    na_if(trimws(Region), ""),
+    paste0(CHR, "p/q")
+  )
+)]
 # Filter duplicates and keep first mapping
 master_clean <- master_clean %>% group_by(RSID) %>% slice(1) %>% ungroup()
 
