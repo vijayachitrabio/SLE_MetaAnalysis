@@ -7,6 +7,11 @@
 *.tmp
 *.zip
 Rplots.pdf
+CLAUDE.md
+*AUDIT*.md
+*CHECKLIST*.md
+*UPDATE_SUMMARY*.md
+*PROGRESS_REPORT*.md
 
 # Exclude Intermediate Data & Logs
 *.log
