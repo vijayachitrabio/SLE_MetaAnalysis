@@ -2,6 +2,8 @@ library(vroom)
 library(dplyr)
 library(data.table)
 
+setwd(".")
+
 
 # Set working directory to project root
 

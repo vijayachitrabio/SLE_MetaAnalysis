@@ -10,6 +10,8 @@ suppressPackageStartupMessages({
   library(jsonlite)
 })
 
+setwd(".")
+
 
 
 cat("=== Refined Locus Analysis Pipeline ===\n")

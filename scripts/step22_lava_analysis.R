@@ -21,7 +21,9 @@ cat("=========================================\n")
 # --- Configuration ---
 
 # Paths to external LD data (from fibroids project)
-REF_DIR  <- "../../../uterine_fibroids/mr_analysis_2026_04_16/reference_data"
+WD <- "."
+setwd(WD)
+REF_DIR  <- "reference_data"
 REF_PREFIX   <- file.path(REF_DIR, "g1000_eur")
 BLOCKS_FILE  <- file.path(REF_DIR, "LAVA_s2500_m25_f1_w200.blocks")
 

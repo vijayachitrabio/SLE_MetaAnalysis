@@ -7,6 +7,8 @@ suppressPackageStartupMessages({
   library(dplyr)
 })
 
+setwd(".")
+
 
 
 cat("=== LD Confirmation (Coordinate-based) ===\n")

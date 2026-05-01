@@ -1,0 +1,53 @@
+RSID	Trait	P_value	PubMed_ID	Category
+rs389884	C4A protein levels	7e-134	39972214	Other Trait
+rs389884	CCL16 protein levels	9e-25	39789286	Other Trait
+rs389884	CD93/CLEC14A protein level ratio	2e-24	38412862	Other Trait
+rs389884	Paraneoplastic antigen Ma2 levels	9e-36	39528825	Other Trait
+rs389884	NAD-dependent protein deacylase sirtuin-5, mitochondrial levels	1e-32	39528825	Other Trait
+rs389884	Ferritin, mitochondrial levels	0	34648354	Other Trait
+rs389884	Serum levels of protein FTMT	6e-137	35078996	Other Trait
+rs389884	Inguinal hernia	1e-08	34382107	Other Trait
+rs389884	Sarcoidosis (Lofgren's syndrome vs non-Lofgren's syndrome)	1e-32	26651848	Other Trait
+rs389884	Idiopathic membranous nephropathy	8e-66	21323541	Other Trait
+rs389884	Hematology traits	2e-08	23263863	Other Trait
+rs4853458	Hypothyroidism NOS (PheCode 244.4)	7e-17	39024449	Other Trait
+rs4853458	Thyroid problems	5e-12	39024449	Other Trait
+rs4853458	Takes medication for Thyroid problems?	2e-13	39024449	Other Trait
+rs4853458	Systemic sclerosis	2e-35	38296975	Other Trait
+rs4853458	Rheumatoid arthritis (rheumatoid factor and anti-cyclic citrullinated peptide seronegative)	1e-06	35470158	Immune-Mediated
+rs4853458	Rheumatoid arthritis (rheumatoid factor and/or anti-cyclic citrullinated peptide seropositive)	5e-14	35470158	Immune-Mediated
+rs4853458	Rheumatoid arthritis	3e-19	35470158	Immune-Mediated
+rs17849501	Lupus (localized and systemic) (PheCode 695.4)	7e-13	39024449	Immune-Mediated
+rs17849501	Systemic lupus erythematosus	2e-59	27399966	Immune-Mediated
+rs17849501	Systemic lupus erythematosus	2e-59	26502338	Immune-Mediated
+rs17849501	Systemic lupus erythematosus	3e-88	26502338	Immune-Mediated
+rs41272536	Neutrophil count	3e-11	32888494	Other Trait
+rs41272536	White blood cell count	5e-11	32888494	Other Trait
+rs41272536	Neutrophil count	2e-13	32888493	Other Trait
+rs41272536	White blood cell count	4e-13	32888493	Other Trait
+rs41272536	White blood cell count	5e-11	32888493	Other Trait
+rs41272536	Neutrophil count	7e-11	32888493	Other Trait
+rs34572943	Lupus (localized and systemic) (PheCode 695.4)	8e-36	39024449	Immune-Mediated
+rs34572943	Systemic lupus erythematosus (PheCode 695.42)	1e-19	39024449	Immune-Mediated
+rs34572943	Cutaneous lupus erythematosus (PheCode 695.41)	9e-37	39024449	Immune-Mediated
+rs34572943	Lupus (localized and systemic) (PheCode 695.4)	1e-11	39024449	Immune-Mediated
+rs34572943	Cutaneous lupus erythematosus (PheCode 695.41)	2e-13	39024449	Immune-Mediated
+rs34572943	Lupus (localized and systemic) (PheCode 695.4)	1e-11	39024449	Immune-Mediated
+rs34572943	Lupus (localized and systemic) (PheCode 695.4)	8e-16	39024449	Immune-Mediated
+rs34572943	Systemic lupus erythematosus	9e-85	28714469	Immune-Mediated
+rs34572943	Systemic lupus erythematosus	3e-76	26502338	Immune-Mediated
+rs13332649	Systemic lupus erythematosus	5e-17	27399966	Immune-Mediated
+rs13332649	Systemic lupus erythematosus	2e-18	26502338	Immune-Mediated
+rs10912578	Type 2 diabetes	5e-07	39379762	Immune-Mediated
+rs10912578	Systemic lupus erythematosus	2e-08	27399966	Immune-Mediated
+rs10912578	Systemic lupus erythematosus	2e-15	27399966	Immune-Mediated
+rs10912578	Systemic lupus erythematosus	4e-19	26502338	Immune-Mediated
+rs6671847	Ulcerative colitis	3e-11	37156999	Immune-Mediated
+rs6671847	CD14 on CD14+ CD16+ monocyte	5e-11	32929287	Other Trait
+rs6671847	Kawasaki disease	3e-09	33772158	Other Trait
+rs6671847	Inflammatory bowel disease	2e-12	33608531	Other Trait
+rs6671847	Systemic lupus erythematosus	1e-12	26502338	Immune-Mediated
+rs693109	Polyunsaturated fatty acids to monounsaturated fatty acids ratio	2e-08	40545721	Other Trait
+rs693109	Endometriosis or asthma (pleiotropy)	1e-07	35472084	Other Trait
+rs693109	Phospholipids to total lipids ratio in small LDL	3e-22	35213538	Other Trait
+rs693109	Cholesteryl esters to total lipids ratio in small LDL	2e-20	35213538	Other Trait

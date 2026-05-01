@@ -7,6 +7,8 @@ suppressPackageStartupMessages({
   library(ggrepel)
 })
 
+setwd(".")
+
 
 
 rep_df <- fread("results/spanish_replication_results.tsv")

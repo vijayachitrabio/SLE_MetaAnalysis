@@ -7,6 +7,8 @@ suppressPackageStartupMessages({
   library(ggplot2)
 })
 
+setwd(".")
+
 
 
 dir.create("figures", showWarnings = FALSE)

@@ -1,12 +1,12 @@
 # SLE Meta-Analysis Final Gitignore
 
 # Exclude Manuscripts (requested)
-manuscript_sle_meta_analysis.md
-SLE_Manuscript.docx
-SLE_Manuscript_Frontiers_Immunology.docx
-SLE_Manuscript_Revised_new.docx
-~$*.docx
-~$*.pptx
+*.docx
+*.pptx
+.~lock.*
+*.tmp
+*.zip
+Rplots.pdf
 
 # Exclude Intermediate Data & Logs
 *.log
@@ -53,3 +53,10 @@ results/.DS_Store
 scripts/.DS_Store
 figures/.DS_Store
 results/.DS_Store
+
+# Generated Submission / Archive Directories
+archive_*/
+unpacked_*/
+2026-*/
+SLE_Publication_Package/
+RA_Gum_Shared_Architecture/

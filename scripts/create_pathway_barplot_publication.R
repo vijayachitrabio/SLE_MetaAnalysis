@@ -8,11 +8,26 @@ suppressPackageStartupMessages({
   library(stringr)
 })
 
+setwd(".")
+
 
 dir.create("figures", showWarnings = FALSE)
 
 wrap_term <- function(x, width = 34) {
   stringr::str_wrap(x, width = width)
+}
+
+capitalize_term_start <- function(x) {
+  x <- as.character(x)
+  idx <- regexpr("[A-Za-z]", x)
+  hit <- idx > 0
+  if (any(hit)) {
+    starts <- substring(x[hit], 1, idx[hit] - 1)
+    firsts <- substring(x[hit], idx[hit], idx[hit])
+    rests <- substring(x[hit], idx[hit] + 1)
+    x[hit] <- paste0(starts, toupper(firsts), rests)
+  }
+  x
 }
 
 pathway <- fread("results/pathway_enrichment_filtered.tsv")
@@ -24,6 +39,7 @@ plot_df <- pathway %>%
     term_plot = str_replace_all(term_plot, "signaling pathway", "signaling"),
     term_plot = str_replace_all(term_plot, "Signalling", "signaling"),
     term_plot = str_replace_all(term_plot, "Immune System", "immune system"),
+    term_plot = capitalize_term_start(term_plot),
     term_plot = wrap_term(term_plot),
     source_label = recode(source, "GO:BP" = "GO Biological Process", "REAC" = "Reactome")
   ) %>%

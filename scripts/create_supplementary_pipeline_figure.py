@@ -11,24 +11,24 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "SLE_Publication_Package" / "Supplementary" / "Figures"
 
 
-def add_box(ax, x, y, w, h, title, body, fill, edge, title_color):
+def add_box(ax, x, y, w, h, title, body, fill, edge, title_color, body_size=10.4):
     patch = FancyBboxPatch(
         (x, y),
         w,
         h,
-        boxstyle="round,pad=0.02,rounding_size=0.03",
-        linewidth=2.0,
+        boxstyle="round,pad=0.012,rounding_size=0.022",
+        linewidth=1.8,
         edgecolor=edge,
         facecolor=fill,
     )
     ax.add_patch(patch)
     ax.text(
         x + w / 2,
-        y + h * 0.68,
+        y + h * 0.70,
         title,
         ha="center",
         va="center",
-        fontsize=17,
+        fontsize=13.8,
         weight="bold",
         color=title_color,
         family="DejaVu Serif",
@@ -39,30 +39,30 @@ def add_box(ax, x, y, w, h, title, body, fill, edge, title_color):
         body,
         ha="center",
         va="center",
-        fontsize=11.5,
-        color="#2d3648",
-        linespacing=1.45,
+        fontsize=body_size,
+        color="#334155",
+        linespacing=1.35,
         family="DejaVu Sans",
     )
 
 
-def add_arrow(ax, x1, y1, x2, y2):
+def add_arrow(ax, x1, y1, x2, y2, color="#66768f"):
     ax.add_patch(
         FancyArrowPatch(
             (x1, y1),
             (x2, y2),
             arrowstyle="-|>",
-            mutation_scale=18,
-            linewidth=2.2,
-            color="#5c6b82",
-            shrinkA=8,
-            shrinkB=8,
+            mutation_scale=16,
+            linewidth=1.9,
+            color=color,
+            shrinkA=6,
+            shrinkB=6,
         )
     )
 
 
 def build_figure():
-    fig = plt.figure(figsize=(16, 9), dpi=300)
+    fig = plt.figure(figsize=(18, 7.6), dpi=300)
     ax = fig.add_axes([0, 0, 1, 1])
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
@@ -78,45 +78,36 @@ def build_figure():
         "Supplementary Workflow of the European SLE GWAS Meta-analysis",
         ha="center",
         va="center",
-        fontsize=24,
+        fontsize=22,
         weight="bold",
-        color="#172235",
+        color="#1b263b",
         family="DejaVu Serif",
     )
     ax.text(
         0.5,
-        0.90,
+        0.905,
         "From cohort harmonization to replication, causal prioritization, and therapeutic interpretation",
         ha="center",
         va="center",
-        fontsize=12.5,
+        fontsize=11.5,
         color="#64748b",
         family="DejaVu Sans",
     )
 
-    # top input box
     add_box(
         ax,
-        0.18,
+        0.17,
         0.75,
-        0.64,
-        0.11,
+        0.66,
+        0.105,
         "Input Cohorts and Study Design",
-        "Bentham 2015 and FinnGen R12 summary statistics for discovery\nSpanish cohort used for independent North-to-South replication",
-        fill="#edf4fb",
-        edge="#9cb9d9",
-        title_color="#2f5d87",
+        "Bentham 2015 and FinnGen R12 used for discovery\nSpanish cohort used for independent North-to-South replication",
+        fill="#eef4fb",
+        edge="#a9bfdc",
+        title_color="#305a86",
+        body_size=10.6,
     )
 
-    # five-step workflow
-    xs = [0.05, 0.24, 0.43, 0.62, 0.81]
-    colors = [
-        ("#dff2ed", "#78b8a8", "#2f7f73"),
-        ("#e6f0fb", "#8fb0d7", "#355f93"),
-        ("#f7eed8", "#d1b067", "#8b6822"),
-        ("#f6e5ea", "#cb8ea1", "#9d4f6a"),
-        ("#ebe8f8", "#a59bda", "#6557b8"),
-    ]
     titles = [
         "1. Discovery",
         "2. Refinement",
@@ -125,39 +116,50 @@ def build_figure():
         "5. Final Synthesis",
     ]
     bodies = [
-        "IVW meta-analysis\nGWAS-significant locus detection\nManhattan and QQ visualization",
-        "QC summary tables\nannotation and gene mapping\nLD pruning and novelty checks",
-        "Pathway enrichment\neQTL integration\nLAVA and COLOC prioritization",
-        "Spanish replication\nheterogeneity and sensitivity analyses\nregional locus review",
-        "PheWAS and pleiotropy profiling\ntherapeutic target mapping\nhigh-confidence locus reporting",
+        "IVW meta-analysis\nGenome-wide signal discovery\nManhattan and QQ plots",
+        "QC summary tables\nAnnotation and gene mapping\nLD pruning and novelty review",
+        "Pathway enrichment\neQTL integration\nLAVA and COLOC support",
+        "Spanish replication\nHeterogeneity checks\nRegional locus review",
+        "PheWAS profiling\nTherapeutic mapping\nHigh-confidence locus prioritization",
+    ]
+    colors = [
+        ("#e6f5ef", "#84bea9", "#2f7c6d"),
+        ("#ebf3fb", "#98b7dc", "#335f93"),
+        ("#faf0da", "#d5b672", "#8c6a22"),
+        ("#f7e8ec", "#d29bad", "#9b526b"),
+        ("#efeaf9", "#b1a5de", "#6657b5"),
     ]
 
-    y = 0.42
-    w = 0.14
-    h = 0.20
-    for x, (fill, edge, title_color), title, body in zip(xs, colors, titles, bodies):
+    x0 = 0.055
+    gap = 0.02
+    w = 0.156
+    h = 0.17
+    y = 0.43
+    xs = [x0 + i * (w + gap) for i in range(5)]
+
+    for x, title, body, (fill, edge, title_color) in zip(xs, titles, bodies, colors):
         add_box(ax, x, y, w, h, title, body, fill, edge, title_color)
 
-    for i in range(len(xs) - 1):
+    for i in range(4):
         add_arrow(ax, xs[i] + w, y + h / 2, xs[i + 1], y + h / 2)
 
-    # output band
+    add_arrow(ax, 0.5, 0.75, 0.5, 0.60)
+    add_arrow(ax, 0.5, 0.43, 0.5, 0.28)
+
     add_box(
         ax,
-        0.13,
         0.15,
-        0.74,
-        0.12,
+        0.14,
+        0.70,
+        0.10,
         "Key Outputs",
         "47 independent loci | 25 putatively novel signals | 15 high-confidence targets | "
-        "replication evidence | pathway, eQTL, pleiotropy, and therapeutic interpretation",
-        fill="#f3f5f8",
-        edge="#c7d0dc",
-        title_color="#41516a",
+        "replication, pathway, eQTL, pleiotropy, and therapeutic evidence",
+        fill="#f4f6f9",
+        edge="#c9d2de",
+        title_color="#415268",
+        body_size=10.2,
     )
-
-    add_arrow(ax, 0.50, 0.75, 0.50, 0.62)
-    add_arrow(ax, 0.50, 0.42, 0.50, 0.27)
 
     return fig
 

@@ -7,6 +7,8 @@ suppressPackageStartupMessages({
   library(dplyr)
 })
 
+setwd(".")
+
 
 
 cat("=== Proper LD-based GWAS Analysis ===\n")

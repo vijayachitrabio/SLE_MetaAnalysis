@@ -9,6 +9,8 @@ suppressPackageStartupMessages({
   library(jsonlite)
 })
 
+setwd(".")
+
 
 
 cat("=== LD Confirmation for Novelty ===\n")

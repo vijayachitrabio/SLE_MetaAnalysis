@@ -9,27 +9,71 @@ suppressPackageStartupMessages({
   library(stringr)
   library(forcats)
   library(viridis)
+  library(cowplot)
 })
+
+setwd(".")
 
 
 dir.create("figures", showWarnings = FALSE)
 
-clean_gene <- function(gene, rsid) {
-  gene <- as.character(gene)
-  gene <- trimws(gsub('^"|"$', "", gene))
-  gene[gene %in% c("", "NA", "TBD", "character(0)")] <- NA_character_
-  ifelse(is.na(gene), rsid, gene)
+clean_text <- function(x) {
+  x <- as.character(x)
+  x <- trimws(gsub('^"|"$', "", x))
+  x[x %in% c("", "NA", "TBD", "character(0)", "Locus_NA")] <- NA_character_
+  x
+}
+
+extract_near_gene <- function(x) {
+  out <- rep(NA_character_, length(x))
+  hit <- grepl("Known \\(near .+\\)", x)
+  out[hit] <- sub("^Known \\(near (.+)\\)$", "\\1", x[hit])
+  out
+}
+
+choose_gene_label <- function(gene, master_gene, effector_gene, novelty, rsid) {
+  label <- dplyr::coalesce(
+    clean_text(gene),
+    clean_text(master_gene),
+    clean_text(effector_gene),
+    extract_near_gene(as.character(novelty))
+  )
+  label <- ifelse(grepl(" / ", label), sub("^.* / ", "", label), label)
+  ifelse(is.na(label), rsid, paste0(label, " (", rsid, ")"))
 }
 
 wrap_trait <- function(x, width = 30) {
   stringr::str_wrap(x, width = width)
 }
 
+capitalize_trait <- function(x) {
+  x <- as.character(x)
+  idx <- regexpr("[A-Za-z]", x)
+  hit <- idx > 0
+  if (any(hit)) {
+    starts <- substring(x[hit], 1, idx[hit] - 1)
+    firsts <- substring(x[hit], idx[hit], idx[hit])
+    rests <- substring(x[hit], idx[hit] + 1)
+    x[hit] <- paste0(starts, toupper(firsts), rests)
+  }
+  x
+}
+
 phewas <- fread("results/phewas_summary_refined.tsv")
 master <- fread("results/master_results_table.tsv")
 
 genes_map <- master %>%
-  transmute(RSID, Gene = clean_gene(Gene, RSID)) %>%
+  mutate(
+    Master_Gene = clean_text(Gene),
+    Master_Effector_Gene = clean_text(Effector_Gene),
+    has_effector = !is.na(Master_Effector_Gene),
+    has_gene = !is.na(Master_Gene)
+  ) %>%
+  arrange(desc(has_effector), desc(has_gene)) %>%
+  group_by(RSID) %>%
+  slice(1) %>%
+  ungroup() %>%
+  transmute(RSID, Gene = choose_gene_label(Gene, Master_Gene, Master_Effector_Gene, Novelty, RSID)) %>%
   distinct()
 
 whitelist_keywords <- c(
@@ -52,7 +96,7 @@ plot_data <- phewas %>%
   mutate(
     logP = pmin(-log10(P_value), 60),
     Category = ifelse(Category == "Immune-Mediated", "Immune-mediated", "Other trait"),
-    Trait_Label = wrap_trait(EFO_Trait)
+    Trait_Label = wrap_trait(capitalize_trait(EFO_Trait))
   ) %>%
   group_by(Gene, EFO_Trait, Trait_Label, Category) %>%
   summarise(logP = max(logP, na.rm = TRUE), .groups = "drop")
@@ -98,7 +142,7 @@ lane_df <- expand.grid(
     Trait_Label = factor(Trait_Label, levels = levels(plot_data_sub$Trait_Label))
   )
 
-p <- ggplot() +
+p_base <- ggplot() +
   geom_point(
     data = lane_df,
     aes(x = Gene, y = Trait_Label),
@@ -117,33 +161,62 @@ p <- ggplot() +
     alpha = 0.98
   ) +
   facet_grid(Category ~ ., scales = "free_y", space = "free_y", switch = "y") +
-  scale_fill_viridis_c(option = "C", end = 0.95, name = expression(-log[10](P))) +
+  scale_fill_viridis_c(option = "C", end = 0.95, name = NULL) +
   scale_size_continuous(range = c(3.2, 8.2), guide = "none") +
   labs(
-    title = "SLE Genetic Cross-Talk Portfolio",
-    subtitle = "GWAS Catalog pleiotropic associations for prioritized SLE loci",
+    title = NULL,
     x = "Prioritized SLE loci",
     y = NULL
   ) +
   theme_minimal(base_size = 12) +
   theme(
     panel.grid = element_blank(),
-    axis.text.x = element_text(angle = 38, hjust = 1, vjust = 1, face = "bold", color = "#102a43"),
+    axis.text.x = element_text(
+      angle = 34,
+      hjust = 1,
+      vjust = 1,
+      face = "bold",
+      color = "#102a43",
+      margin = margin(t = 6)
+    ),
+    axis.title.x = element_text(color = "#102a43", margin = margin(t = 10)),
     axis.text.y = element_text(size = 10, color = "#1f2937"),
     strip.placement = "outside",
     strip.text.y.left = element_text(angle = 0, face = "bold", color = "#102a43", size = 11),
     strip.background = element_rect(fill = "#e5e7eb", color = "#d1d5db"),
-    plot.title = element_text(face = "bold", size = 16, color = "#102a43"),
-    plot.subtitle = element_text(size = 10.5, color = "#486581"),
-    legend.position = c(0.86, 0.16),
-    legend.title = element_text(size = 10),
+    legend.direction = "horizontal",
+    legend.title = element_blank(),
     legend.text = element_text(size = 9),
     legend.background = element_blank(),
-    plot.margin = margin(10, 14, 10, 10)
+    legend.margin = margin(b = 6),
+    plot.margin = margin(6, 14, 16, 10)
   ) +
-  guides(fill = guide_colorbar(title.position = "top", barheight = unit(3.2, "cm")))
+  guides(fill = guide_colorbar(barwidth = unit(4.8, "cm"), barheight = unit(0.35, "cm")))
 
-ggsave("figures/pleiotropy_map_linear.png", p, width = 11, height = 8.2, dpi = 320, bg = "white")
-ggsave("figures/pleiotropy_map_linear.pdf", p, width = 11, height = 8.2, bg = "white")
+legend_grob <- cowplot::get_legend(
+  p_base +
+    theme(
+      legend.position = "top",
+      legend.justification = "left",
+      legend.box.just = "left",
+      plot.margin = margin(0, 0, 0, 0)
+    )
+)
+
+legend_row <- cowplot::ggdraw() +
+  cowplot::draw_grob(legend_grob, x = 0, y = 1, width = 0.42, height = 1, hjust = 0, vjust = 1)
+
+p_main <- p_base + theme(legend.position = "none")
+
+p_final <- cowplot::plot_grid(
+  legend_row,
+  p_main,
+  ncol = 1,
+  align = "v",
+  rel_heights = c(0.08, 1)
+)
+
+ggsave("figures/pleiotropy_map_linear.png", p_final, width = 11, height = 8.8, dpi = 320, bg = "white")
+ggsave("figures/pleiotropy_map_linear.pdf", p_final, width = 11, height = 8.8, bg = "white")
 
 message("Cleaned pleiotropy map saved to figures/pleiotropy_map_linear.png/pdf")

@@ -7,6 +7,8 @@ suppressPackageStartupMessages({
   library(dplyr)
 })
 
+setwd(".")
+
 
 
 cat("=== Finalizing SLE Meta-Analysis Results ===\n")

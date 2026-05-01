@@ -5,6 +5,8 @@ library(gprofiler2)
 library(ggpubr)
 library(stringr)
 
+setwd(".")
+
 
 
 message("Loading full audited loci mapping...")
@@ -40,6 +42,7 @@ if (is.null(gostres)) {
       overlap_ratio = intersection_size / query_size * 100,
       # Clean term names
       term_clean = str_remove_all(term_name, "^GO:.*? "),
+      term_clean = str_to_sentence(term_clean),
       term_clean = ifelse(nchar(term_clean) > 60, str_trunc(term_clean, 57), term_clean)
     ) %>%
     arrange(p_value)

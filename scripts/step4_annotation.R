@@ -2,6 +2,8 @@ library(vroom)
 library(dplyr)
 library(biomaRt)
 
+setwd(".")
+
 
 # Set working directory to project root
 

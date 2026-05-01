@@ -6,6 +6,8 @@ suppressPackageStartupMessages({
   library(ggplot2)
 })
 
+setwd(".")
+
 
 
 rep_df <- fread("results/spanish_replication_results.tsv")
@@ -80,8 +82,6 @@ p <- ggplot(forest_df, aes(x = Beta, y = label, color = Cohort)) +
     "Nominal" = 16
   )) +
   labs(
-    title = "Replication Forest Plot for Top Reproduced SLE Loci",
-    subtitle = "Effect sizes and 95% confidence intervals in discovery meta-analysis and Spanish replication",
     x = "Effect size (beta)",
     y = NULL,
     color = "Dataset",
@@ -89,8 +89,6 @@ p <- ggplot(forest_df, aes(x = Beta, y = label, color = Cohort)) +
   ) +
   theme_minimal(base_size = 12) +
   theme(
-    plot.title = element_text(face = "bold", size = 17, color = "#18263d"),
-    plot.subtitle = element_text(size = 11, color = "#5b6678"),
     axis.text.y = element_text(face = "bold", color = "#1f2937"),
     axis.text.x = element_text(color = "#334155"),
     axis.title.x = element_text(face = "bold", color = "#334155"),

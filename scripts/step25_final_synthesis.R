@@ -8,6 +8,8 @@ suppressPackageStartupMessages({
   library(dplyr)
 })
 
+setwd(".")
+
 
 cat("=========================================\n")
 cat("Starting Final Results Synthesis\n")

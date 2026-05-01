@@ -9,6 +9,8 @@ suppressPackageStartupMessages({
   library(jsonlite)
 })
 
+setwd(".")
+
 
 
 cat("=== LD-based Locus Analysis using Ensembl API ===\n")
