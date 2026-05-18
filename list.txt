@@ -1,0 +1,59 @@
+List of Tables
+
+Table 1. GWAS datasets used for discovery meta-analysis and independent replication.
+
+Table 2. Analytical workflow, software, and key parameters used in the integrative post-GWAS pipeline.
+
+Table 3. High-confidence SLE susceptibility loci prioritized by LAVA-based local genetic architecture analysis.
+
+Table 4. Evidence-tiered therapeutic prioritization of SLE-associated candidate targets.
+
+List of Figures
+
+Figure 1. Genome-wide meta-analysis of SLE identifies significant susceptibility loci.
+
+Figure 2. LAVA-based prioritization of high-confidence SLE loci.
+
+Figure 3. Colocalization analysis of the CLIC1-region signal.
+
+Figure 4. Effect-size concordance between discovery and replication cohorts.
+
+Figure 5A. Pathway enrichment of prioritized SLE-associated genes.
+
+Figure 5B. Protein–protein interaction network of prioritized SLE-associated genes.
+
+Figure 6. Cross-trait genetic correlations between SLE and immune-mediated traits.
+
+Figure 7. Therapeutic prioritization of SLE-associated candidate targets.
+
+Supplementary figures
+
+Supplementary Figure 1. Overview of the integrative post-GWAS analysis pipeline.
+
+Supplementary Figure 2. Quantile–quantile plot of the discovery meta-analysis.
+
+Supplementary Figure 3. Sensitivity analysis of heterogeneity across discovery cohorts.
+
+Supplementary Figure 4. Additional replication assessment in the Spanish SLE cohort.
+
+Supplementary Figure 5. Regional association plots for representative prioritized SLE loci.
+
+Supplementary tables
+
+Supplementary Table 1. Genome-wide significant loci from the discovery meta-analysis.
+
+Supplementary Table 2. Heterogeneity and cohort-level statistics for prioritized variants.
+
+Supplementary Table 3. Consolidated LAVA prioritization results.
+
+Supplementary Table 4. Bayesian colocalization results.
+
+Supplementary Table 5. Spanish replication results for prioritized variants.
+
+Supplementary Table 6. Pathway enrichment results.
+
+Supplementary Table 7. PheWAS summary of prioritized SLE-associated variants.
+
+Supplementary Table 8. Therapeutic annotation of prioritized SLE-associated genes.
+
+Supplementary Table 9. SuSiE fine-mapping credible sets for LAVA-prioritized loci.
