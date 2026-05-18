@@ -1,0 +1,18 @@
+Step	Analysis module	Primary script(s)	Main software/packages	Key parameters/output
+1	Discovery meta-analysis	scripts/step1_meta_discovery.R	R; vroom; dplyr; data.table	Inverse-variance weighted fixed-effect meta-analysis of Bentham and FinnGen summary statistics
+2	Independent Spanish replication	scripts/step2_spanish_replication.R	R; vroom; dplyr; data.table	Lead variants selected at P < 5e-8; replication required direction concordance and P < 0.05
+3	QC summary tables	scripts/step3_qc_summary_tables.R	R; data.table	Discovery cohort QC, heterogeneity, and summary statistics tables
+4	Variant and gene annotation	scripts/step4_annotation.R	R; data.table; biomaRt/gene annotation resources	Genomic annotation of lead loci and nearby genes
+5	Core GWAS figures	scripts/step5_figures.R	R; ggplot2	Manhattan and quantile-quantile visualizations
+6	Pathway and eQTL preprocessing	scripts/step6_pathways_eqtl.R	R; gprofiler2; data.table	Pathway enrichment and eQTL input preparation
+7	Sensitivity analyses	scripts/step8_sensitivity.R	R; data.table	Fixed/random-effects comparison, heterogeneity assessment, and HLA sensitivity
+8	eQTL mapping	scripts/step9_eqtls.R; scripts/step13_eqtl_plots.R	R; GTEx/eQTL resources	Immune-tissue eQTL annotation and heatmap generation
+9	Ranked pathway enrichment	scripts/step10_fgsea_ranked.R	R; fgsea; msigdbr	GO, Reactome, Hallmark, and ImmuneSigDB pathway enrichment
+10	Regional locus plots	scripts/step11_locus_plots.R	R; ggplot2	Representative regional association plots for prioritized loci
+11	Novelty and LD confirmation	scripts/step12_novelty_check.R; scripts/step16_refined_locus_analysis.R; scripts/step17_proper_ld_clumping.R; scripts/step18_ld_based_locus.R; scripts/step19_ld_confirmation.R; scripts/step20_precise_novelty.R	R; data.table; LD reference panels	Novelty classification and independent-locus refinement
+12	LAVA local genetic architecture	scripts/step22_lava_analysis.R; scripts/step23_consolidate_lava.R	R; LAVA	Discovery N = 388655; replication N = 3752; LAVA local genetic correlation prioritization
+13	Bayesian colocalization	scripts/step24_coloc_analysis.R	R; coloc	GTEx immune-tissue eQTL colocalization; PP4-based prioritization
+14	Final synthesis and PheWAS	scripts/step25_final_synthesis.R; scripts/step26_phewas_lookup.R; scripts/step27_pleiotropy_plot.R	R; GWAS Catalog/PheWAS resources	Cross-trait pleiotropy and therapeutic evidence synthesis
+15	SuSiE fine-mapping	scripts/step28_susie_finemapping.R	R; susieR; PLINK LD matrices	Credible-set fine-mapping for prioritized loci
+16	Statistical validation	scripts/step29_statistical_validation.R	R; data.table	Final statistical checks and manuscript-ready validation outputs
+17	Publication figure formatting	scripts/publication_figures/*.R	R; ggplot2	Final manuscript figure formatting using existing project result tables

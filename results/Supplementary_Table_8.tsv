@@ -1,0 +1,9 @@
+Gene/target	Pathway	Genetic/regulatory support	Representative agents/pathway examples	Clinical relevance/development status	Evidence category	Notes/caveats
+ITGAM	leukocyte adhesion/integrin pathway; indirect therapeutic relevance	Strong (GWAS + eQTL)	Complement-pathway agents, e.g., eculizumab/C5, avacopan/C5aR; indirect relevance only.	Approved in related indications / investigated in immune-mediated disease	Strong (GWAS + eQTL)	""
+IRF8	Myeloid / Interferon Response	Strong (GWAS + eQTL Lymphocyte)	Anifrolumab, Baricitinib	approved in other immune-mediated indications; evaluated in SLE trials	Strong (GWAS + eQTL Lymphocyte)	""
+TNFSF4	T-cell Co-stimulation (OX40L)	Moderate (GWAS)	OX40/OX40L pathway agents under investigation	Phase II SLE	Moderate (GWAS)	""
+FCGR2A	Fc receptor/FcRn pathway relevance; indirect therapeutic relevance	Strong (GWAS)	IVIG and FcRn-pathway agents; indirect Fc-receptor pathway relevance.	Approved in related indications / investigated in immune-mediated disease	Strong (GWAS)	""
+IL12A	IL-12 / Th1 Polarization	Strong (GWAS + eQTL Lymphocyte)	Ustekinumab (Stelara)	approved in related immune-mediated diseases; investigated in autoimmune contexts	Strong (GWAS + eQTL Lymphocyte)	""
+CLEC16A	Autophagy / MHC-II Regulation	Moderate (GWAS)	Sirolimus, Everolimus	Investigational SLE	Moderate (GWAS)	""
+CLIC1	Ion channel / inflammatory regulation	Discovery + LAVA + colocalization	None validated in SLE	Preclinical / functional validation required	Emerging candidate	ρLAVA = 0.621; PP4 = 0.93 in spleen and 0.88 in whole blood
+STAT4	JAK-STAT / Type I Interferon Signaling	Strong (GWAS + eQTL)	Baricitinib, Tofacitinib	approved in other immune-mediated indications; evaluated in SLE trials	Strong (GWAS + eQTL)	""

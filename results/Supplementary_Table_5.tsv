@@ -1,0 +1,10 @@
+RSID	Candidate gene/region	Beta discovery	P discovery	Beta Spanish replication	P Spanish replication	Direction concordance	Replication status	Availability/proxy status
+rs10912578	TNFSF4 / TRIM21-region	0.184243221178961	1.75373755085608e-13	0.147141303006393	0.023616	Yes	Replicated	Available
+rs12928726	CLEC16A	-0.13817263617087	3.07722966427189e-09	-0.337303782259476	8.13737e-09	Yes	Replicated	Available
+rs13332649	IRF8-region	-0.229209306859579	9.572717561106e-16	-0.231160602158053	0.00448867	Yes	Replicated	Available
+rs2647928	IL12A	-0.16611172251783	2.11129160873984e-11	-0.180159495733309	0.00433082	Yes	Replicated	Available
+rs34572943	ITGAM	0.507262044720673	2.68623547210467e-51	0.561573869641584	5.83907e-12	Yes	Replicated	Available
+rs4853458	STAT4	0.470411227499651	4.07604197286915e-72	0.432877415718502	5.42202e-10	Yes	Replicated	Available
+rs6671847	FCGR2A / STAT1-region	0.166756300266454	7.60917787548015e-13	0.264055141820625	6.27134e-05	Yes	Replicated	Available
+rs389884	CLIC1-region candidate signal					""	Unavailable	Unavailable / not directly tested / not counted as replicated
+rs17849501	1q25 locus						Unavailable	Unavailable / not directly tested / not counted as replicated

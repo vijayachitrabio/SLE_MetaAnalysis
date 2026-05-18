@@ -1,0 +1,5 @@
+Dataset	Role	Ancestry/region	Cases	Controls	Total N	Use in analysis	Source
+Bentham et al. 2015	Discovery cohort	European	4036	11040	15076	Discovery meta-analysis	EBI GWAS Catalog GCST003156
+FinnGen R12 SLE	Discovery cohort	European; North-Eastern European	1306	372273	373579	Discovery meta-analysis	FinnGen R12 M13_SLE
+Combined discovery meta-analysis	Discovery meta-analysis	European	5342	383313	388655	Genome-wide association meta-analysis	Bentham et al. 2015 plus FinnGen R12
+Julia et al. 2018 Spanish SLE cohort	Independent replication cohort	Spanish European	907	2845	3752	Replication and direction-concordance assessment	Julia et al. 2018
