@@ -2,7 +2,8 @@
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-SLE__MetaAnalysis-blue?logo=github)](https://github.com/vijayachitrabio/SLE_MetaAnalysis)
 
-![GWAS Manhattan Plot](figures/manhattan_plot.png)
+<img width="4200" height="2100" alt="image" src="https://github.com/user-attachments/assets/76a4359e-81d0-422c-957f-e45f90cbeee7" />
+
 
 This repository contains the complete, enhanced analytical pipeline for a genome-wide association (GWAS) meta-analysis of **Systemic Lupus Erythematosus (SLE)** across the European continent. Our study leverages a unique "North-to-South" validation strategy to identify stable, high-confidence genetic risk factors for autoimmune disease.
 
