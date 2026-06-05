@@ -130,7 +130,7 @@ Input summary statistics are sourced from public repositories:
 - **Bentham et al. (2015)**: [GCST003156](https://www.ebi.ac.uk/gwas/studies/GCST003156)
 - **FinnGen R12 (2025)**: [M13_SLE](https://www.finngen.fi/en/access_results)
 - **Julia et al. (2018)**: Spanish-only replication cohort.
-
+- The summary statistics generated in this study have been deposited in Zenodo at https://doi.org/10.5281/zenodo.20514335. 
 ---
 *Last Updated: April 21, 2026*  
 *GitHub Repository: [vijayachitrabio/SLE_MetaAnalysis](https://github.com/vijayachitrabio/SLE_MetaAnalysis)*  
