@@ -10,7 +10,6 @@ This repository contains the complete, analytical pipeline for a genome-wide ass
 ---
 
 ## 1. Study Highlights
-<img width="5586" height="1596" alt="image" src="https://github.com/user-attachments/assets/68cc4b75-7e97-4437-beb0-dadbfb2ecb60" />
 
 
 - **47 Independent Susceptibility Loci**: Identified via IVW Meta-Analysis ($P < 5 \times 10^{-8}$).
@@ -22,6 +21,7 @@ This repository contains the complete, analytical pipeline for a genome-wide ass
 ---
 
 ## 2. Analytical Pipeline (26 Modular Steps)
+<img width="5586" height="1596" alt="image" src="https://github.com/user-attachments/assets/68cc4b75-7e97-4437-beb0-dadbfb2ecb60" />
 
 The repository provides a robust, end-to-end bioinformatics pipeline implemented in R:
 
