@@ -19,6 +19,8 @@ This repository contains the complete, enhanced analytical pipeline for a genome
 ---
 
 ## 2. Analytical Pipeline (26 Modular Steps)
+<img width="468" height="133" alt="image" src="https://github.com/user-attachments/assets/f725a209-8ddb-4330-a721-e73052e96995" />
+
 
 The repository provides a robust, end-to-end bioinformatics pipeline implemented in R:
 
@@ -75,16 +77,11 @@ Our integrated pipeline identifies several targets with existing FDA-approved dr
 
 ---
 
-## 4. Visualizing Genetic Risk
 
-### High-Confidence eQTL Landscape
-The following heatmap shows the tissue-specific expression modulation ($P_{eQTL} < 1 \times 10^{-5}$) for our 15 high-confidence SLE targets across immune tissues (Whole Blood, Spleen, Lymphocytes).
-
-![eQTL Heatmap](figures/Fig_4_eQTL_clustered_heatmap.png)
 
 ---
 
-## 5. Usage and Execution
+## 4. Usage and Execution
 
 ### Option A: Using Docker (Recommended for Reproducibility)
 We provide a complete Docker container configured with the exact R (`rocker/tidyverse`) and Python environment needed to run the entire pipeline seamlessly without package conflicts. All required dependencies listed in `requirements.txt` and the Dockerfile are pre-installed.
@@ -125,7 +122,7 @@ Rscript scripts/create_replication_forest_top7.R
 
 ---
 
-## 6. Data Availability
+## 5. Data Availability
 Input summary statistics are sourced from public repositories:
 - **Bentham et al. (2015)**: [GCST003156](https://www.ebi.ac.uk/gwas/studies/GCST003156)
 - **FinnGen R12 (2025)**: [M13_SLE](https://www.finngen.fi/en/access_results)
