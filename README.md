@@ -1,8 +1,8 @@
 # SLE Meta-Analysis: European Ancestry
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-SLE__MetaAnalysis-blue?logo=github)](https://github.com/vijayachitrabio/SLE_MetaAnalysis)
 
-<img width="4200" height="2100" alt="image" src="https://github.com/user-attachments/assets/76a4359e-81d0-422c-957f-e45f90cbeee7" />
+<img width="6000" height="4725" alt="image" src="https://github.com/user-attachments/assets/4d7fbaa8-2602-473c-8bf9-310d569cdb9a" />
+
 
 
 This repository contains the complete, analytical pipeline for a genome-wide association (GWAS) meta-analysis of **Systemic Lupus Erythematosus (SLE)** across the European continent. Our study leverages a robust validation strategy to identify stable, high-confidence genetic risk factors for autoimmune disease.
