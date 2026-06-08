@@ -1,16 +1,14 @@
 # SLE Meta-Analysis: European Ancestry
 
+[![GitHub Repo](https://img.shields.io/badge/GitHub-SLE__MetaAnalysis-blue?logo=github)](https://github.com/vijayachitrabio/SLE_MetaAnalysis)
 
-<img width="6000" height="4725" alt="image" src="https://github.com/user-attachments/assets/4d7fbaa8-2602-473c-8bf9-310d569cdb9a" />
+![GWAS Manhattan Plot](figures/manhattan_plot.png)
 
-
-
-This repository contains the complete, analytical pipeline for a genome-wide association (GWAS) meta-analysis of **Systemic Lupus Erythematosus (SLE)** across the European continent. Our study leverages a robust validation strategy to identify stable, high-confidence genetic risk factors for autoimmune disease.
+This repository contains the complete, enhanced analytical pipeline for a genome-wide association (GWAS) meta-analysis of **Systemic Lupus Erythematosus (SLE)** across the European continent. Our study leverages a unique "North-to-South" validation strategy to identify stable, high-confidence genetic risk factors for autoimmune disease.
 
 ---
 
 ## 1. Study Highlights
-
 
 - **47 Independent Susceptibility Loci**: Identified via IVW Meta-Analysis ($P < 5 \times 10^{-8}$).
 - **25 Novel Signals**: Putative novel associations validated against the EBI GWAS Catalog (as of April 2026).
@@ -21,7 +19,6 @@ This repository contains the complete, analytical pipeline for a genome-wide ass
 ---
 
 ## 2. Analytical Pipeline (26 Modular Steps)
-<img width="5586" height="1596" alt="image" src="https://github.com/user-attachments/assets/68cc4b75-7e97-4437-beb0-dadbfb2ecb60" />
 
 The repository provides a robust, end-to-end bioinformatics pipeline implemented in R:
 
@@ -60,6 +57,7 @@ Our study provides rigorous statistical support for key causal mediators of SLE 
 | ***CLIC1*** | rs389884 | Bayesian COLOC | **PP4 = 0.94** | Inflammasome regulation & Macrophage function. |
 | ***TNFSF4*** | rs10912578| Regional Heritability| Replicated | T-cell costimulation (OX40L pathway). |
 
+*Note: Bayesian colocalization (COLOC) identifies CLIC1 as a high-confidence causal driver in Spleen tissue, exceeding the standard posterior probability threshold of 0.8.*
 
 ---
 
@@ -132,7 +130,7 @@ Input summary statistics are sourced from public repositories:
 - **Bentham et al. (2015)**: [GCST003156](https://www.ebi.ac.uk/gwas/studies/GCST003156)
 - **FinnGen R12 (2025)**: [M13_SLE](https://www.finngen.fi/en/access_results)
 - **Julia et al. (2018)**: Spanish-only replication cohort.
-- The summary statistics generated in this study have been deposited in Zenodo at https://doi.org/10.5281/zenodo.20514335. 
+
 ---
 *Last Updated: April 21, 2026*  
 *GitHub Repository: [vijayachitrabio/SLE_MetaAnalysis](https://github.com/vijayachitrabio/SLE_MetaAnalysis)*  
