@@ -21,8 +21,8 @@ nodes <- data.table(
     "Immune response", "Cell activation", "JAK-STAT signaling",
     "JAK-STAT signaling", "Immune response", "Cytokine signaling"
   ),
-  x = c(0.60, 0.77, 0.84, 0.77, 0.77, 0.91, 0.58, 0.59, 0.41, 0.24, 0.25, 0.36, 0.43, 0.14, 0.30),
-  y = c(0.86, 0.78, 0.72, 0.54, 0.40, 0.31, 0.40, 0.11, 0.16, 0.24, 0.36, 0.44, 0.56, 0.52, 0.79)
+  x = c(0.51, 0.71, 0.83, 0.25, 0.64, 0.83, 0.53, 0.42, 0.36, 0.24, 0.42, 0.49, 0.61, 0.24, 0.83),
+  y = c(0.68, 0.22, 0.55, 0.39, 0.38, 0.20, 0.40, 0.17, 0.28, 0.22, 0.33, 0.57, 0.58, 0.58, 0.38)
 )
 
 edges <- data.table(
@@ -73,62 +73,58 @@ pathway_colors <- c(
 
 p <- ggraph(graph, layout = "manual", x = layout$x, y = layout$y) +
   geom_edge_link(
-    color = "#9ca3af",
-    alpha = 0.50,
-    linewidth = 0.58,
+    color = "#747b84",
+    alpha = 0.48,
+    linewidth = 0.56,
     lineend = "round"
   ) +
   geom_node_point(
     aes(fill = pathway, size = degree),
     shape = 21,
     color = "#111111",
-    stroke = 0.75,
+    stroke = 0.70,
     alpha = 0.96
   ) +
   geom_node_text(
     aes(label = name),
-    size = 2.35,
+    size = 2.20,
     fontface = "bold",
     color = "#111111",
     family = "sans"
   ) +
-  scale_fill_manual(values = pathway_colors, name = NULL) +
-  scale_size(range = c(13.5, 22), guide = "none") +
-  coord_equal(xlim = c(0.10, 0.93), ylim = c(0.09, 0.88), clip = "off") +
-  labs(
-    title = "Protein-Protein Interaction Network",
-    subtitle = "SLE Susceptibility Genes"
+  annotate(
+    "text",
+    x = 0.51,
+    y = 0.745,
+    label = "candidate\nsignal",
+    size = 2.15,
+    lineheight = 0.88,
+    fontface = "italic",
+    color = "#1f2933",
+    family = "sans"
   ) +
+  scale_fill_manual(values = pathway_colors, name = NULL) +
+  scale_size(range = c(11.2, 15.8), guide = "none") +
+  coord_equal(xlim = c(0.06, 0.95), ylim = c(0.075, 0.765), clip = "off") +
   theme_void(base_size = 10) +
   theme(
     plot.background = element_rect(fill = "white", color = NA),
     panel.background = element_rect(fill = "white", color = NA),
-    plot.title = element_text(
-      size = 10,
-      face = "bold",
-      hjust = 0.5,
-      color = "#111111",
-      margin = margin(b = 1)
-    ),
-    plot.subtitle = element_text(
-      size = 7.5,
-      face = "bold",
-      hjust = 0.5,
-      color = "#111111",
-      margin = margin(b = 7)
-    ),
-    legend.position = "top",
+    legend.position = "right",
     legend.justification = "center",
-    legend.direction = "horizontal",
-    legend.key.size = unit(0.13, "in"),
-    legend.text = element_text(size = 7.5, face = "bold", color = "#111111"),
-    legend.margin = margin(0, 0, 0, 0),
-    plot.margin = margin(2, 2, 2, 2)
+    legend.direction = "vertical",
+    legend.key.size = unit(0.14, "in"),
+    legend.spacing.y = unit(0.04, "in"),
+    legend.text = element_text(size = 7.6, face = "bold", color = "#111111"),
+    legend.margin = margin(0, 1, 0, 1),
+    plot.margin = margin(1, 1, 1, 1)
   ) +
-  guides(fill = guide_legend(nrow = 1, byrow = TRUE, override.aes = list(size = 4.2)))
+  guides(fill = guide_legend(ncol = 1, byrow = TRUE, override.aes = list(size = 4.0)))
 
 dir.create("figures", showWarnings = FALSE)
-ggsave("figures/Figure_5B.png", p, width = 6.8, height = 5.8, dpi = 600, bg = "white")
-ggsave("figures/Figure_5B.tiff", p, width = 6.8, height = 5.8, dpi = 600, bg = "white", compression = "lzw")
+ggsave("figures/Figure_5B.png", p, width = 6.8, height = 4.35, dpi = 600, bg = "white")
+ggsave("figures/Figure_5B.tiff", p, width = 6.8, height = 4.35, dpi = 600, bg = "white", compression = "lzw")
+ggsave("figures/5B_new.png", p, width = 6.8, height = 4.35, dpi = 600, bg = "white")
+ggsave("figures/5B_new.tiff", p, width = 6.8, height = 4.35, dpi = 600, bg = "white", compression = "lzw")
 
-cat("Saved figures/Figure_5B.png and figures/Figure_5B.tiff at 600 dpi\n")
+cat("Saved figures/Figure_5B and figures/5B_new at 600 dpi\n")
