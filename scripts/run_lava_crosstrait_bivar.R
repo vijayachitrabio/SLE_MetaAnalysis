@@ -36,9 +36,25 @@ cat("\n--- Formatting Trait 1: SLE Discovery Meta ---\n")
 d1 <- fread("results/discovery_meta_results.tsv",
             select = c("CHR", "BP", "EA", "OA", "RSID", "P_meta", "BETA_meta", "SE_meta"))
 setnames(d1, c("CHR", "BP", "A1", "A2", "SNP", "P", "BETA", "SE"))
-d1 <- d1[!is.na(P) & !is.na(BETA) & !is.na(SE)]
+d1 <- d1[!is.na(P) & !is.na(BETA) & !is.na(SE) & !is.na(SNP) & SNP != ""]
 d1 <- d1[P > 0 & P <= 1 & SE > 0 & is.finite(BETA) & is.finite(SE)]
 d1[, Z := BETA / SE]
+
+# Smart Deduplication
+dup_snps <- unique(d1$SNP[duplicated(d1$SNP)])
+if (length(dup_snps) > 0) {
+    d1_unique <- d1[!SNP %in% dup_snps]
+    d1_dup <- d1[SNP %in% dup_snps]
+    d1_dup_resolved <- d1_dup[, {
+        if (uniqueN(paste(A1, A2, sep="_")) > 1) {
+            .SD[0]
+        } else {
+            .SD[which.min(P)]
+        }
+    }, by = SNP]
+    d1 <- rbind(d1_unique, d1_dup_resolved)
+}
+
 d1[, N := 362694] # N_DISCO (8417 cases + 354277 controls)
 fwrite(d1[, .(SNP, A1, A2, Z, P, N)], "data/munged/SLE_lava_input.txt", sep="\t")
 rm(d1); gc()
