@@ -43,22 +43,22 @@ Strikingly, out of the 55 successfully modeled cross-trait pairs involving SLE, 
 ### Other Reviewer 1 Items Completed:
 
 1. **Point 2 (Colocalization Traits):** We identified the traits in the response (GTEx and eQTLGen).
-3. **Point 3 (Histone Enrichment):** We agreed that formal epigenetic enrichment (like partitioned LDSC) fell outside the methodological scope of the native-R framework. However, to directly address the reviewer's intent for regulatory context, we performed a targeted descriptive overlap of our prioritized non-MHC SLE loci using public Roadmap Epigenomics data:
+3. **Point 3 (Histone Enrichment):** We agreed that formal epigenetic enrichment fell outside the methodological scope of the native-R framework. However, to directly address the reviewer's intent for regulatory context, we performed a targeted descriptive overlap of our prioritized non-MHC SLE loci using public Roadmap Epigenomics data:
 
 > **Reviewer 1:** _"Part 3.3 recommends enrichment analysis of histone marks, e.g., H3K27ac/H3K4me1 across immune cell types."_
 
 **Response:**
-We thank the reviewer for this excellent recommendation. We agree that evaluating the functional context of our identified loci across immune-cell epigenetic marks (such as active H3K27ac and H3K4me1) provides highly valuable regulatory insight.
+We thank the reviewer for this excellent recommendation. We agree that evaluating the functional context of our identified loci across immune-cell epigenetic marks provides highly valuable regulatory insight.
 
-As an exploratory follow-up, we assessed whether our prioritized SLE loci overlapped immune-cell enhancer/promoter chromatin states annotated by the Roadmap Epigenomics project (15-state core models). This analysis was intended to provide descriptive regulatory context rather than a formal genome-wide partitioned heritability analysis (which fell outside the scope of our chosen framework).
+As an exploratory follow-up, we assessed whether our prioritized SLE loci overlapped active immune enhancer/promoter chromatin states associated with regulatory histone marks annotated by the Roadmap Epigenomics project (15-state core models). This analysis was intended to provide descriptive regulatory context rather than a formal genome-wide partitioned heritability analysis (which fell outside the scope of our chosen framework).
 
 We explicitly defined ±10 kb proximal regulatory-context windows around the 45 non-MHC lead variants and evaluated their physical intersection with active promoter/enhancer states across primary PBMCs (E062), B-cells (E032), T-cells (E034), and Monocytes (E029).
 
-This targeted analysis revealed that a majority of the discovery non-MHC loci localized precisely to active immune regulatory regions:
+This descriptive analysis showed that a majority of the discovery non-MHC loci localized precisely to active immune regulatory regions:
 - For **33.3%** of our loci (15 of 45), the exact lead SNP itself fell directly inside an active immune enhancer or promoter.
-- Strikingly, when expanding to a **±10 kb regulatory-context window**, **75.6%** of our loci (34 of 45) successfully encompassed at least one active immune enhancer/promoter state in these primary cell types. 
+- When expanding to a **±10 kb regulatory-context window**, **75.6%** of our loci (34 of 45) successfully encompassed at least one active immune enhancer/promoter state in these primary cell types. 
 
-These descriptive findings strongly reinforce the biological relevance of the meta-analysis loci and align precisely with the reviewer's expectation of immune-epigenetic localization. We have added a transparent limitation to the Discussion section explicitly stating that formal genome-wide immune-cell histone-mark enrichment should be prioritized in future functional annotation studies, while briefly noting the strong descriptive overlap observed here.
+These findings provide supportive regulatory context for the biological relevance of the meta-analysis loci and align with the reviewer's expectation of immune-epigenetic localization. We have added a transparent limitation to the Discussion section explicitly stating that formal genome-wide immune-cell histone-mark enrichment should be prioritized in future functional annotation studies, while briefly noting the strong descriptive overlap observed here.
 
 4. **Point 4 (CLIC1 missing variant):** We evaluated `rs3130346` as a potential proxy for `rs389884` in the Spanish replication cohort. However, our LD analysis using the 1000 Genomes European reference panel revealed an $r^2$ of only 0.009 between these variants. Thus, `rs3130346` is NOT a valid proxy, and we have updated the manuscript to state that the CLIC1 locus could not be independently evaluated in the replication cohort due to marker absence.
 

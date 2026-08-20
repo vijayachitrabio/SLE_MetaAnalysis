@@ -92,7 +92,8 @@ for (i in 1:length(cell_types)) {
     # Filter for active states
     bed_active <- bed[state %in% target_states]
     
-    gr_bed <- GRanges(seqnames = bed_active$chr, ranges = IRanges(start = bed_active$start, end = bed_active$end))
+    # BED is 0-based, GRanges is 1-based: add 1 to start
+    gr_bed <- GRanges(seqnames = bed_active$chr, ranges = IRanges(start = bed_active$start + 1, end = bed_active$end))
     
     # Overlap Exact
     hits_exact <- findOverlaps(gr_hg19_exact, gr_bed)
