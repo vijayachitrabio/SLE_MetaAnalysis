@@ -34,8 +34,9 @@ The repository provides a robust, end-to-end bioinformatics pipeline implemented
 | **Enrichment** | `step6`, `step10` | fgsea, Reactome, and ImmuneSigDB pathway profiling. |
 | **Sensitivity** | `step8` | Random vs. Fixed effects and HLA-region distance enhancements. |
 | **eQTL Mapping** | `step9`, `step13` | BioMart-integrated multi-tissue expression profiling (GTEx API). |
-| **Causality** | `step22-24`, `29` | **LAVA** heritability and **COLOC** causal mapping (GTEx v10). |
-| **Pleiotropy** | `step26-27` | Global connectivity map via EBI GWAS Catalog v2. |
+| **Causality** | `step22-24` | **LAVA** heritability and **COLOC** causal mapping (GTEx v10). |
+| **Pleiotropy** | `step26-27`, `run_lava_crosstrait_bivar` | EBI GWAS Catalog map and LAVA cross-trait genetic correlation. |
+| **Regulatory** | `step28-29` | Roadmap Epigenomics immune-cell enhancer/promoter chromatin overlap. |
 
 ---
 
@@ -46,6 +47,7 @@ The repository also includes a small set of helper scripts for publication-ready
 - `scripts/create_supplementary_pipeline_figure.py`: supplementary workflow schematic
 - `scripts/create_replication_concordance_figure.R`: discovery-vs-replication effect direction plot
 - `scripts/create_replication_forest_top7.R`: focused forest plot for replicated loci
+- `scripts/step29_epigenetic_overlap_plot.R`: minimalist bar plot for epigenetic enhancer overlap
 
 These scripts are downstream formatting utilities and do not change the core association or validation results.
 
@@ -64,7 +66,7 @@ Our study provides rigorous statistical support for key causal mediators of SLE 
 
 ---
 
-## 3. Results Overview
+## 4. Results Overview
 
 ### Major Actionable Targets
 Our integrated pipeline identifies several targets with existing FDA-approved drugs or clinical potential:
@@ -75,6 +77,18 @@ Our integrated pipeline identifies several targets with existing FDA-approved dr
 | **rs4853458** | ***STAT4*** | JAK-STAT Pathway | FDA-approved Inhibitors |
 | **rs34572943** | ***ITGAM*** | Complement System | Phase III Clinical |
 | **rs10912578**| ***TNFSF4***| T-cell Activation| Phase II Clinical |
+
+### Cross-Trait Shared Genetic Architecture
+Using local genetic correlation modeling (LAVA), we identified extensive localized pleiotropy. Of our successfully mapped discovery loci, **70% (38 of 55 modeled locus-trait pairs)** demonstrated a significant local genetic correlation (FDR < 0.05) with comorbid autoimmune conditions, highlighting intense shared genetic architecture with Rheumatoid Arthritis, Systemic Sclerosis, and Sjögren's Syndrome.
+
+### Epigenetic Regulatory Context
+To provide deep regulatory context, we mapped our prioritized non-MHC SLE loci against active immune enhancer and promoter chromatin states (15-state core models) derived from the Roadmap Epigenomics project. 
+
+Strikingly, **75.6%** of our loci mapped successfully to an active immune enhancer or promoter (TssA, TssAFlnk, EnhG, Enh) within a ±10 kb proximal regulatory window across primary PBMCs, B-cells, T-cells, and Monocytes.
+
+<div align="center">
+  <img src="assets/Supplementary_Figure_Epigenetic.png" width="700" alt="Epigenetic Overlap Figure">
+</div>
 
 ---
 
