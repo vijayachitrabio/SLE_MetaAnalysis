@@ -99,21 +99,21 @@ def build_figure():
         "2. Locus\nrefinement",
         "3. Functional\nprioritization",
         "4. Validation",
-        "5. Translation",
+        "5. Cross-trait /\ntranslation",
     ]
     bodies = [
         "IVW meta-analysis\nSignal discovery",
-        "LD pruning\nIndependent loci",
-        "LAVA / SuSiE / COLOC\neQTL mapping",
-        "Replication\nSensitivity analysis",
-        "Pathway enrichment\nTherapeutic annotation",
+        "LD pruning\nIndependent loci\nLAVA local architecture",
+        "COLOC with GTEx v10 eQTLs\nPathway enrichment\nImmune chromatin-state overlap",
+        "Spanish replication\nProxy-SNP evaluation\nSensitivity analysis",
+        "Bivariate LAVA\nTherapeutic annotation",
     ]
 
     x0 = 0.045
     gap = 0.020
     w = 0.172
-    h = 0.255
-    y = 0.365
+    h = 0.285
+    y = 0.350
     xs = [x0 + i * (w + gap) for i in range(5)]
 
     for x, title, body in zip(xs, titles, bodies):
@@ -125,10 +125,10 @@ def build_figure():
             h,
             title,
             body,
-            body_size=8.0,
+            body_size=7.6,
             title_size=9.4,
-            title_y=0.77,
-            body_y=0.31,
+            title_y=0.79,
+            body_y=0.36,
         )
 
     for i in range(4):
@@ -144,8 +144,8 @@ def build_figure():
         0.68,
         0.145,
         "Prioritized output",
-        "47 genome-wide significant loci  |  9 prioritized candidate regions  |  immune regulatory pathways",
-        body_size=8.2,
+        "47 genome-wide significant loci  |  9 prioritized candidate regions  |  shared autoimmune architecture  |  immune regulatory pathways",
+        body_size=7.9,
     )
 
     return fig
