@@ -3,15 +3,16 @@
 
 
 This repository contains the complete, enhanced analytical pipeline for a genome-wide association (GWAS) meta-analysis of **Systemic Lupus Erythematosus (SLE)** across the European continent. Our study leverages a robust validation strategy to identify stable, high-confidence genetic risk factors for autoimmune disease.
-[<img width="6000" height="4725" alt="image" src="https://github.com/user-attachments/assets/273b45ff-fbb9-44e1-9b73-5e32d5b7e349" />](https://app.biorender.com/illustrations/canvas-beta/6a11a527158ee75d64baec36)
-
+<div align="center">
+  <img src="assets/Graphical_Abstract.png" width="900" alt="SLE Meta-Analysis Pipeline">
+</div>
 
 ---
 
 ## 1. Study Highlights
 
 - **46 Independent Susceptibility Loci**: Identified via IVW Meta-Analysis ($P < 5 \times 10^{-8}$).
-- **25 Novel Signals**: Putative novel associations validated against the EBI GWAS Catalog (as of April 2026).
+- **Putative Novel Signals**: Associations rigorously audited against the EBI GWAS Catalog for further functional qualification.
 - **15 High-Confidence Targets**: Prioritized via the **LAVA** framework (Regional Genetic Correlation) and Bayesian **COLOC** (GTEx v10 immune eQTLs).
 - **Discovery Power**: Consolidated sample size of **N = 388,655** (5,342 SLE cases).
 - **Novel Biological Insights**: Identification of ***CLIC1*** and ***TNFSF4*** as suggested causal mediators of SLE risk.
@@ -42,19 +43,6 @@ The repository provides a robust, end-to-end bioinformatics pipeline implemented
 
 ---
 
-## 2.1. Publication Figure Helpers
-
-The repository also includes a small set of helper scripts for publication-ready visual summaries derived from existing results tables:
-
-- `scripts/create_supplementary_pipeline_figure.py`: supplementary workflow schematic
-- `scripts/create_replication_concordance_figure.R`: discovery-vs-replication effect direction plot
-- `scripts/create_replication_forest_top7.R`: focused forest plot for replicated loci
-- `scripts/step29_epigenetic_overlap_plot.R`: minimalist bar plot for epigenetic enhancer overlap
-
-These scripts are downstream formatting utilities and do not change the core association or validation results.
-
----
-
 ## 3. Prioritized Causal Drivers and Functional Validation
 
 Our study provides rigorous statistical support for key causal mediators of SLE pathogenesis:
@@ -82,6 +70,15 @@ Our integrated pipeline identifies several targets with existing FDA-approved dr
 
 ### Cross-Trait Shared Genetic Architecture
 Using local genetic correlation modeling (LAVA), we identified extensive localized pleiotropy. Of our successfully mapped discovery loci, **70% (38 of 55 modeled locus-trait pairs)** demonstrated a significant local genetic correlation (FDR < 0.05) with comorbid autoimmune conditions, highlighting intense shared genetic architecture with Rheumatoid Arthritis, Systemic Sclerosis, and Sjögren's Syndrome.
+
+| Locus | Gene | Secondary Trait | Genetic Correlation (Rho) | 95% CI | P-value |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **1p/q** | ***RSBN1*** | Rheumatoid Arthritis | 0.905 | [0.75, 1.00] | 4.21e-21 |
+| **2p/q** | ***STAT4*** | Rheumatoid Arthritis | 0.734 | [0.58, 0.91] | 1.92e-15 |
+| **2p/q** | ***STAT4*** | Systemic Sclerosis | 0.727 | [0.45, 1.00] | 1.01e-06 |
+| **2p/q** | ***STAT4*** | Sjögren's Syndrome | 0.584 | [0.43, 0.75] | 7.04e-11 |
+| **1p/q** | ***TNFSF4***| Rheumatoid Arthritis | 0.696 | [0.46, 0.98] | 2.45e-07 |
+| **5p/q** | ***PTTG1*** | Sjögren's Syndrome | 0.849 | [0.42, 1.00] | 2.83e-04 |
 
 ### Epigenetic Regulatory Context
 To provide deep regulatory context, we mapped our prioritized non-MHC SLE loci against active immune enhancer and promoter chromatin states (15-state core models) derived from the Roadmap Epigenomics project. 
