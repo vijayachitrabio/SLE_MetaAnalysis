@@ -19,7 +19,9 @@ This repository contains the complete, enhanced analytical pipeline for a genome
 ---
 
 ## 2. Analytical Pipeline (26 Modular Steps)
-<img width="5586" height="1596" alt="image" src="https://github.com/user-attachments/assets/825b7864-8b5b-4028-9995-d3060f4df562" />
+<div align="center">
+  <img src="assets/Supplementary_Figure_1.png" width="900" alt="Analytical Pipeline">
+</div>
 
 
 

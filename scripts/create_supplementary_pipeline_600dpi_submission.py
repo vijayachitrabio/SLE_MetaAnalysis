@@ -104,7 +104,7 @@ def build_figure():
     bodies = [
         "IVW meta-analysis\nSignal discovery",
         "LD pruning\nIndependent loci\nLAVA local architecture",
-        "COLOC with GTEx v10 eQTLs\nPathway enrichment\nImmune chromatin-state overlap",
+        "COLOC: GTEx v10 eQTLs\nPathway enrichment\nChromatin-state overlap",
         "Spanish replication\nProxy-SNP evaluation\nSensitivity analysis",
         "Bivariate LAVA\nTherapeutic annotation",
     ]
@@ -135,17 +135,19 @@ def build_figure():
         add_arrow(ax, xs[i] + w, y + h / 2, xs[i + 1], y + h / 2)
 
     add_arrow(ax, 0.5, 0.78, 0.5, y + h, scale=12)
-    add_arrow(ax, 0.5, y, 0.5, 0.225, scale=12)
+    add_arrow(ax, 0.5, y, 0.5, 0.235, scale=12)
 
     add_box(
         ax,
         0.16,
-        0.075,
+        0.065,
         0.68,
-        0.145,
+        0.165,
         "Prioritized output",
-        "47 genome-wide significant loci  |  9 prioritized candidate regions  |  shared autoimmune architecture  |  immune regulatory pathways",
+        "47 genome-wide significant loci  |  9 prioritized candidate regions\nshared autoimmune architecture  |  immune regulatory pathways",
         body_size=7.9,
+        title_y=0.72,
+        body_y=0.25,
     )
 
     return fig
@@ -154,18 +156,20 @@ def build_figure():
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     fig = build_figure()
-    for suffix, kwargs in {
-        ".png": {"dpi": 600},
-        ".tiff": {"dpi": 600, "pil_kwargs": {"compression": "tiff_lzw"}},
-        ".pdf": {},
-    }.items():
-        fig.savefig(
-            OUT_DIR / f"Supplementary_Figure_1{suffix}",
-            bbox_inches="tight",
-            pad_inches=0.055,
-            facecolor="white",
-            **kwargs,
-        )
+    output_stems = ["Supplementary_Figure_1", "Supplementary_Figure_1_pipeline_600dpi"]
+    for stem in output_stems:
+        for suffix, kwargs in {
+            ".png": {"dpi": 600},
+            ".tiff": {"dpi": 600, "pil_kwargs": {"compression": "tiff_lzw"}},
+            ".pdf": {},
+        }.items():
+            fig.savefig(
+                OUT_DIR / f"{stem}{suffix}",
+                bbox_inches="tight",
+                pad_inches=0.055,
+                facecolor="white",
+                **kwargs,
+            )
     plt.close(fig)
 
 
