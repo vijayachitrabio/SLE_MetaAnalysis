@@ -15,7 +15,7 @@ cat("Starting Colocalization Analysis (COLOC)\n")
 cat("=========================================\n")
 
 # 1. Load High-Confidence Loci
-lava_loci <- fread("results/final_lava_consolidated_loci.tsv")[Final_Assessment == "HIGH CONFIDENCE"]
+lava_loci <- fread("results_extracted/final_lava_consolidated_loci.tsv")[Final_Assessment == "HIGH CONFIDENCE"]
 gwas_full <- fread("results/discovery_meta_results.tsv")
 # Reference sample size for GWAS (Meta): Corrected to audited Discovery counts
 N_GWAS <- 388655 
@@ -36,7 +36,7 @@ get_ensembl_genes <- function(chr, start, end) {
 get_gtex_eqtl <- function(gene_symbol, tissue="Whole_Blood") {
   # Get Gencode ID first
   url_gene <- "https://gtexportal.org/api/v2/reference/gene"
-  res_gene <- tryCatch(GET(url_gene, query = list(geneId = gene_symbol, datasetId = "gtex_v10")), error=function(e) NULL)
+  res_gene <- tryCatch(GET(url_gene, query = list(geneId = gene_symbol, datasetId = "gtex_v8")), error=function(e) NULL)
   if (is.null(res_gene) || status_code(res_gene) != 200) return(NULL)
   gene_data <- fromJSON(content(res_gene, as = "text"))$data
   if (length(gene_data) == 0) return(NULL)
@@ -47,7 +47,7 @@ get_gtex_eqtl <- function(gene_symbol, tissue="Whole_Blood") {
   res_assoc <- tryCatch(GET(url_assoc, query = list(
     gencodeId = gencode_id,
     tissueSiteDetailId = tissue,
-    datasetId = "gtex_v10"
+    datasetId = "gtex_v8"
   )), error=function(e) NULL)
   
   if (!is.null(res_assoc) && status_code(res_assoc) == 200) {
@@ -139,7 +139,7 @@ for (i in 1:nrow(lava_loci)) {
         snp = common,
         position = as.numeric(eqtl$pos[idx2]),
         type = "quant",
-        N = 670, # GTEx v8
+        N = ifelse(tis == "Whole_Blood", 670, 227), # GTEx v8 N for WB and Spleen
         sdY = 1 # Standard for normalized GTEx data
       )
       
@@ -148,11 +148,9 @@ for (i in 1:nrow(lava_loci)) {
       pp4 <- res$summary["PP.H4.abf"]
       cat(sprintf("    -> PP4 = %.3f\n", pp4))
       
-      if (pp4 > 0.8) {
-        coloc_all_results[[length(coloc_all_results)+1]] <- data.frame(
-          Locus = rsid, Gene = gene, Tissue = tis, PP4 = pp4
-        )
-      }
+      coloc_all_results[[length(coloc_all_results)+1]] <- data.frame(
+        Locus = rsid, Gene = gene, Tissue = tis, PP4 = pp4
+      )
     }
   }
   Sys.sleep(1) # API kindness
