@@ -144,7 +144,7 @@ def build_figure():
         0.68,
         0.165,
         "Prioritized output",
-        "47 genome-wide significant loci  |  9 prioritized candidate regions\nshared autoimmune architecture  |  immune regulatory pathways",
+        "46 genome-wide significant loci  |  9 prioritized candidate regions\nshared autoimmune architecture  |  immune regulatory pathways",
         body_size=7.9,
         title_y=0.72,
         body_y=0.25,
