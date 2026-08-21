@@ -3,14 +3,14 @@
 
 
 This repository contains the complete, enhanced analytical pipeline for a genome-wide association (GWAS) meta-analysis of **Systemic Lupus Erythematosus (SLE)** across the European continent. Our study leverages a robust validation strategy to identify stable, high-confidence genetic risk factors for autoimmune disease.
-<img width="6000" height="4725" alt="image" src="https://github.com/user-attachments/assets/273b45ff-fbb9-44e1-9b73-5e32d5b7e349" />
+[<img width="6000" height="4725" alt="image" src="https://github.com/user-attachments/assets/273b45ff-fbb9-44e1-9b73-5e32d5b7e349" />](https://app.biorender.com/illustrations/canvas-beta/6a11a527158ee75d64baec36)
 
 
 ---
 
 ## 1. Study Highlights
 
-- **47 Independent Susceptibility Loci**: Identified via IVW Meta-Analysis ($P < 5 \times 10^{-8}$).
+- **46 Independent Susceptibility Loci**: Identified via IVW Meta-Analysis ($P < 5 \times 10^{-8}$).
 - **25 Novel Signals**: Putative novel associations validated against the EBI GWAS Catalog (as of April 2026).
 - **15 High-Confidence Targets**: Prioritized via the **LAVA** framework (Regional Genetic Correlation) and Bayesian **COLOC** (GTEx v10 immune eQTLs).
 - **Discovery Power**: Consolidated sample size of **N = 388,655** (5,342 SLE cases).
