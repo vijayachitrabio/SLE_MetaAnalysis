@@ -4,7 +4,8 @@
 
 This repository contains the complete, enhanced analytical pipeline for a genome-wide association (GWAS) meta-analysis of **Systemic Lupus Erythematosus (SLE)** across the European continent. Our study leverages a robust validation strategy to identify stable, high-confidence genetic risk factors for autoimmune disease.
 <div align="center">
-  <img src="assets/Graphical_Abstract.png" width="900" alt="SLE Meta-Analysis Pipeline">
+  <img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/8198e015-22d5-4bba-bba6-584b8c055d8f" />
+
 </div>
 
 ---
