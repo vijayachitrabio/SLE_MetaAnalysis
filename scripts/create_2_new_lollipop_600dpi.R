@@ -64,7 +64,7 @@ p <- ggplot(plot_dt, aes(x = log_p, y = label)) +
   scale_color_manual(values = class_colors, guide = "none") +
   scale_fill_manual(values = class_colors, name = "Locus class") +
   scale_shape_manual(values = support_shapes, name = "Support") +
-  scale_size_continuous(name = "|β|", range = c(3.4, 6.7), breaks = c(0.4, 0.6, 0.8)) +
+  scale_size_continuous(name = expression(paste("|", beta, "|")), range = c(3.4, 6.7), breaks = c(0.4, 0.6, 0.8)) +
   scale_x_continuous(
     breaks = seq(0, 160, by = 40),
     limits = c(0, x_limit),

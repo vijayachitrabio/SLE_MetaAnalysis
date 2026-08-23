@@ -52,7 +52,7 @@ p <- ggplot(plot_dt, aes(x = Statistical_power, y = Locus)) +
     expand = c(0, 0)
   ) +
   labs(
-    title = "SA3: Replication power analysis",
+    title = "Replication power analysis",
     subtitle = "Power and replication status in the Spanish cohort",
     x = "Statistical power (%)",
     y = NULL

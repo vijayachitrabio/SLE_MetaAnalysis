@@ -68,3 +68,7 @@ RA_Gum_Shared_Architecture/
 bivariate_lava_summary.md
 scripts/create_reviewer1_revision_package.py
 list.txt
+SLE_submission/
+revisions_todays_data/
+*.tbi
+AGENTS.md

@@ -65,7 +65,7 @@ p <- ggplot(plot_dt, aes(x = I2, y = Locus)) +
     expand = c(0, 0)
   ) +
   labs(
-    title = "SA1: Heterogeneity by locus",
+    title = "Heterogeneity by locus",
     subtitle = "Fixed-effects discovery meta-analysis",
     x = expression(I^2~"(%)"),
     y = NULL
@@ -101,3 +101,11 @@ base <- "figures/Supplementary_Figure_3"
 ggsave(paste0(base, ".png"), p, width = 6.2, height = 4.2, dpi = 600, bg = "white")
 ggsave(paste0(base, ".tiff"), p, width = 6.2, height = 4.2, dpi = 600, bg = "white", compression = "lzw")
 cat("Saved SA1 heterogeneity figure to SLE_submission at 600 dpi\n")
+
+# Also emit at the geometry used in the supplementary document (4.9 x 6.2 in
+# portrait = 2940 x 3720 at 600 dpi) so the standalone file is a drop-in
+# replacement for the embedded copy.
+sa1 <- "SLE_submission/Supplementary_Figure_SA1_heterogeneity_600dpi"
+ggsave(paste0(sa1, ".png"), p, width = 4.9, height = 6.2, dpi = 600, bg = "white")
+ggsave(paste0(sa1, ".tiff"), p, width = 4.9, height = 6.2, dpi = 600, bg = "white", compression = "lzw")
+cat("Also wrote portrait SA1 files matching the document geometry\n")

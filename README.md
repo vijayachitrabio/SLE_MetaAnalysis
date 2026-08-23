@@ -14,7 +14,7 @@ This repository contains the complete, enhanced analytical pipeline for a genome
 
 - **46 Independent Susceptibility Loci**: Identified via IVW Meta-Analysis ($P < 5 \times 10^{-8}$).
 - **Putative Novel Signals**: Associations rigorously audited against the EBI GWAS Catalog for further functional qualification.
-- **15 High-Confidence Targets**: Prioritized via the **LAVA** framework (Regional Genetic Correlation) and Bayesian **COLOC** (GTEx v10 immune eQTLs).
+- **14 High-Confidence Targets**: Prioritized via the **LAVA** framework (Regional Genetic Correlation) and Bayesian **COLOC** (GTEx v8 whole blood and spleen, full nominal summary statistics via the eQTL Catalogue).
 - **Discovery Power**: Consolidated sample size of **N = 388,655** (5,342 SLE cases).
 - **Novel Biological Insights**: Identification of ***CLIC1*** and ***TNFSF4*** as suggested causal mediators of SLE risk.
 
@@ -38,9 +38,13 @@ The repository provides a robust, end-to-end bioinformatics pipeline implemented
 | **Enrichment** | `step6`, `step10` | fgsea, Reactome, and ImmuneSigDB pathway profiling. |
 | **Sensitivity** | `step8` | Random vs. Fixed effects and HLA-region distance enhancements. |
 | **eQTL Mapping** | `step9`, `step13` | BioMart-integrated multi-tissue expression profiling (GTEx API). |
-| **Causality** | `step22-24` | **LAVA** heritability and **COLOC** causal mapping (GTEx v10). |
+| **Causality** | `step22-24` | **LAVA** heritability and **COLOC** causal mapping (GTEx v8 whole blood and spleen, full nominal summary statistics via the eQTL Catalogue). |
 | **Pleiotropy** | `step26-27`, `run_lava_crosstrait_bivar` | EBI GWAS Catalog map and LAVA cross-trait genetic correlation. |
 | **Regulatory** | `step28-29` | Roadmap Epigenomics immune-cell enhancer/promoter chromatin overlap. |
+
+---
+
+*Note on Provenance: The colocalization analysis was rebuilt during revision using complete nominal eQTL summary statistics; an earlier table-building script (`fix_tables.R`) used placeholder values and has been removed. The current pipeline is `prepare_coloc_inputs.py` → `run_coloc_abf.R`.*
 
 ---
 

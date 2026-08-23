@@ -17,7 +17,7 @@ setwd(WD)
 REF_PREFIX   <- "reference_data/g1000_eur" # Will need to ensure this points to valid bed/bim/fam
 BLOCKS_FILE  <- "reference_data/LAVA_s2500_m25_f1_w200.blocks"
 
-# Prioritized Loci list (47 genome-wide significant SLE loci)
+# Prioritized Loci list (46 genome-wide significant SLE loci)
 LAVA_LOCI_FILE <- "results_extracted/final_lava_consolidated_loci.tsv"
 if (file.exists(LAVA_LOCI_FILE)) {
     sle_loci <- fread(LAVA_LOCI_FILE)
